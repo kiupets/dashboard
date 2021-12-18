@@ -1,0 +1,18 @@
+.toast {
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  width: fit-content;
+
+  align-items: center;
+  padding: 2px 8px;
+  margin: 2px;
+
+  background: #F7F9FA;
+  /* Gray / gray 200 */
+
+  border: 1px solid #DEE0E2;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
