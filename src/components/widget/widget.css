@@ -1,0 +1,26 @@
+.widget{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 283px;
+    height: 155px;
+    background-color: rgb(228, 20, 20);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #000;
+    /* padding: 10px; */
+    border:#000;
+
+}
+.number {
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.svg-string {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+}

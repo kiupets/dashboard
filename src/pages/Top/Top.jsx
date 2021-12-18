@@ -1,9 +1,9 @@
 import React from 'react'
-
+import Widget from "../../components/widget/Widget"
 const Top = () => {
     return (
-        <div>
-            Top
+        <div className='top'>
+            <Widget string="hello" number="0" svg="🌟" />
         </div>
     )
 }
