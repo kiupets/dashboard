@@ -1,5 +1,5 @@
 import React from 'react'
-import Table from '../../components/shared/Table/Table'
+import {Table} from '../../components/'
 import './Central.css'
 
 const Central = () => {

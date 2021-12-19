@@ -1,7 +1,7 @@
 import React from 'react'
 import './TableRow'
 
-const TableRow = ({ children }) => {
+export const TableRow = ({ children }) => {
     return (
         <tr className='table-row'>
             {children}
@@ -9,4 +9,3 @@ const TableRow = ({ children }) => {
     )
 }
 
-export default TableRow

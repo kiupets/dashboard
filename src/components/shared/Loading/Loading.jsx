@@ -1,6 +1,6 @@
 import { Dots } from '@dexma/ui-components';
 
-const Loading = () => {
+export const Loading = () => {
     return (
         <div>
               <Dots steps={3} size={5} />
@@ -8,4 +8,3 @@ const Loading = () => {
     )
 }
 
-export default Loading
