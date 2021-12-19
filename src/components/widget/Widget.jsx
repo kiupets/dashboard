@@ -1,14 +1,24 @@
 import React from 'react'
-import './widget.css'
+import Span from '../shared/Span/Span'
+import './Widget.css'
 
 const Widget = ({ string, number, icon }) => {
     return (
         <div className='widget'>
-            <div className='number'>{number}</div>
-            <div className='icon-string' >
-                <div>{icon}</div>
-                <div>{string}</div>
+            <div className='items'>
+                <div className='icon-number'>
+                    <Span classname='icon' label={icon} />
+                    <Span classname='number' style={{ fontSize: '48px', fontFamily: 'SF Pro Display' }} label={number} />
+                </div>
+                <Span label={string} />
             </div>
+            {/* <div className='practice'>
+                <h1>practice</h1>
+                <h1>practice</h1>
+                <h1>practice</h1>
+            </div> */}
+
+
         </div>
     )
 }

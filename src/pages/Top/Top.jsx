@@ -1,9 +1,11 @@
 import React from 'react'
-import Widget from "../../components/widget/Widget"
+import Container from '../../components/componente/Container'
+import Dot from '../../components/shared/Dot/Dot'
+import './Top.css'
 const Top = () => {
     return (
         <div className='top'>
-            <Widget string="hello" number="0" vicon="🌟" />
+            <Container />
         </div>
     )
 }
