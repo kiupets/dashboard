@@ -61,6 +61,14 @@ export const info = [
     index: "Prueba",
     name: "Escola Itaca",
   },
+  {
+    id: 842,
+    dot:"red",
+    tipo: "completa",
+    ciudad: "Madrid",
+    index: "Prueba",
+    name: "Escola Itaca",
+  },
 ];
 export const index = [
   { id: 1, name: "ID" },
@@ -92,6 +100,15 @@ export const index = [
     name: "PV",
   },
   {
-    name: "Temp ACS",
+    name: "#Anomalias",
+  },
+  {
+    name: "Impacto anomalias",
+  },
+  {
+    name: "Detected score",
+  },
+  {
+    name: "Ahorro Potencial",
   },
 ];
