@@ -7,18 +7,12 @@ const Widget = ({ string, number, icon }) => {
         <div className='widget'>
             <div className='items'>
                 <div className='icon-number'>
-                    <Span classname='icon' label={icon} />
-                    <Span classname='number' style={{ fontSize: '48px', fontFamily: 'SF Pro Display' }} label={number} />
+                    <Span label={icon ? icon : "hello"} />
+                    <Span style={{ fontSize: '48px' }} label={number} />
+                    <Span style={{ visibility: 'hidden' }} label={icon} />
                 </div>
                 <Span label={string} />
             </div>
-            {/* <div className='practice'>
-                <h1>practice</h1>
-                <h1>practice</h1>
-                <h1>practice</h1>
-            </div> */}
-
-
         </div>
     )
 }
