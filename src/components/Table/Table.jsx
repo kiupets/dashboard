@@ -1,13 +1,9 @@
 import React from "react";
-import { index, info } from "../../../data";
-import TableData from "../../TableData/TableData";
-import Dot from "../Dot/Dot";
-import Span from "../Span/Span";
-import TableHeader from "../TableHeader/TableHeader";
-import TableRow from "../TableRow/TableRow";
+import { index, info } from "../../data";
+import {Span,TableRow,Dot,TableData,TableHeader} from "../shared/";
 import "./Table.css";
 
-const Table = () => {
+export const Table = () => {
   return (
     <table className="table">
       <thead>
@@ -73,4 +69,3 @@ const Table = () => {
   );
 };
 
-export default Table;

@@ -1,3 +1,1 @@
-import Loading from "./shared/Loading/Loading";
-
-export default Loading;
+export {Table} from './Table/Table'
