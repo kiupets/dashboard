@@ -1,11 +1,6 @@
-import React from 'react'
-import './TableRow'
+import React from "react";
+import "./TableRow";
 
-export const TableRow = ({ children }) => {
-    return (
-        <tr className='table-row'>
-            {children}
-        </tr>
-    )
-}
-
+export const TableRow = ({ children, props }) => {
+  return <tr {...props}>{children}</tr>;
+};
