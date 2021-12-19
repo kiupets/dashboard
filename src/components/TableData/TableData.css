@@ -1,0 +1,23 @@
+.table-data {
+  font-size: 14px;
+  line-height: 20px;
+  height: 42px;
+  text-align: center;
+  width: 120px;
+
+}
+
+.green {
+  background-color: #F36C6C !important;
+  font-weight: bold;
+}
+.red {
+  background-color: #00CC87 !important;
+  font-weight: bold;
+
+}
+.yellow {
+  background-color: rgb(231, 220, 116) !important;
+  font-weight: bold;
+
+}
