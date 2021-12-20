@@ -9,21 +9,18 @@
   width: 123px;
   height: 83px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 
 .icon1 {
   font-family: 'SFPRODISPLAYREGULAR';
-  font-size: 30px;
   color: #080808;
-  font-size: 16px;
 
 }
 
 .icon2 {
   font-family: 'SFPRODISPLAYREGULAR';
-  font-size: 72px;
   font-size: larger;
   color: #0a0a0a;
 }
