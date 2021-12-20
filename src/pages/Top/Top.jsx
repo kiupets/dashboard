@@ -17,10 +17,10 @@ const Top = () => {
       number: "456",
       string: "1dashboard",
       icon: <Dot style={{ backgroundColor: "red" }} />,
-      clase: 'icon2'
+      clase: 'icon1'
     },
     { number: "125", clase: 'icon1' },
-    { number: "16", string: "1dashboard", clase: 'icon2' },
+    { number: "16", string: "1dashboard", clase: 'icon1' },
     { number: "89%", string: "1dashboard", clase: 'icon1' },
   ];
   const widgets = widgetData.map((w) => (
