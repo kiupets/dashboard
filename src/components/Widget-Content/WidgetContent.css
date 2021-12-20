@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "SFPRODISPLAYREGULAR";
+    src: local("SFPRODISPLAYREGULAR"),
+     url("../../fonts/SFPRODISPLAYREGULAR.OTF") format("truetype");
+    font-weight: bold;
+    }
+
+.icon-number {
+    width: 123px;
+    height: 83px;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .icon1 {
+font-family: 'SFPRODISPLAYREGULAR';
+    font-size: 30px;
+    color: #00a1e9;
+  
+  font-size: larger;
+    color: #00a8ff;
+    
+  }
+  .icon2 {
+    font-family: 'SFPRODISPLAYREGULAR';
+
+    font-size: larger;
+      color: #da1daa;
+      
+    }
+  
