@@ -7,7 +7,7 @@ const Widget = ({ string, number, icon }) => {
         <div className='widget'>
             <div className='items'>
                 <div className='icon-number'>
-                    <Span label={icon ? icon : "hello"} />
+                    <Span style={{ marginRight: "10px" }} label={icon ? icon : "prueba"} />
                     <Span style={{ fontSize: '48px' }} label={number} />
                     <Span style={{ visibility: 'hidden' }} label={icon} />
                 </div>

@@ -5,7 +5,7 @@ import Dot from '../shared/Dot/Dot'
 
 const widgetData = [
     { number: '123', string: '1dashboard', icon: <Dot style={{ backgroundColor: 'red' }} /> },
-    { number: '123', string: '1dashboard', icon: <Dot style={{ backgroundColor: 'red' }} /> },
+    { number: '123', string: '1dashboard', icon: <Dot style={{ backgroundColor: 'green' }} /> },
     { number: '123', string: '1dashboard' },
     { number: '123', string: '1dashboard' },
     { number: '123', string: '1dashboard' },
