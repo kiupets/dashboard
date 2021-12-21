@@ -6,26 +6,31 @@
   width: 120px;
 }
 
+
 .orange {
   background-color: #fdc56a !important;
   font-weight: bold;
-   opacity: 0.9;
+  opacity: 0.9;
 }
+
 .green {
   background-color: #6bc183 !important;
   font-weight: bold;
-   opacity: 0.9;
+  opacity: 0.9;
 }
+
 .light-green {
   background-color: #cccd70 !important;
   font-weight: bold;
-   opacity: 0.9;
+  opacity: 0.9;
 }
+
 .red {
   background-color: #f47e73 !important;
   font-weight: bold;
-   opacity: 0.9;
+  opacity: 0.9;
 }
+
 .yellow {
   background-color: #fdc56a !important;
   font-weight: bold;

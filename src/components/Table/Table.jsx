@@ -7,7 +7,7 @@ export const Table = () => {
   return (
     <table className="table">
       <thead>
-        <TableRow style={{width:"100%"}}>
+        <TableRow style={{ width: "100%" }}>
           {index.map((header, i) => (
             <TableHeader key={i}>
               <Span
@@ -78,32 +78,32 @@ export const Table = () => {
               <Span
                 className="span-info"
                 style={{ fontWeight: "bold" }}
-                label={item.id} 
+                label={item.id}
               />
             </TableData>
             <TableData>
-              <Span className="span-info" label={`${item.id}€`}/>
+              <Span className="span-info" label={`${item.id}€`} />
             </TableData>
           </TableRow>
         ))}
 
         {info2.map((item) => (
           <TableRow className="table-row">
-            <TableData className="table-index" style={{ width: "100%" }}>
+            <TableData colspan="3" className="table-index2" style={{ width: "100%" }}>
               <Span
                 className=""
-                style={{ cursor: "pointer" }}
+                style={{ cursor: "pointer", }}
                 label={item.name}
               />
             </TableData>
-            <TableData
+            {/* <TableData
               className="table-index"
               style={{ width: "100%" }}
             ></TableData>
             <TableData
               className="table-index"
               style={{ width: "100%" }}
-            ></TableData>
+            ></TableData> */}
             <TableData className="table-index" style={{ width: "100%" }}>
               <Span
                 className=""
@@ -118,7 +118,7 @@ export const Table = () => {
                 label={item.id}
               />
             </TableData>
-            <TableData className={item?.dot ? item.dot1 : ""} style={{width:"100%"}}>
+            <TableData className={item?.dot ? item.dot1 : ""} style={{ width: "100%" }}>
 
               <Span
                 style={{ cursor: "pointer" }}
