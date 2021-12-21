@@ -17,3 +17,15 @@
     font-family: 'SFPRODISPLAYREGULAR';
     font-size: 16px;
 }
+
+.dots {
+    border: 1px solid #C9CCCF;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding-left: 3px;
+}
