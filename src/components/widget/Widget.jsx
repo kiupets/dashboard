@@ -1,5 +1,5 @@
 import React from "react";
-import "./widget.css";
+import "./Widget.css";
 
 export const Widget = ({ children }) => {
   return (

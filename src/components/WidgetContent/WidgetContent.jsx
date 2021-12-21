@@ -1,7 +1,6 @@
 import React from 'react'
-import { Widget } from '..';
 import { Dot, ToastContainer, WidgetLabels } from '../shared';
-
+import {Widget} from '../'
 
 
 const widgetData = [
