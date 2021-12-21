@@ -13,6 +13,7 @@ export const Table = () => {
               <Span
                 className={`span-header ${header?.id ? "index" : ""}`}
                 label={header.name}
+                style={{borderBottom: "1px solid #DEE0E2"}}
               />
             </TableHeader>
           ))}
