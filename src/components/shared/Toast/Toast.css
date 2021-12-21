@@ -5,3 +5,14 @@
   font-size: 12px;
   padding: 2px 2px;
 }
+
+.tag {
+  color: #414541 !important;
+
+  background: #F7F9FA !important;
+  /* Gray / gray 200 */
+
+  border: 1px solid #DEE0E2 !important;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
