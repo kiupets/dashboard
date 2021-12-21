@@ -1,4 +1,3 @@
-import react from "react";
 import { Tag } from '@dexma/ui-components';
 import './Toast.css';
 

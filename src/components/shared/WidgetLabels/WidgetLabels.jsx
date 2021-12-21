@@ -1,7 +1,7 @@
 import React from 'react'
-import './WidgetContent.css'
-import { Span } from '../../components/shared/Span/Span'
-export const WidgetContent = ({ string, number, icon, clase, }) => {
+import { Span } from '..'
+import './WidgetLabels.css'
+export const WidgetLabels = ({ string, number, icon, clase, }) => {
     return (
         <div>
             <div className="icon-number">

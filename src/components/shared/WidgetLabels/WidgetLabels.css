@@ -1,7 +1,7 @@
 @font-face {
   font-family: "SFPRODISPLAYREGULAR";
   src: local("SFPRODISPLAYREGULAR"),
-    url("../../fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+    url("../../../fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
   font-weight: bold;
 }
 
