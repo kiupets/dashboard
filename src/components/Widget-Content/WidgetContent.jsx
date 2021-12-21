@@ -6,9 +6,7 @@ export const WidgetContent = ({ string, number, icon, clase, }) => {
         <div>
             <div className="icon-number">
                 <Span className={clase ? clase : ''} style={{ marginRight: "10px" }} label={icon ? icon : ''} />
-
                 <Span className={clase ? clase : ''} style={{ fontSize: "72px" }} label={number} />
-
                 <Span style={{ visibility: "hidden" }} label={icon} />
             </div>
             <Span className={clase ? clase : ''} style={{ fontSize: '16px' }} label={string} />
