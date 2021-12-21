@@ -79,31 +79,34 @@ export const info = [
 export const index = [
   { id: 1, name: "ID" },
   {
-    name: "Concentrador",
+    name: "Ciudad",
   },
   {
-    name: "Elec. General",
+    name: "Tipología",
   },
   {
-    name: "Gas/Gasoil",
+    name: "Comunicación",
   },
   {
-    name: "Aigua",
+    name: "Pasarela clima",
   },
   {
-    name: "PV",
+    name: "Alumbrado",
   },
   {
-    name: "Temp ACS",
+    name: "Clima",
   },
   {
-    name: "PV",
+    name: "Banderola",
   },
   {
-    name: "Temp ACS",
+    name: "Rótulo",
   },
   {
-    name: "PV",
+    name: "Consumo Clima",
+  },
+  {
+    name: "Confort",
   },
   {
     name: "#Anomalias",
@@ -122,10 +125,10 @@ export const index = [
 export const info2 = [
   {
     id: 137,
-    number:14,
-    number2:53,
-    number3:81,
-    number4:9,
+    number: 14,
+    number2: 53,
+    number3: 81,
+    number4: 9,
     tipo: "completa",
     ciudad: "Madrid",
     index: "Prueba",
@@ -134,10 +137,10 @@ export const info2 = [
   },
   {
     id: 147,
-    number:14,
-    number2:54,
-    number3:8,
-    number4:9,
+    number: 14,
+    number2: 54,
+    number3: 8,
+    number4: 9,
     tipo: "completa",
     ciudad: "Madrid",
     index: "Prueba",
@@ -145,14 +148,18 @@ export const info2 = [
     color: "#F25A5A",
   },
   {
-    dot: "red",
-    dot1: "pink",
-    dot2: "red",
+    dot: "salmon-vertical",
+    dot1: "salmon-claro-inferior",
+    dot2: "salmon-inferior",
+    dot3: "salmon-medio-inferior",
+    dot4: "#FCF3F3",
+    dot5: "#F7A8A8",
+    dot6: "#F87A79",
     id: 227,
-    number:'%14',
-    number2:36,
-    number3:8,
-    number4:1,
+    number: '%14',
+    number2: 36,
+    number3: 8,
+    number4: 1,
     tipo: "completa",
     ciudad: "Madrid",
     index: "Prueba",

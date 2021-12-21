@@ -3,6 +3,7 @@ import { index, info, info2 } from "../../data";
 import { Span, TableRow, Dot, TableData, TableHeader } from "../shared/";
 import "./Table.css";
 
+
 export const Table = () => {
   return (
     <table className="table">
@@ -65,16 +66,25 @@ export const Table = () => {
             <TableData>
               <Dot style={{ backgroundColor: "#00CC87" }} />
             </TableData>
+
             <TableData>
-              <Span className="span-no-data" label="-" />
+              <Dot style={{ backgroundColor: "#00CC87" }} />
             </TableData>
+            {/* confort */}
+            <TableData>
+              <Dot style={{ backgroundColor: "#00CC87" }} />
+            </TableData>
+
             <TableData>
               <Span className="span-info" label={item.id} />
             </TableData>
             <TableData>
               <Span className="span-info" label={`${item.id}€`} />
             </TableData>
-            <TableData className={item?.dot ? item.dot : ""}>
+
+
+
+            <TableData className={item?.dot ? item.dot : "blue"}>
               <Span
                 className="span-info"
                 style={{ fontWeight: "bold" }}
@@ -104,56 +114,56 @@ export const Table = () => {
               className="table-index"
               style={{ width: "100%" }}
             ></TableData> */}
-            <TableData className="table-index" style={{ width: "100%" }}>
+            <TableData className={item?.dot1 ? item.dot1 : ""} style={{ width: "100%", }}>
               <Span
                 className=""
                 style={{ cursor: "pointer" }}
                 label={item.number}
               />
             </TableData>
-            <TableData className={item?.dot ? item.dot : ""}>
+            <TableData className={item?.dot2 ? item.dot2 : ""}>
               <Span
                 className="span-info"
                 style={{ fontWeight: "bold" }}
                 label={item.id}
               />
             </TableData>
-            <TableData className={item?.dot ? item.dot1 : ""} style={{ width: "100%" }}>
+            <TableData className={item?.dot1 ? item.dot1 : ""} style={{ width: "100%" }}>
 
               <Span
                 style={{ cursor: "pointer" }}
                 label={item.number}
               />
             </TableData>
-            <TableData className={item?.dot ? item.dot : ""}>
+            <TableData className={item?.dot3 ? item.dot3 : ""}>
               <Span
                 className="span-info"
                 style={{ fontWeight: "bold" }}
                 label={item.number}
               />
             </TableData>
-            <TableData className="table-index" style={{ width: "100%" }}>
+            <TableData className={item?.dot1 ? item.dot1 : ""} style={{ width: "100%" }}>
               <Span
                 className=""
                 style={{ cursor: "pointer" }}
                 label={item.number4}
               />
             </TableData>
-            <TableData className={item?.dot ? item.dot : ""}>
+            <TableData className={item?.dot3 ? item.dot3 : ""}>
               <Span
                 className="span-info"
                 style={{ fontWeight: "bold" }}
                 label={item.id}
               />
             </TableData>
-            <TableData className="table-index" style={{ width: "100%" }}>
+            <TableData className={item?.dot3 ? item.dot3 : ""} style={{ width: "100%" }}>
               <Span
                 className=""
                 style={{ cursor: "pointer" }}
                 label={item.number4}
               />
             </TableData>
-            <TableData className={item?.dot1 ? item.dot1 : ""}>
+            <TableData className={item?.dot2 ? item.dot2 : ""}>
               <Span
                 className="span-info"
                 style={{ fontWeight: "bold" }}
