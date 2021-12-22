@@ -5,6 +5,8 @@
 }
 
 .table {
+
+  /* table-layout: fixed; */
   font-family: 'SFProText-Regular', sans-serif;
   /* border-collapse: collapse; */
   width: 100%;

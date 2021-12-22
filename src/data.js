@@ -24,6 +24,7 @@ export const info = [
     ciudad: "Barcelona",
     index: "Prueba",
     name: "CAP Puif Roig",
+    color: "#F25A5A",
   },
   {
     dot: "medio-green3",
@@ -50,6 +51,7 @@ export const info = [
     ciudad: "Madrid",
     index: "Prueba",
     name: "OT Berga",
+    color: "#00CC87"
   },
   {
     dot: "yellow",
@@ -58,6 +60,7 @@ export const info = [
     ciudad: "Madrid",
     index: "Prueba",
     name: "Escola Quatre Vents",
+    color: "#00CC87"
   },
   {
     dot: "yellow-green",
@@ -66,6 +69,7 @@ export const info = [
     ciudad: "Barcelona",
     index: "Prueba",
     name: "Escola Itaca",
+    color: "#00CC87"
   },
   {
     id: 842,
@@ -74,6 +78,7 @@ export const info = [
     ciudad: "Madrid",
     index: "Prueba",
     name: "Escola Itaca",
+    color: "#00CC87"
   },
   {
     id: 842,
@@ -82,6 +87,7 @@ export const info = [
     ciudad: "Sevilla",
     index: "Prueba",
     name: "Escola Itaca",
+    color: "#00CC87",
   },
   {
     id: 842,
@@ -90,6 +96,7 @@ export const info = [
     ciudad: "Sevilla",
     index: "Prueba",
     name: "Escola Itaca",
+    color: "#F25A5A",
   },
 ];
 export const index = [

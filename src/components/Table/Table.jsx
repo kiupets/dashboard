@@ -66,7 +66,7 @@ export const Table = () => {
               <Dot style={{ backgroundColor: "#00CC87" }} />
             </TableData>
             <TableData>
-              <Span className="span-no-data" label="-" />
+              <Dot style={{ backgroundColor: "#00CC87" }} />
             </TableData>
             {/* confort */}
             <TableData>
@@ -101,9 +101,6 @@ export const Table = () => {
                 label={item.name}
               />
             </TableData>
-
-
-
 
             {/* <TableData
               className="table-index"
