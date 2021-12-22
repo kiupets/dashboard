@@ -1,5 +1,11 @@
-.table{
-    font-family: arial, sans-serif;
+@font-face {
+  font-family: "SFProText-Regular";
+  src: local("SFProText-Regular"),
+    url("../../fonts/SFProText-Regular.ttf") format("truetype");
+}
+
+.table {
+  font-family: 'SFProText-Regular', sans-serif;
   /* border-collapse: collapse; */
   width: 100%;
   /* height: 800px; */
