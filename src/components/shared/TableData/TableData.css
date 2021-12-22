@@ -10,7 +10,10 @@
   padding-left: 16px;
 }
 
-
+.table-index2 {
+  text-align: start;
+  max-width: 108px;
+}
 
 
 .rojo-claro-inferior {

@@ -68,6 +68,11 @@ export const Table = () => {
             <TableData>
               <Span className="span-no-data" label="-" />
             </TableData>
+            {/* confort */}
+            <TableData>
+              <Dot style={{ backgroundColor: "#00CC87" }} />
+            </TableData>
+
             <TableData>
               <Span className="span-info" label={item.id} />
             </TableData>
@@ -89,13 +94,17 @@ export const Table = () => {
 
         {info2.map((item) => (
           <TableRow className="table-row">
-            <TableData className="table-index" style={{ width: "100%" }}>
+            <TableData colspan="3" className="table-index2" style={{ width: "100%" }}>
               <Span
                 className=""
                 style={{ cursor: "pointer" }}
                 label={item.name}
               />
             </TableData>
+
+
+
+
             {/* <TableData
               className="table-index"
               style={{ width: "100%" }}

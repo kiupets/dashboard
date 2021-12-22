@@ -79,31 +79,35 @@ export const info = [
 export const index = [
   { id: 1, name: "ID" },
   {
-    name: "Concentrador",
+    name: "Ciudad",
   },
   {
-    name: "Elec. General",
+    name: "Tipología",
   },
   {
-    name: "Gas/Gasoil",
+    name: "Comunicación",
   },
   {
-    name: "Aigua",
+    name: "Pasarela clima",
   },
   {
-    name: "PV",
+    name: "Alumbrado",
   },
   {
-    name: "Temp ACS",
+    name: "Clima",
   },
   {
-    name: "PV",
+    name: "Banderola",
   },
   {
-    name: "Temp ACS",
+    name: "Rótulo",
   },
   {
-    name: "PV",
+    name: "Consumo Clima",
+  },
+  // CONFORT
+  {
+    name: "Confort",
   },
   {
     name: "#Anomalias",
