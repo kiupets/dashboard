@@ -1,5 +1,12 @@
+@font-face {
+  font-family: "SFProText-Regular";
+  src: local("SFProText-Regular"),
+    url("../../../fonts/SFProText-Regular.ttf") format("truetype");
+}
+
+
 .toast {
-  font-family: SF Pro Text;
+  font-family: 'SFProText-Regular';
   font-style: normal;
   font-weight: 600;
   font-size: 12px;

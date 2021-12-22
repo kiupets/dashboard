@@ -1,6 +1,6 @@
 export const info = [
   {
-    dot: "red",
+    dot: "yellow-43",
     id: 127,
     tipo: "completa",
     ciudad: "Madrid",
@@ -9,7 +9,7 @@ export const info = [
     color: "#F25A5A",
   },
   {
-    dot: "yellow",
+    dot: "rojo-16",
     id: 245,
     tipo: "simple",
     ciudad: "Sevilla",
@@ -18,7 +18,7 @@ export const info = [
     color: "#00CC87",
   },
   {
-    dot: "red",
+    dot: "rojo-13",
     id: 356,
     tipo: "simple",
     ciudad: "Barcelona",
@@ -26,7 +26,7 @@ export const info = [
     name: "CAP Puif Roig",
   },
   {
-    dot: "green",
+    dot: "medio-green3",
     id: 465,
     tipo: "completa",
     ciudad: "Sevilla",
@@ -35,7 +35,7 @@ export const info = [
     color: "#F25A5A",
   },
   {
-    dot: "red",
+    dot: "light-green",
     id: 5,
     tipo: "completa",
     ciudad: "Barcelona",
@@ -44,7 +44,7 @@ export const info = [
     color: "#F25A5A",
   },
   {
-    dot: "yellow",
+    dot: "rojo-10",
     id: 654,
     tipo: "completa",
     ciudad: "Madrid",
@@ -52,7 +52,7 @@ export const info = [
     name: "OT Berga",
   },
   {
-    dot: "red",
+    dot: "yellow",
     id: 745,
     tipo: "completa",
     ciudad: "Madrid",
@@ -60,7 +60,7 @@ export const info = [
     name: "Escola Quatre Vents",
   },
   {
-    dot: "red",
+    dot: "yellow-green",
     id: 845,
     tipo: "completa",
     ciudad: "Barcelona",
@@ -69,7 +69,7 @@ export const info = [
   },
   {
     id: 842,
-    dot: "red",
+    dot: "medio-green2",
     tipo: "completa",
     ciudad: "Madrid",
     index: "Prueba",
@@ -77,7 +77,7 @@ export const info = [
   },
   {
     id: 842,
-    dot: "red",
+    dot: "medio-green",
     tipo: "simple",
     ciudad: "Sevilla",
     index: "Prueba",
@@ -85,7 +85,7 @@ export const info = [
   },
   {
     id: 842,
-    dot: "red",
+    dot: "dark-green",
     tipo: "simple",
     ciudad: "Sevilla",
     index: "Prueba",
@@ -169,9 +169,10 @@ export const info2 = [
     dot1: "rojo-claro-inferior",
     dot2: "rojo-inferior",
     dot3: "rojo-medio-inferior",
-    dot4: "#FCF3F3",
-    dot5: "#F7A8A8",
-    dot6: "#F87A79",
+    dot4: "dark-green",
+    dot5: "light-green",
+    dot6: "green",
+    dot7: "orange",
     id: 227,
     number: '%14',
     number2: 36,

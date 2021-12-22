@@ -5,11 +5,10 @@
 }
 
 .icon-number {
-  width: 123px;
   height: 83px;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
+  justify-content: center;
 }
 
 .icon1 {
