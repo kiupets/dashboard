@@ -1,5 +1,7 @@
 import React from 'react'
-import { Toast } from '../Toast/Toast'
+import { Dots } from '@dexma/ui-components';
+import { Toast ,Span} from '../'
+
 import './ToastContainer.css'
 
 
@@ -13,8 +15,15 @@ export const ToastContainer = () => {
     ];
     const labels = fakeData.map(l => <Toast key={l.id} label={l.label} />)
     return (
-        <div className='toast-container'>
-            {labels}
+        <div className='toast-widget'>
+            <div className='toast-container'>
+                {labels}
+                <div className='dots'>
+                    <Dots steps={3} size={2} />
+                </div>
+            </div>
+            <Span label="Tags seleccionadas" className='toast-span' />
         </div>
+        
     )
 }
