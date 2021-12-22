@@ -10,5 +10,6 @@
   font-family: 'SFProText-Regular', sans-serif;
   /* border-collapse: collapse; */
   width: 100%;
+  border-collapse: collapse;
   /* height: 800px; */
 }
