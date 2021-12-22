@@ -5,6 +5,9 @@
   text-align: center;
   width: 120px;
 }
+.table-index{
+  padding-left: 16px;
+}
 
 .orange {
   background-color: #fdc56a !important;

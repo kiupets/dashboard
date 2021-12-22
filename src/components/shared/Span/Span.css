@@ -20,6 +20,7 @@
   text-align: center;
   align-items: center;
   justify-content: center;
+  padding-left: 16px;
 }
 .index {
   display: flex;
@@ -48,4 +49,4 @@ font-weight: 700;
     font-family: 'SFPRODISPLAYREGULAR';
     font-size: 16px;
     padding: 5px;
-  }
+}
