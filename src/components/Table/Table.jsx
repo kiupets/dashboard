@@ -7,7 +7,7 @@ export const Table = () => {
   return (
     <table className="table">
       <thead>
-        <TableRow style={{width:"100%"}}>
+        <TableRow style={{ width: "100%" }}>
           {index.map((header, i) => (
             <TableHeader key={i}>
               <Span
@@ -78,11 +78,11 @@ export const Table = () => {
               <Span
                 className="span-info"
                 style={{ fontWeight: "bold" }}
-                label={item.id} 
+                label={item.id}
               />
             </TableData>
             <TableData>
-              <Span className="span-info" label={`${item.id}€`}/>
+              <Span className="span-info" label={`${item.id}€`} />
             </TableData>
           </TableRow>
         ))}
@@ -96,64 +96,64 @@ export const Table = () => {
                 label={item.name}
               />
             </TableData>
-            <TableData
+            {/* <TableData
               className="table-index"
               style={{ width: "100%" }}
             ></TableData>
             <TableData
               className="table-index"
               style={{ width: "100%" }}
-            ></TableData>
-            <TableData className="table-index" style={{ width: "100%" }}>
+            ></TableData> */}
+            <TableData className={item?.dot1 ? item.dot1 : ""} style={{ width: "100%", }}>
               <Span
                 className=""
                 style={{ cursor: "pointer" }}
                 label={item.number}
               />
             </TableData>
-            <TableData className={item?.dot ? item.dot : ""}>
+            <TableData className={item?.dot2 ? item.dot2 : ""}>
               <Span
                 className="span-info"
                 style={{ fontWeight: "bold" }}
                 label={item.id}
               />
             </TableData>
-            <TableData className={item?.dot ? item.dot1 : ""} style={{width:"100%"}}>
+            <TableData className={item?.dot1 ? item.dot1 : ""} style={{ width: "100%" }}>
 
               <Span
                 style={{ cursor: "pointer" }}
                 label={item.number}
               />
             </TableData>
-            <TableData className={item?.dot ? item.dot : ""}>
+            <TableData className={item?.dot3 ? item.dot3 : ""}>
               <Span
                 className="span-info"
                 style={{ fontWeight: "bold" }}
                 label={item.number}
               />
             </TableData>
-            <TableData className="table-index" style={{ width: "100%" }}>
+            <TableData className={item?.dot1 ? item.dot1 : ""} style={{ width: "100%" }}>
               <Span
                 className=""
                 style={{ cursor: "pointer" }}
                 label={item.number4}
               />
             </TableData>
-            <TableData className={item?.dot ? item.dot : ""}>
+            <TableData className={item?.dot3 ? item.dot3 : ""}>
               <Span
                 className="span-info"
                 style={{ fontWeight: "bold" }}
                 label={item.id}
               />
             </TableData>
-            <TableData className="table-index" style={{ width: "100%" }}>
+            <TableData className={item?.dot3 ? item.dot3 : ""} style={{ width: "100%" }}>
               <Span
                 className=""
                 style={{ cursor: "pointer" }}
                 label={item.number4}
               />
             </TableData>
-            <TableData className={item?.dot1 ? item.dot1 : ""}>
+            <TableData className={item?.dot2 ? item.dot2 : ""}>
               <Span
                 className="span-info"
                 style={{ fontWeight: "bold" }}
