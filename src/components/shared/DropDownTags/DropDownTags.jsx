@@ -13,7 +13,6 @@ export const DropDownTags = ({ tags }) => {
         return (
             <DropDownItems key={toast.id}>
                 <div>{toast.label}</div>
-                {/* <Tag className='tag'>{toast.label}</Tag> */}
             </DropDownItems>
         )
     })

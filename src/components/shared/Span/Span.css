@@ -13,7 +13,6 @@
   align-items: flex-start;
   text-align: center;
   width: 108px;
-  /* margin-left: 16px; */
 
 }
 
@@ -32,7 +31,6 @@
 }
 
 .index {
-  /* width: 108px; */
   display: flex;
   align-items: center;
   justify-content: flex-start;
