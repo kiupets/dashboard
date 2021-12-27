@@ -1,8 +1,6 @@
 .dropdown {
     position: absolute;
-    top: 125px;
-    /* left: -100px; */
-    /* left: 200px; */
+    top: 130px;
     width: 100;
     transform: translateX(-50%);
     background-color: #fff;
@@ -10,7 +8,16 @@
     border-radius: 5px;
     padding: 1rem;
     overflow: hidden;
-    color: #414541;
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+.tag {
+    color: #414541 !important;
+    background: #F7F9FA !important;
+    border: 1px solid #DEE0E2 !important;
+    box-sizing: border-box;
+    border-radius: 4px;
     font-family: 'SFProText-Regular';
     font-weight: 600;
     font-size: 16px;

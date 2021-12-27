@@ -3,10 +3,6 @@ import './App.css';
 import Dashboard from './pages/Dashboard/Dashboard';
 import { api } from './api/api';
 
-
-
-
-
 function App() {
   const [state, setState] = useState('')
   useEffect(() => {
@@ -14,7 +10,7 @@ function App() {
 
       try {
         const response = await api.getSessionInfo()
-        console.log(response)
+
         setState(response.data)
       } catch (error) {
         console.log(error)
@@ -26,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* <ToastDropDown /> */}
+
       <Dashboard />
     </div>
   );

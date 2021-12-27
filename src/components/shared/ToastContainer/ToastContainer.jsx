@@ -19,13 +19,20 @@ export const ToastContainer = () => {
         { id: 8, label: 'carlos' },
         { id: 9, label: 'cesar' },
         { id: 10, label: 'gonzalo' },
+        { id: 11, label: 'juan' },
+        { id: 12, label: 'maria' },
+        { id: 13, label: 'pedro' },
+        { id: 14, label: 'pablo' },
+        { id: 15, label: 'raul' },
+        { id: 16, label: 'santiago' },
+        { id: 17, label: 'tomas' },
 
     ])
 
     const [toggle, setToggle] = useState(false)
     const widgetLabels = toasts.slice(0, 5).map(toast => <Toast key={toast.id} label={toast.label} />)
-    const dropdownLabels = toasts.slice(5, 10)
-    // const labels = toasts.map(l => <Toast key={l.id} label={l.label} />)
+    const dropdownLabels = toasts.slice(5)
+
 
     return (
         <div className='toast-widget'>
