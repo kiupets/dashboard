@@ -1,6 +1,14 @@
+@font-face {
+    font-family: "SFProText-Regular";
+    src: local("SFProText-Regular"),
+        url("../../../fonts/SFProText-Regular.ttf") format("truetype");
+}
+
+
+
 .dropdown {
     position: absolute;
-    top: 125px;
+    top: 130px;
     /* left: -100px; */
     /* left: 200px; */
     width: 100;
@@ -8,16 +16,15 @@
     background-color: #fff;
     border: 1px solid rgb(43, 30, 30);
     border-radius: 5px;
-    padding: 1rem;
+    padding: 0.5rem;
     overflow: hidden;
 }
 
 .tag {
     color: #414541 !important;
-
     background: #F7F9FA !important;
-    /* Gray / gray 200 */
     border: 1px solid #DEE0E2 !important;
     box-sizing: border-box;
     border-radius: 4px;
+    font-family: 'SFProText-Regular';
 }
