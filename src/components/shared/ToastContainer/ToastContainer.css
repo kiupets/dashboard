@@ -16,8 +16,8 @@
 .dots {
     border: 1px solid #C9CCCF;
     display: flex;
-    flex-direction: row;
-    align-items:center;
+    /* flex-direction: column; */
+    align-items: center;
     height: 24px;
     width: 24px;
     border-radius: 50%;
