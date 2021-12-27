@@ -4,13 +4,15 @@
     url("../../../fonts/SFProText-Regular.ttf") format("truetype");
 }
 
-
 .toast {
+  padding: 1px 1px;
+}
+
+.toast div{
   font-family: 'SFProText-Regular';
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
-  padding: 2px 2px;
 }
 
 .tag {
