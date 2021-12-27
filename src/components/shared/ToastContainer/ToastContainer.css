@@ -1,8 +1,26 @@
 .toast-container {
-    width: 200px;
-    height: 140px;
+    max-width: 150px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.toast-widget {
+    display: flex;
+    flex-direction: column;
+}
+
+.dots {
+    border: 1px solid #C9CCCF;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding-left: 5px;
 }

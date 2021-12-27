@@ -6,4 +6,5 @@ export {TableHeader} from "./TableHeader/TableHeader";
 export {TableRow} from "./TableRow/TableRow";
 export {WidgetLabels} from "./WidgetLabels/WidgetLabels";
 export {ToastContainer} from "./ToastContainer/ToastContainer";
+export {Toast} from "./Toast/Toast";
 

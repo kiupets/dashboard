@@ -1,26 +1,24 @@
 @font-face {
-  font-family: "SFPRODISPLAYREGULAR";
-  src: local("SFPRODISPLAYREGULAR"),
-    url("../../../fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
-  font-weight: bold;
+  font-family: "SFProText-Regular";
+  src: local("SFProText-Regular"),
+    url("../../../fonts/SFProText-Regular.ttf") format("truetype");
 }
 
 .icon-number {
-  width: 123px;
   height: 83px;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
+  justify-content: center;
 }
 
 .icon1 {
-  font-family: 'SFPRODISPLAYREGULAR';
+  font-family: 'SFProText-Regular';
   color: #080808;
 
 }
 
 .icon2 {
-  font-family: 'SFPRODISPLAYREGULAR';
+  font-family: 'SFProText-Regular';
   font-size: larger;
   color: #0a0a0a;
 }
