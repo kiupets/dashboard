@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { DropDownItems } from '../DropDownItems/DropDownItems'
-import { Tag } from '@dexma/ui-components'
 import './DropDownTags.css'
 
 
