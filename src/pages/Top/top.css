@@ -3,7 +3,8 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: auto;
+    /* margin: auto; */
+    margin-top: 70px;
     /* background-color: #e4dede; */
     padding: 0px 0px 10px 0;
     border-radius: 8px;
