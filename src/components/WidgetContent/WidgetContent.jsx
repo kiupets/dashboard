@@ -5,9 +5,6 @@ import axios from 'axios'
 import { widgetData } from './WidgetData';
 
 
-
-
-
 export const WidgetContent = () => {
   const [loc, setLoc] = useState(126)
   const [storeCom, setStoreCom] = useState(43)
