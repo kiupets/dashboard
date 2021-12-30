@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Dots } from "@dexma/ui-components";
-import { Toast, Span } from "../";
+import { Toast, Span, Loading } from "../";
 import { DropDownTags } from "../DropDownTags/DropDownTags";
 
 import "./ToastContainer.css";
@@ -18,7 +18,6 @@ export const ToastContainer = () => {
     .map((toast) => <Toast key={toast.id} label={toast.label} />);
   const dropdownLabels = toasts.slice(5);
 
-  console.log(widgetLabels);
   const handleToggle = (e) => {
     e.stopPropagation();
     setToggle(!toggle);
@@ -36,8 +35,8 @@ export const ToastContainer = () => {
   return (
     <div className="toast-widget">
       <div className="toast-container">
-        {widgetLabels.length > 0 && widgetLabels}
-        {widgetLabels.length > 5 && (
+        {widgetLabels.length > 0 ? widgetLabels : <Loading />}
+        {widgetLabels.length >= 5 && (
           <div onClick={handleToggle}>
             <div className="dots">
               <Dots steps={3} size={2} />
@@ -50,7 +49,7 @@ export const ToastContainer = () => {
       {widgetLabels.length > 0 ? (
         <Span label="Tags seleccionadas" className="toast-span" />
       ) : (
-        <Span  label="Tags no seleccionadas" className="toast-span" />
+        <Span label="Tags no seleccionadas" className="toast-span" />
       )}
     </div>
   );

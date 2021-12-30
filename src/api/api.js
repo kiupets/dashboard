@@ -5,7 +5,7 @@ const dep_id = urlParams.get("dep_id");
 const session_id = urlParams.get("session_id");
 const headers = {
   "X-Dep-ID": dep_id,
-  "X-Session-ID": session_id,
+  "X-Session-ID": "5679",
 };
 const get = async (path) => {
   const response = await axios.get(`${baseUrl}/${path}/`, { headers });
