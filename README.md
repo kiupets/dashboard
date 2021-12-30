@@ -2,7 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+
+## Step to run project 
+
+In the project directory, you need to change the .env file to the base url you are going to use.
+
+`REACT_APP_API_BASEURL= API-URL`
+
+## Scripts
 
 In the project directory, you can run:
 
