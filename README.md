@@ -9,6 +9,10 @@ In the project directory, you need to change the .env file to the base url you a
 
 `REACT_APP_API_BASEURL= API-URL`
 
+development example:
+
+`REACT_APP_BACKEND_URL= http://ec2-34-220-38-243.us-west-2.compute.amazonaws.com:8000/dashboard`
+
 ## Scripts
 
 In the project directory, you can run:
