@@ -33,14 +33,32 @@ export const ToastContainer = () => {
     const widgetLabels = toasts.slice(0, 5).map(toast => <Toast key={toast.id} label={toast.label} />)
     const dropdownLabels = toasts.slice(5)
 
+    const handleToggle = (e) => {
+        e.stopPropagation()
+        setToggle(!toggle)
+    }
+
+    useEffect(() => {
+        window.addEventListener('click', (e) => {
+            e.target.classList.contains('dots') || e.target.classList.contains('StyledDots__StyledDot-hRONXn gFhRXc')
+                ? setToggle(!toggle)
+                : setToggle(false)
+        })
+    }, [])
+
 
     return (
         <div className='toast-widget'>
             <div className='toast-container'>
                 {widgetLabels}
-                <div onClick={() => setToggle(!toggle)} className='dots'>
-                    {toggle ? <DropDownTags tags={dropdownLabels} /> : null}
-                    <Dots steps={3} size={2} />
+                <div onClick={handleToggle}>
+                    <div className='dots'>
+                        <Dots
+                            steps={3}
+                            size={2}
+                        />
+                        {toggle ? <DropDownTags tags={dropdownLabels} /> : null}
+                    </div>
                 </div>
             </div>
             <Span label="Tags seleccionadas" className='toast-span' />
