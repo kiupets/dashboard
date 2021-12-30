@@ -10,6 +10,16 @@
     overflow: hidden;
     animation: growDown 300ms ease-in-out forwards;
     transform-origin: top center;
+
+}
+
+.dropdown:hover .dropdown_menu--animated {
+    animation: growDown 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+.dropdown_menu-6 {
+    animation: growDown 300ms ease-in-out forwards
 }
 
 .tag {
