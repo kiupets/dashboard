@@ -21,8 +21,8 @@ export const Table = () => {
           </TableRow>
         </thead>
         <tbody>
-          {info.map((item) => (
-            <TableRow key={item.id}>
+          {info.map((item,i) => (
+            <TableRow key={i}>
               <TableData className="table-index">
                 <Span
                   className="span-index"
@@ -93,8 +93,8 @@ export const Table = () => {
             </TableRow>
           ))}
 
-          {info2.map((item) => (
-            <TableRow className="table-row">
+          {info2.map((item,i) => (
+            <TableRow  key={i}className="table-row">
               <TableData
                 colspan="3"
                 className="table-index2"

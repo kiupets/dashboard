@@ -1,68 +1,57 @@
-import React, { useState, useEffect } from 'react'
-import { Dots } from '@dexma/ui-components';
-import { Toast, Span } from '../'
-import { DropDownTags } from '../DropDownTags/DropDownTags'
+import React, { useState, useEffect } from "react";
+import { Dots } from "@dexma/ui-components";
+import { Toast, Span } from "../";
+import { DropDownTags } from "../DropDownTags/DropDownTags";
 
-
-import './ToastContainer.css'
-
+import "./ToastContainer.css";
+import { api } from "../../../api/api";
 
 export const ToastContainer = () => {
-    const [toasts, setToast] = useState([
-        { id: 1, label: 'Text load' },
-        { id: 2, label: 'Text 3' },
-        { id: 3, label: 'Text toast3' },
-        { id: 4, label: 'Tx' },
-        { id: 5, label: 'Text' },
-        { id: 6, label: 'Text toast5' },
-        { id: 7, label: 'Text-typo' },
-        { id: 8, label: 'carlos' },
-        { id: 9, label: 'cesar' },
-        { id: 10, label: 'gonzalo' },
-        { id: 11, label: 'juan' },
-        { id: 12, label: 'maria' },
-        { id: 13, label: 'pedro' },
-        { id: 14, label: 'pablo' },
-        { id: 15, label: 'raul' },
-        { id: 16, label: 'santiago' },
-        { id: 17, label: 'tomas' },
+  const [toasts, setToast] = useState([]);
 
-    ])
+  useEffect(() => {
+    api.getLocationTags().then(({ location_tags }) => setToast(location_tags));
+  }, []);
+  const [toggle, setToggle] = useState(false);
+  const widgetLabels = toasts
+    .slice(0, 5)
+    .map((toast) => <Toast key={toast.id} label={toast.label} />);
+  const dropdownLabels = toasts.slice(5);
 
-    const [toggle, setToggle] = useState(false)
-    const widgetLabels = toasts.slice(0, 5).map(toast => <Toast key={toast.id} label={toast.label} />)
-    const dropdownLabels = toasts.slice(5)
+  console.log(widgetLabels);
+  const handleToggle = (e) => {
+    e.stopPropagation();
+    setToggle(!toggle);
+  };
 
-    const handleToggle = (e) => {
-        e.stopPropagation()
-        setToggle(!toggle)
-    }
+  useEffect(() => {
+    window.addEventListener("click", (e) => {
+      e.target.classList.contains("dots") ||
+      e.target.classList.contains("StyledDots__StyledDot-hRONXn gFhRXc")
+        ? setToggle(!toggle)
+        : setToggle(false);
+    });
+  }, [toggle]);
 
-    useEffect(() => {
-        window.addEventListener('click', (e) => {
-            e.target.classList.contains('dots') || e.target.classList.contains('StyledDots__StyledDot-hRONXn gFhRXc')
-                ? setToggle(!toggle)
-                : setToggle(false)
-        })
-    }, [])
-
-
-    return (
-        <div className='toast-widget'>
-            <div className='toast-container'>
-                {widgetLabels}
-                <div onClick={handleToggle}>
-                    <div className='dots'>
-                        <Dots
-                            steps={3}
-                            size={2}
-                        />
-                        {toggle ? <DropDownTags tags={dropdownLabels} /> : null}
-                    </div>
-                </div>
+  return (
+    <div className="toast-widget">
+      <div className="toast-container">
+        {widgetLabels.length > 0 && widgetLabels}
+        {widgetLabels.length > 5 && (
+          <div onClick={handleToggle}>
+            <div className="dots">
+              <Dots steps={3} size={2} />
+              {toggle ? <DropDownTags tags={dropdownLabels} /> : null}
             </div>
-            <Span label="Tags seleccionadas" className='toast-span' />
-        </div>
+          </div>
+        )}{" "}
+      </div>
 
-    )
-}
+      {widgetLabels.length > 0 ? (
+        <Span label="Tags seleccionadas" className="toast-span" />
+      ) : (
+        <Span  label="Tags no seleccionadas" className="toast-span" />
+      )}
+    </div>
+  );
+};
