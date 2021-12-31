@@ -1,12 +1,19 @@
+
 import React from 'react'
 import { Table } from '../../components/'
 import { Span } from '../../components/shared'
+import {Dots} from '@dexma/ui-components'
 import './Central.css'
 
 const Central = () => {
     return (
         <div className='central'>
-            <Span style={{ fontSize: "18px", fontWeight: "bold", alignSelf: 'start', marginLeft: "20px", marginTop: '50px' }} label='Estados por store' />
+            <div className='header-table'>
+                <Span style={{ fontSize: "18px", fontWeight: "bold"}} label='Estados por store' />
+                <div className='dots'>
+                    <Dots steps={3} size={2}/>
+                </div>
+            </div>
             <Table />
         </div>
     )
