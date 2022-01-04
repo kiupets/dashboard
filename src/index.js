@@ -1,16 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './fonts/SFProText-Regular.ttf';
-import './index.css';
-import App from './App';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import "./fonts/SFProText-Regular.ttf";
+import "./index.css";
+import App from "./App";
 
 ReactDOM.render(
-
   <React.StrictMode>
     <App />
   </React.StrictMode>,
 
-
-  document.getElementById('root')
+  document.getElementById("root")
 );
