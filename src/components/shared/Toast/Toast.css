@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "SFProText-Regular";
+  src: local("SFProText-Regular"),
+    url("../../../fonts/SFProText-Regular.ttf") format("truetype");
+}
+
+.toast {
+  padding: 1px 1px;
+}
+
+.toast div{
+  font-family: 'SFProText-Regular';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.tag {
+  color: #414541 !important;
+
+  background: #F7F9FA !important;
+  border: 1px solid #DEE0E2 !important;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
