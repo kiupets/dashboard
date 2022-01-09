@@ -17,7 +17,7 @@ export const widgetData = [
     {
         number: "16",
         clase: 'icon1',
-        string: 'Stores en comunicación',
+        string: 'Stores sin comunicación',
         icon: <Dot style={{ backgroundColor: "red" }} />
     },
 

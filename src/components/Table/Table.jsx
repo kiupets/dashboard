@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { index, info, info2 } from "../../data";
 import { Span, TableRow, Dot, TableData, TableHeader } from "../shared/";
 import "./Table.css";
+// import data from './data.json'
+const sortBy = (key) => (a, b) => {
+  if (a[key] < b[key]) return -1;
+  if (a[key] > b[key]) return 1;
+  return 0;
+};
+// console.log(data.sort(sortBy("Ciudad")))
 
 export const Table = () => {
+  // const
   return (
     <div style={{ padding: '30px' }}>
 
@@ -13,6 +21,7 @@ export const Table = () => {
             {index.map((header, i) => (
               <TableHeader key={i}>
                 <Span
+                  onClick={() => { console.log('clicked') }}
                   className={`span-header ${header?.id ? "index" : ""}`}
                   label={header.name}
                 />
@@ -21,7 +30,7 @@ export const Table = () => {
           </TableRow>
         </thead>
         <tbody>
-          {info.map((item,i) => (
+          {info.map((item, i) => (
             <TableRow key={i}>
               <TableData className="table-index">
                 <Span
@@ -93,8 +102,8 @@ export const Table = () => {
             </TableRow>
           ))}
 
-          {info2.map((item,i) => (
-            <TableRow  key={i}className="table-row">
+          {info2.map((item, i) => (
+            <TableRow key={i} className="table-row">
               <TableData
                 colspan="3"
                 className="table-index2"
