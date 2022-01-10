@@ -15,8 +15,7 @@ const Central = () => {
                     <Dots steps={3} size={2} />
                 </div>
             </div>
-            <TableJson />
-            {/* <Table /> */}
+            <Table />
         </div>
     )
 }

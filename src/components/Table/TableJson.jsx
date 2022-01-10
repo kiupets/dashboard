@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { index, info, info2 } from "../../data";
-import { headers, orderBy } from './utils'
+import { info2 } from "../../data";
+
 import { Span, TableRow, Dot, TableData, TableHeader } from "../shared";
 import * as R from 'ramda'
 import data from '../../data.json'

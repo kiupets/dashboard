@@ -1,104 +1,140 @@
 import React, { useState } from "react";
-import { index, info, info2 } from "../../data";
-import { Span, TableRow, Dot, TableData, TableHeader } from "../shared/";
+import { info2 } from "../../data";
+import { Span, TableRow, Dot, TableData, TableHeader } from "../shared";
+import * as R from 'ramda'
+import data from '../../data.json'
 import "./Table.css";
-// import data from './data.json'
-const sortBy = (key) => (a, b) => {
-  if (a[key] < b[key]) return -1;
-  if (a[key] > b[key]) return 1;
-  return 0;
-};
-// console.log(data.sort(sortBy("Ciudad")))
 
 export const Table = () => {
-  // const
+
+  const [dataSort, setDataSort] = useState(data)
+  const orderData = (e) => {
+    const key = e.target.innerText
+    setDataSort(R.sortBy(R.prop(key), dataSort))
+  }
+
   return (
     <div style={{ padding: '30px' }}>
 
       <table className="table">
         <thead>
           <TableRow style={{ width: "100%" }}>
-            {index.map((header, i) => (
+            {Object.keys(data[0]).map((header, i) => (
               <TableHeader key={i}>
                 <Span
-                  onClick={() => { console.log('clicked') }}
-                  className={`span-header ${header?.id ? "index" : ""}`}
-                  label={header.name}
+                  style={{ cursor: "pointer" }}
+                  onClick={orderData}
+                  className={`span-header ${header === 'ID' ? "index" : ""}`}
+                  label={header}
                 />
               </TableHeader>
             ))}
           </TableRow>
         </thead>
         <tbody>
-          {info.map((item, i) => (
+          {dataSort.map((item, i) => (
             <TableRow key={i}>
               <TableData className="table-index">
                 <Span
                   className="span-index"
                   style={{ textDecoration: "underline", cursor: "pointer", width: '90px' }}
-                  label={item.id}
+                  label={item['ID']}
                 />
               </TableData>
+
               <TableData className="table-index">
-                <Span className="span-info" label={item.ciudad} />
-              </TableData>
-              <TableData>
-                <Span className="span-info" label={item.tipo} />
-              </TableData>
-              <TableData>
-                {item.color ? (
-                  <Dot style={{ backgroundColor: `${item.color}` }} />
-                ) : (
-                  <Span className="span-no-data" label="-" />
-                )}
-              </TableData>
-              <TableData>
-                {item.color ? (
-                  <Dot style={{ backgroundColor: `${item.color}` }} />
-                ) : (
-                  <Span className="span-no-data" label="-" />
-                )}
-              </TableData>
-              <TableData>
-                {item.color ? (
-                  <Dot style={{ backgroundColor: `${item.color}` }} />
-                ) : (
-                  <Span className="span-no-data" label="-" />
-                )}
+                <Span className="span-info" label={item.Ciudad} />
               </TableData>
 
               <TableData>
-                <Dot style={{ backgroundColor: "#00CC87" }} />
-              </TableData>
-              <TableData>
-                <Dot style={{ backgroundColor: "#00CC87" }} />
-              </TableData>
-              <TableData>
-                <Dot style={{ backgroundColor: "#00CC87" }} />
-              </TableData>
-              <TableData>
-                <Dot style={{ backgroundColor: "#00CC87" }} />
-              </TableData>
-              <TableData>
-                <Dot style={{ backgroundColor: "#00CC87" }} />
+                <Span className="span-info" label={item.Tipologia} />
               </TableData>
 
               <TableData>
-                <Span className="span-info" label={item.id} />
+                {item['Comunicación'] !== '-' ? (
+                  <Dot style={{ backgroundColor: `${item['Comunicación']}` }} />
+                ) : (
+                  <Span className="span-no-data" label="-" />
+                )}
               </TableData>
               <TableData>
-                <Span className="span-info" label={`${item.id}€`} />
-              </TableData>
-              <TableData className={item?.dot ? item.dot : ""}>
-                <Span
-                  className="span-info"
-                  style={{ fontWeight: "bold" }}
-                  label={item.id}
-                />
+                {item['Pasarela Clima'] !== '-' ? (
+                  <Dot style={{ backgroundColor: `${item['Pasarela Clima']}` }} />
+                ) : (
+                  <Span className="span-no-data" label="-" />
+                )}
               </TableData>
               <TableData>
-                <Span className="span-info" label={`${item.id}€`} />
+                {item.Alumbrado !== '-' ? (
+                  <Dot style={{ backgroundColor: `${item.Alumbrado}` }} />
+                ) : (
+                  <Span className="span-no-data" label="-" />
+                )}
               </TableData>
+              <TableData>
+                {item.Clima !== '-' ? (
+                  <Dot style={{ backgroundColor: `${item.Clima}` }} />
+                ) : (
+                  <Span className="span-no-data" label="-" />
+                )}
+              </TableData>
+              <TableData>
+                {item.Banderola !== '-' ? (
+                  <Dot style={{ backgroundColor: `${item.Banderola}` }} />
+                ) : (
+                  <Span className="span-no-data" label="-" />
+                )}
+              </TableData>
+              <TableData>
+                {item.Rotulos !== '-' ? (
+                  <Dot style={{ backgroundColor: `${item.Rotulos}` }} />
+                ) : (
+                  <Span className="span-no-data" label="-" />
+                )}
+              </TableData>
+              <TableData>
+                {item['Consumo Clima'] !== '-' ? (
+                  <Dot style={{ backgroundColor: `${item['Consumo Clima']}` }} />
+                ) : (
+                  <Span className="span-no-data" label={item['Consumo Clima']} />
+                )}
+              </TableData>
+              <TableData>
+                {item.Confort !== '-' ? (
+                  <Dot style={{ backgroundColor: `${item.Confort}` }} />
+                ) : (
+                  <Span className="span-no-data" label={item.Confort} />
+                )}
+              </TableData>
+              <TableData>
+                {item['Anomalías'] !== '-' ?
+                  <Span className="span-info" label={item['Anomalías']} />
+                  : <Span className="span-no-data" label={item['Anomalías']} />
+                }
+              </TableData>
+              <TableData>
+                {item['Impacto Anomalías'] !== '-' ?
+                  <Span className="span-info" label={item['Impacto Anomalías']} />
+                  : <Span className="span-no-data" label={item['Impacto Anomalías']} />
+                }
+              </TableData>
+              <TableData>
+                {item['Detected Score'] !== '-' ?
+                  <Span
+                    style={{ fontWeight: "bold" }}
+                    className="span-info" label={item['Detected Score']} />
+                  : <Span className="span-no-data" label={item['Detected Score']} />
+                }
+              </TableData>
+              <TableData>
+                {item['Ahorro Potencial'] !== '-' ?
+                  <Span className="span-info" label={item['Ahorro Potencial']} />
+                  : <Span className="span-no-data" label={item['Ahorro Potencial']} />
+                }
+              </TableData>
+
+
+
             </TableRow>
           ))}
 
