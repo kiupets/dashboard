@@ -5,6 +5,12 @@ import { widgetData } from "./WidgetData";
 import { api } from "../../api/api";
 import data from '../../data.json'
 
+
+const keys = data.map(item => Object.keys(item)).map(item => item[0])
+const items = data.map((item, i) => item[keys[i]])
+
+
+
 export const WidgetContent = () => {
   const [locations, setLocations] = useState("");
   const [loading, setloading] = useState(true);
@@ -12,7 +18,7 @@ export const WidgetContent = () => {
   const [storeInci, setStoreInci] = useState(32);
   const [incidencias, setIncidencias] = useState(0);
 
-  const stSinComTotal = data.map(item => item['Comunicación'] === 'red' ? 1 : 0).reduce((a, b) => a + b, 0);
+  const stSinComTotal = items.map(item => item['Comunicación'] ? 0 : 1).reduce((a, b) => a + b, 0);
 
 
   useEffect(() => {
