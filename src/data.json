@@ -1,78 +1,97 @@
 [
     {
         "236541": {
-            "id": "852",
-            "ciudad": "Rusia",
-            "Tipologia": "Completa",
-            "Comunicación": "-",
-            "Pasarela Clima": true,
-            "Alumbrado": true,
-            "Clima": false,
-            "Banderola": true,
-            "Rotulos": false,
-            "Consumo Clima": true,
-            "Confort": "-",
-            "Anomalías": 1,
-            "Impacto Anomalías": "120€",
-            "Detected Score": 41,
-            "Ahorro Potencial": "1,528€"
-        }
-    },
-    {
-        "236541": {
-            "id": "852",
-            "ciudad": "Rusia",
-            "Tipologia": "Simple",
-            "Comunicación": "-",
-            "Pasarela Clima": "-",
-            "Alumbrado": true,
-            "Clima": false,
-            "Banderola": true,
-            "Rotulos": false,
-            "Consumo Clima": true,
-            "Confort": true,
-            "Anomalías": 2,
-            "Impacto Anomalías": "120€",
-            "Detected Score": 42,
-            "Ahorro Potencial": "1,528€"
-        }
-    },
-    {
-        "236541": {
-            "id": "852",
-            "ciudad": "Rusia",
-            "Tipologia": "Completa",
-            "Comunicación": false,
-            "Pasarela Clima": false,
-            "Alumbrado": true,
-            "Clima": false,
-            "Banderola": "-",
-            "Rotulos": false,
-            "Consumo Clima": true,
-            "Confort": "-",
-            "Anomalías": 3,
-            "Impacto Anomalías": "120€",
-            "Detected Score": 43,
-            "Ahorro Potencial": "1,528€"
-        }
-    },
-    {
-        "236541": {
-            "id": "852",
-            "ciudad": "Rusia",
+            "ID": "2",
+            "Ciudad": "Barcelona",
             "Tipologia": "Simple",
             "Comunicación": true,
-            "Pasarela Clima": false,
-            "Alumbrado": false,
-            "Clima": true,
+            "Pasarela_Clima": true,
+            "Alumbrado": true,
+            "Clima": false,
             "Banderola": false,
             "Rotulos": false,
-            "Consumo Clima": true,
+            "Consumo_Clima": false,
             "Confort": "-",
-            "Anomalías": 4,
-            "Impacto Anomalías": "120€",
-            "Detected Score": 44,
-            "Ahorro Potencial": "1,528€"
+            "Anomalías": 1,
+            "Impacto_Anomalías": "2€",
+            "Detected_Score": 41,
+            "Ahorro_Potencial": "1,521€"
+        }
+    },
+    {
+        "236541": {
+            "ID": "3",
+            "Ciudad": "Rusia",
+            "Tipologia": "Simple",
+            "Comunicación": false,
+            "Pasarela_Clima": true,
+            "Alumbrado": false,
+            "Clima": true,
+            "Banderola": true,
+            "Rotulos": false,
+            "Consumo_Clima": true,
+            "Confort": "-",
+            "Anomalías": 2,
+            "Impacto_Anomalías": "3€",
+            "Detected_Score": 42,
+            "Ahorro_Potencial": "1,522€"
+        }
+    },
+    {
+        "236541": {
+            "ID": "100",
+            "Ciudad": "Sevilla",
+            "Tipologia": "Simple",
+            "Comunicación": "-",
+            "Pasarela_Clima": true,
+            "Alumbrado": true,
+            "Clima": false,
+            "Banderola": true,
+            "Rotulos": false,
+            "Consumo_Clima": true,
+            "Confort": "-",
+            "Anomalías": 3,
+            "Impacto_Anomalías": "100€",
+            "Detected_Score": 43,
+            "Ahorro_Potencial": "1,523€"
+        }
+    },
+    {
+        "236541": {
+            "ID": "834",
+            "Ciudad": "Sevilla",
+            "Tipologia": "Simple",
+            "Comunicación": "-",
+            "Pasarela_Clima": true,
+            "Alumbrado": true,
+            "Clima": false,
+            "Banderola": true,
+            "Rotulos": false,
+            "Consumo_Clima": true,
+            "Confort": "-",
+            "Anomalías": 3,
+            "Impacto_Anomalías": "834€",
+            "Detected_Score": 43,
+            "Ahorro_Potencial": "1,523€"
+        }
+    },
+    {
+        "236541": {
+            "ID": "567",
+            "Ciudad": "Sevilla",
+            "Tipologia": "Simple",
+            "Comunicación": "-",
+            "Pasarela_Clima": true,
+            "Alumbrado": true,
+            "Clima": false,
+            "Banderola": true,
+            "Rotulos": false,
+            "Consumo_Clima": true,
+            "Confort": "-",
+            "Anomalías": 10000,
+            "Impacto_Anomalías": "567€",
+            "Detected_Score": 43,
+            "Ahorro_Potencial": "1,523€"
         }
     }
 ]

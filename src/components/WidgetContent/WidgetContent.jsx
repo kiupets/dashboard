@@ -9,8 +9,6 @@ import data from '../../data.json'
 const keys = data.map(item => Object.keys(item)).map(item => item[0])
 const items = data.map((item, i) => item[keys[i]])
 
-
-
 export const WidgetContent = () => {
   const [locations, setLocations] = useState("");
   const [loading, setloading] = useState(true);
@@ -26,7 +24,6 @@ export const WidgetContent = () => {
       .getLocations()
       .then(({ total_locations }) => setLocations(total_locations)).then(setloading(false))
   }, []);
-
 
   useEffect(() => {
     setStoreCom(stSinComTotal)
