@@ -22,6 +22,7 @@ export const Table = () => {
           ? setDataSort(R.sort(R.ascend(R.prop(key)), dataSort))
           : setDataSort(R.sort(R.ascend(R.prop(key)), dataSort))
   }
+
   return (
     <div style={{ padding: '30px' }}>
       <table className="table">
