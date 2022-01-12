@@ -1,7 +1,7 @@
 [
     {
         "236541": {
-            "ID": "2",
+            "ID": 3,
             "Ciudad": "Barcelona",
             "Tipologia": "Simple",
             "Comunicación": true,
@@ -13,14 +13,14 @@
             "Consumo_Clima": false,
             "Confort": "-",
             "Anomalías": 1,
-            "Impacto_Anomalías": "2€",
+            "Impacto_Anomalías": 4,
             "Detected_Score": 41,
-            "Ahorro_Potencial": "1,521€"
+            "Ahorro_Potencial": 123
         }
     },
     {
         "236541": {
-            "ID": "3",
+            "ID": 2,
             "Ciudad": "Rusia",
             "Tipologia": "Simple",
             "Comunicación": false,
@@ -32,14 +32,33 @@
             "Consumo_Clima": true,
             "Confort": "-",
             "Anomalías": 2,
-            "Impacto_Anomalías": "3€",
+            "Impacto_Anomalías": 2,
             "Detected_Score": 42,
-            "Ahorro_Potencial": "1,522€"
+            "Ahorro_Potencial": 6
         }
     },
     {
         "236541": {
-            "ID": "100",
+            "ID": 1,
+            "Ciudad": "Sevilla",
+            "Tipologia": "Completa",
+            "Comunicación": "-",
+            "Pasarela_Clima": true,
+            "Alumbrado": true,
+            "Clima": false,
+            "Banderola": true,
+            "Rotulos": false,
+            "Consumo_Clima": true,
+            "Confort": "-",
+            "Anomalías": 3,
+            "Impacto_Anomalías": 32232,
+            "Detected_Score": 43,
+            "Ahorro_Potencial": 231
+        }
+    },
+    {
+        "236541": {
+            "ID": 122,
             "Ciudad": "Sevilla",
             "Tipologia": "Simple",
             "Comunicación": "-",
@@ -51,35 +70,16 @@
             "Consumo_Clima": true,
             "Confort": "-",
             "Anomalías": 3,
-            "Impacto_Anomalías": "100€",
+            "Impacto_Anomalías": 212,
             "Detected_Score": 43,
-            "Ahorro_Potencial": "1,523€"
+            "Ahorro_Potencial": 212121
         }
     },
     {
         "236541": {
-            "ID": "834",
+            "ID": 121,
             "Ciudad": "Sevilla",
-            "Tipologia": "Simple",
-            "Comunicación": "-",
-            "Pasarela_Clima": true,
-            "Alumbrado": true,
-            "Clima": false,
-            "Banderola": true,
-            "Rotulos": false,
-            "Consumo_Clima": true,
-            "Confort": "-",
-            "Anomalías": 3,
-            "Impacto_Anomalías": "834€",
-            "Detected_Score": 43,
-            "Ahorro_Potencial": "1,523€"
-        }
-    },
-    {
-        "236541": {
-            "ID": "567",
-            "Ciudad": "Sevilla",
-            "Tipologia": "Simple",
+            "Tipologia": "Completa",
             "Comunicación": "-",
             "Pasarela_Clima": true,
             "Alumbrado": true,
@@ -89,9 +89,9 @@
             "Consumo_Clima": true,
             "Confort": "-",
             "Anomalías": 10000,
-            "Impacto_Anomalías": "567€",
+            "Impacto_Anomalías": 11,
             "Detected_Score": 43,
-            "Ahorro_Potencial": "1,523€"
+            "Ahorro_Potencial": 2121
         }
     }
 ]

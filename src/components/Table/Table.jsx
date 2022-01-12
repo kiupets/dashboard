@@ -16,9 +16,12 @@ export const Table = () => {
     const key = e.target.innerText
     key.includes(' ')
       ? setDataSort(R.sort(R.descend(R.prop(key.replace(' ', '_'))), dataSort))
-      : setDataSort(R.sort(R.descend(R.prop(key)), dataSort))
+      : key === 'Ciudad'
+        ? setDataSort(R.sort(R.ascend(R.prop(key)), dataSort))
+        : key === 'Tipologia'
+          ? setDataSort(R.sort(R.ascend(R.prop(key)), dataSort))
+          : setDataSort(R.sort(R.descend(R.prop(key)), dataSort))
   }
-
   return (
     <div style={{ padding: '30px' }}>
       <table className="table">
