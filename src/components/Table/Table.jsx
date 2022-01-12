@@ -139,9 +139,7 @@ export const Table = () => {
               </TableData>
             </TableRow>
           ))}
-
         </tbody>
-
         <tbody></tbody>
       </table>
     </div>
