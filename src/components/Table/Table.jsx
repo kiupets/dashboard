@@ -20,7 +20,7 @@ export const Table = () => {
         ? setDataSort(R.sort(R.ascend(R.prop(key)), dataSort))
         : key === 'Tipologia'
           ? setDataSort(R.sort(R.ascend(R.prop(key)), dataSort))
-          : setDataSort(R.sort(R.descend(R.prop(key)), dataSort))
+          : setDataSort(R.sort(R.ascend(R.prop(key)), dataSort))
   }
   return (
     <div style={{ padding: '30px' }}>
