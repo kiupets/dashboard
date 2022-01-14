@@ -14,7 +14,7 @@
             "Confort": "-",
             "Anomalías": 1,
             "Impacto_Anomalías": 4,
-            "Detected_Score": 41,
+            "Detected_Score": 80,
             "Ahorro_Potencial": 123
         }
     },
@@ -52,7 +52,7 @@
             "Confort": "-",
             "Anomalías": 3,
             "Impacto_Anomalías": 32232,
-            "Detected_Score": 43,
+            "Detected_Score": 32,
             "Ahorro_Potencial": 231
         }
     },
@@ -71,7 +71,7 @@
             "Confort": "-",
             "Anomalías": 3,
             "Impacto_Anomalías": 212,
-            "Detected_Score": 43,
+            "Detected_Score": 12,
             "Ahorro_Potencial": 212121
         }
     },
@@ -90,7 +90,7 @@
             "Confort": "-",
             "Anomalías": 10000,
             "Impacto_Anomalías": 11,
-            "Detected_Score": 43,
+            "Detected_Score": 98,
             "Ahorro_Potencial": 2121
         }
     }

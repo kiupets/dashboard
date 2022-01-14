@@ -14,13 +14,10 @@ export const Table = () => {
 
   const orderData = (e) => {
     const key = e.target.innerText
-    key.includes(' ')
-      ? setDataSort(R.sort(R.descend(R.prop(key.replace(' ', '_'))), dataSort))
-      : key === 'Ciudad'
-        ? setDataSort(R.sort(R.ascend(R.prop(key)), dataSort))
-        : key === 'Tipologia'
-          ? setDataSort(R.sort(R.ascend(R.prop(key)), dataSort))
-          : setDataSort(R.sort(R.ascend(R.prop(key)), dataSort))
+    key === 'Ciudad' || key === 'Tipologia'
+      ? setDataSort(R.sort(R.ascend(R.prop(key)), dataSort))
+      : setDataSort(R.sort(R.descend(R.prop(key.replace(' ', '_'))), dataSort))
+
   }
 
   return (
@@ -88,7 +85,7 @@ export const Table = () => {
                 )}
               </TableData>
               <TableData>
-                {item['Banderola'] !== '-' ? (
+                {item.Banderola !== '-' ? (
                   <Dot style={{ backgroundColor: `${item.Banderola ? '#00CC87' : '#F25A5A'}` }} />
                 ) : (
                   <Span className="span-no-data" label="-" />
@@ -122,13 +119,13 @@ export const Table = () => {
                 }
               </TableData>
               <TableData>
-                {item['Impacto_Anomalías'] !== '-' ?
+                {item.Impacto_Anomalías !== '-' ?
                   <Span className="span-info" label={item.Impacto_Anomalías} />
                   : <Span className="span-no-data" label={item.Impacto_Anomalías} />
                 }
               </TableData>
               <TableData>
-                {item['Detected Score'] !== '-' ?
+                {item.Detected_Score !== '-' ?
                   <Span
                     style={{ fontWeight: "bold" }}
                     className="span-info" label={item.Detected_Score} />
