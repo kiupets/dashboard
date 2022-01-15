@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Span, TableRow, Dot, TableData, TableHeader } from "../shared";
-import * as R from 'ramda'
-import data from '../../data.json'
+import React from "react";
+import { index, info } from "../../data";
+import { Span, TableRow, Dot, TableData, TableHeader } from "../shared/";
+import { BottomTable } from "../BottomTable/BottomTable";
 import "./Table.css";
 
 const keys = data.map(item => Object.keys(item)).map(item => item[0])
@@ -125,23 +125,12 @@ export const Table = () => {
                 }
               </TableData>
               <TableData>
-                {item.Detected_Score !== '-' ?
-                  <Span
-                    style={{ fontWeight: "bold" }}
-                    className="span-info" label={item.Detected_Score} />
-                  : <Span className="span-no-data" label={item.Detected_Score} />
-                }
-              </TableData>
-              <TableData>
-                {item.Ahorro_Potencial !== '-' ?
-                  <Span className="span-info" label={item.Ahorro_Potencial} />
-                  : <Span className="span-no-data" label={item['Ahorro_Potencial']} />
-                }
+                <Span className="span-info" label={`${item.id}€`} />
               </TableData>
             </TableRow>
           ))}
+          <BottomTable />
         </tbody>
-        <tbody></tbody>
       </table>
     </div>
 
