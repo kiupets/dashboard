@@ -8,11 +8,12 @@ const headers = {
   "X-Session-ID": session_id,
 };
 const get = async (path) => {
-  const response = await axios.get(`${baseUrl}/${path}/`, { headers });
+  const response = await axios.get(`${baseUrl}${path}/`, { headers });
   const { data } = await response;
   return data;
 };
 export const api = {
   getLocationTags: () => get("locations_tags"),
   getLocations: () => get("locations"),
+  getDataTable: () => get("table")
 };
