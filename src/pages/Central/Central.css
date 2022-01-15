@@ -1,11 +1,11 @@
 .central {
-
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
   background-color: white;
+  height: 650px;
   /* padding-top: 30px; */
   box-shadow: 0px 0px 1px rgba(64, 65, 69, 0.08),
     0px 1px 3px rgba(64, 65, 69, 0.1);
