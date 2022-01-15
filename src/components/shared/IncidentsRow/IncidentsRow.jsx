@@ -24,42 +24,34 @@ export const IncidentsRow = ({
           />
         </TableData>
         <TableData
-          style={{ width: "100%" }}
         >
           {comunication.false}
         </TableData>
         <TableData
-          style={{ width: "100%" }}
         >
           <p>{pasarelaClima.false}</p>
         </TableData>
         <TableData
-          style={{ width: "100%" }}
         >
           <p>{alumbrado.false}</p>
         </TableData>
-        <TableData
-          style={{ width: "100%" }}
+        <TableData         
         >
           <p>{clima.false}</p>
         </TableData>
-        <TableData
-        style={{ width: "100%" }}
+        <TableData       
         >
           <p>{banderola.false}</p>
         </TableData>
         <TableData
-          style={{ width: "100%" }}
         >
           <p>{rotulo.false}</p>
         </TableData>
-        <TableData
-          style={{ width: "100%" }}
+        <TableData         
         >
           <p>{consumoClima.false}</p>
         </TableData>
-        <TableData
-          style={{ width: "100%" }}
+        <TableData         
         >
           <p>{confort.false}</p>
         </TableData>
@@ -67,51 +59,42 @@ export const IncidentsRow = ({
       <TableRow className="table-row">
         <TableData
           colspan="3"
-          className="table-index2"
-          style={{ width: "100%" }}
+          className="table-index2"         
         >
           <Span
             style={{ cursor: "pointer" }}
             label="Total Store"
           />
         </TableData>
-        <TableData
-          style={{ width: "100%" }}
+        <TableData         
         >
           <p>{comunication.true}</p>
         </TableData>
-        <TableData
-          style={{ width: "100%" }}
+        <TableData         
         >
           <p>{pasarelaClima.true}</p>
         </TableData>
-        <TableData
-          style={{ width: "100%" }}
+        <TableData         
         >
           <p>{alumbrado.true}</p>
         </TableData>
-        <TableData
-          style={{ width: "100%" }}
+        <TableData         
         >
           <p>{clima.true}</p>
         </TableData>
-        <TableData
-          style={{ width: "100%" }}
+        <TableData         
         >
           <p>{banderola.true}</p>
         </TableData>
-        <TableData
-          style={{ width: "100%" }}
+        <TableData         
         >
           <p>{rotulo.true}</p>
         </TableData>
-        <TableData
-          style={{ width: "100%" }}
+        <TableData         
         >
           <p>{consumoClima.true}</p>
         </TableData>
-        <TableData
-          style={{ width: "100%" }}
+        <TableData         
         >
           <p>{confort.true}</p>
         </TableData>
@@ -128,41 +111,43 @@ export const IncidentsRow = ({
           />
         </TableData>
         <TableData
-          style={{ width: "100%" }}
+        style={{  backgroundColor:`rgba(255, 99, 71, ${comunication?.percent})`,color:"black"}}
         >
           <p>{comunication.percent}%</p>
         </TableData>
         <TableData
-          style={{ width: "100%" }}
+        style={{  backgroundColor:`rgba(255, 99, 71, ${pasarelaClima?.percent})`,color:"black"}}
         >
           <p>{pasarelaClima.percent}%</p>
         </TableData>
         <TableData
-          style={{ width: "100%" }}
+        style={{  backgroundColor:`rgba(255, 99, 71, ${alumbrado?.percent})`,color:"black"}}
         >
           <p>{alumbrado.percent}%</p>
         </TableData>
         <TableData
-          style={{ width: "100%" }}
+        style={{  backgroundColor:`rgba(255, 99, 71, ${clima?.percent})`,color:"black"}}
         >
           <p>{clima.percent}%</p>
         </TableData>
         <TableData
-          style={{ width: "100%" }}
+        style={{  backgroundColor:`rgba(255, 99, 71, ${banderola?.percent})`,color:"black"}}
         >
           <p>{banderola.percent}%</p>
         </TableData>
         <TableData
-          style={{ width: "100%" }}
+        style={{  backgroundColor:`rgba(255, 99, 71, ${rotulo?.percent})`,color:"black"}}
         >
           <p>{rotulo.percent}%</p>
         </TableData>
         <TableData
-          style={{ width: "100%" }}
+        style={{  backgroundColor:`rgba(255, 99, 71, ${consumoClima?.percent})`,color:"black"}}
         >
           <p>{consumoClima.percent}%</p>
         </TableData>
-        <TableData>
+        <TableData
+        style={{  backgroundColor:`rgba(255, 99, 71, ${confort?.percent})`,color:"black"}}
+        >
           <p>{confort.percent}%</p>
         </TableData>
       </TableRow>
