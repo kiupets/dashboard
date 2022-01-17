@@ -1,24 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Span, TableRow, Dot, TableData, TableHeader } from "../shared/";
 import { BottomTable } from "../BottomTable/BottomTable";
 import * as R from "ramda";
+import { colorScale } from '../../utils/colorScale';
 import "./Table.css";
 
-export const Table = ({data}) => {
-  const [keys, setKeys] = useState([]);
-  const [items, setItems] = useState([]);
-  const [headers, setHeaders] = useState([]);
+export const Table = ({ data }) => {
 
+  const keysData = R.keys(data[0]);
+  const headers = R.map(R.replace(/_/g, " "), keysData);
+  const items = R.values(data);
 
-if(data.length !==0){
-
-  setKeys(data?.map((item) => Object?.keys(item))?.map((item) => item[0]));
-  setItems(data?.map((item, i) => item[keys[i]]));
-  setHeaders(Object?.keys(items[0]).map((header) =>
-    header?.replace("_", " ")
-  ));
-}
- 
   const [dataSort, setDataSort] = useState(items);
 
   const orderData = (e) => {
@@ -72,9 +64,8 @@ if(data.length !==0){
                 {item.Comunicación !== "-" ? (
                   <Dot
                     style={{
-                      backgroundColor: `${
-                        item.Comunicación ? "#00CC87" : "#F25A5A"
-                      }`,
+                      backgroundColor: `${item.Comunicación ? "#00CC87" : "#F25A5A"
+                        }`,
                     }}
                   />
                 ) : (
@@ -87,9 +78,8 @@ if(data.length !==0){
                 ) : (
                   <Dot
                     style={{
-                      backgroundColor: `${
-                        item.Pasarela_Clima ? "#00CC87" : "#F25A5A"
-                      }`,
+                      backgroundColor: `${item.Pasarela_Clima ? "#00CC87" : "#F25A5A"
+                        }`,
                     }}
                   />
                 )}
@@ -98,9 +88,8 @@ if(data.length !==0){
                 {item["Alumbrado"] !== "-" ? (
                   <Dot
                     style={{
-                      backgroundColor: `${
-                        item.Alumbrado ? "#00CC87" : "#F25A5A"
-                      }`,
+                      backgroundColor: `${item.Alumbrado ? "#00CC87" : "#F25A5A"
+                        }`,
                     }}
                   />
                 ) : (
@@ -122,9 +111,8 @@ if(data.length !==0){
                 {item.Banderola !== "-" ? (
                   <Dot
                     style={{
-                      backgroundColor: `${
-                        item.Banderola ? "#00CC87" : "#F25A5A"
-                      }`,
+                      backgroundColor: `${item.Banderola ? "#00CC87" : "#F25A5A"
+                        }`,
                     }}
                   />
                 ) : (
@@ -135,9 +123,8 @@ if(data.length !==0){
                 {item.Rotulos !== "-" ? (
                   <Dot
                     style={{
-                      backgroundColor: `${
-                        item.Rotulos ? "#00CC87" : "#F25A5A"
-                      }`,
+                      backgroundColor: `${item.Rotulos ? "#00CC87" : "#F25A5A"
+                        }`,
                     }}
                   />
                 ) : (
@@ -148,9 +135,8 @@ if(data.length !==0){
                 {item.Consumo_Clima !== "-" ? (
                   <Dot
                     style={{
-                      backgroundColor: `${
-                        item.Consumo_Clima ? "#00CC87" : "#F25A5A"
-                      }`,
+                      backgroundColor: `${item.Consumo_Clima ? "#00CC87" : "#F25A5A"
+                        }`,
                     }}
                   />
                 ) : (
@@ -161,9 +147,8 @@ if(data.length !==0){
                 {item["Confort"] !== "-" ? (
                   <Dot
                     style={{
-                      backgroundColor: `${
-                        item.Confort ? "#00CC87" : "#F25A5A"
-                      }`,
+                      backgroundColor: `${item.Confort ? "#00CC87" : "#F25A5A"
+                        }`,
                     }}
                   />
                 ) : (
@@ -179,7 +164,7 @@ if(data.length !==0){
               </TableData>
               <TableData>
                 {item.Impacto_Anomalías !== "-" ? (
-                  <Span className="span-info" label={item.Impacto_Anomalías} />
+                  <Span className="span-info" label={`${item.Impacto_Anomalías}€`} />
                 ) : (
                   <Span
                     className="span-no-data"
@@ -187,14 +172,31 @@ if(data.length !==0){
                   />
                 )}
               </TableData>
+              <TableData style={{ backgroundColor: colorScale(item.Detected_Score) }}>
+                {item.Detected_Score !== "-" ? (
+                  <Span className="span-info" label={item.Detected_Score} />
+                ) : (
+                  <Span
+                    className="span-no-data"
+                    label={item.Detected_Score}
+                  />
+                )}
+              </TableData>
               <TableData>
-                <Span className="span-info" label={`${item.id}€`} />
+                {item.Ahorro_Potencial !== "-" ? (
+                  <Span className="span-info" label={`${item.Ahorro_Potencial}€`} />
+                ) : (
+                  <Span
+                    className="span-no-data"
+                    label={`${item.Ahorro_Potencial}`}
+                  />
+                )}
               </TableData>
             </TableRow>
           ))}
-          <BottomTable />
+          {/* <BottomTable /> */}
         </tbody>
       </table>
-    </div>
+    </div >
   );
 };

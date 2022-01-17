@@ -5,12 +5,14 @@ import { Span } from "../../components/shared";
 import { Dots } from "@dexma/ui-components";
 import { api } from "../../api/api";
 import "./Central.css";
-
+import data from '../../data.json'
 const Central = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    api.getDataTable().then((res) => setData(res));
-  }, []);
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //   api.getDataTable().then((res) => setData(res));
+  // }, []);
+
+
   return (
     <div className="central">
       {data.length !== 0 ? (
@@ -25,7 +27,7 @@ const Central = () => {
             </div>
           </div>
           <Table data={data} />
-          <BottomTable tableInfo={data} />
+          {/* <BottomTable tableInfo={data} /> */}
         </>
       ) : (
         <Dots steps={3} size={10} />
