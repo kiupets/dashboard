@@ -72,6 +72,7 @@ export const Table = ({ data }) => {
                   <Span className="span-no-data" label="-" />
                 )}
               </TableData>
+
               <TableData>
                 {item.Tipologia !== "Completa" ? (
                   <Span className="span-no-data" label="-" />
@@ -84,6 +85,7 @@ export const Table = ({ data }) => {
                   />
                 )}
               </TableData>
+
               <TableData>
                 {item["Alumbrado"] !== "-" ? (
                   <Dot
@@ -96,6 +98,7 @@ export const Table = ({ data }) => {
                   <Span className="span-no-data" label="-" />
                 )}
               </TableData>
+
               <TableData>
                 {item["Clima"] !== "-" ? (
                   <Dot
@@ -107,6 +110,7 @@ export const Table = ({ data }) => {
                   <Span className="span-no-data" label="-" />
                 )}
               </TableData>
+
               <TableData>
                 {item.Banderola !== "-" ? (
                   <Dot
@@ -119,6 +123,7 @@ export const Table = ({ data }) => {
                   <Span className="span-no-data" label="-" />
                 )}
               </TableData>
+
               <TableData>
                 {item.Rotulos !== "-" ? (
                   <Dot
@@ -131,6 +136,7 @@ export const Table = ({ data }) => {
                   <Span className="span-no-data" label="-" />
                 )}
               </TableData>
+
               <TableData>
                 {item.Consumo_Clima !== "-" ? (
                   <Dot
@@ -143,6 +149,7 @@ export const Table = ({ data }) => {
                   <Span className="span-no-data" label={item.Consumo_Clima} />
                 )}
               </TableData>
+
               <TableData>
                 {item["Confort"] !== "-" ? (
                   <Dot
@@ -155,6 +162,7 @@ export const Table = ({ data }) => {
                   <Span className="span-no-data" label={item.Confort} />
                 )}
               </TableData>
+
               <TableData>
                 {item["Anomalías"] !== "-" ? (
                   <Span className="span-info" label={item.Anomalías} />
@@ -162,6 +170,7 @@ export const Table = ({ data }) => {
                   <Span className="span-no-data" label={item.Anomalías} />
                 )}
               </TableData>
+
               <TableData>
                 {item.Impacto_Anomalías !== "-" ? (
                   <Span className="span-info" label={`${item.Impacto_Anomalías}€`} />
@@ -172,6 +181,7 @@ export const Table = ({ data }) => {
                   />
                 )}
               </TableData>
+
               <TableData style={{ backgroundColor: colorScale(item.Detected_Score) }}>
                 {item.Detected_Score !== "-" ? (
                   <Span className="span-info" label={item.Detected_Score} />
@@ -182,6 +192,7 @@ export const Table = ({ data }) => {
                   />
                 )}
               </TableData>
+
               <TableData>
                 {item.Ahorro_Potencial !== "-" ? (
                   <Span className="span-info" label={`${item.Ahorro_Potencial}€`} />
@@ -192,6 +203,7 @@ export const Table = ({ data }) => {
                   />
                 )}
               </TableData>
+
             </TableRow>
           ))}
           {/* <BottomTable /> */}
