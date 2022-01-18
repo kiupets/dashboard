@@ -8,7 +8,8 @@ import "./Table.css";
 export const Table = ({ data }) => {
 
   const keysData = R.keys(data[0]);
-  const headers = R.map(R.replace(/_/g, " "), keysData);
+  // const headers = R.map(R.replace(/_/g, " "), keysData);
+  const headers = ['ID', 'Ciudad', 'Tipologia', 'Comunicación', 'Pasarela Clima', 'Alumbrado', 'Clima', 'Banderola', 'Rotulos', 'Consumo Clima', 'Confort', 'Anomalías', 'Impacto Anomalías', 'Detected Score', 'Ahorro Potencial'];
   const items = R.values(data);
 
   const [dataSort, setDataSort] = useState(items);
@@ -21,26 +22,12 @@ export const Table = ({ data }) => {
   };
 
   return (
-    <div style={{ padding: "30px" }}>
+    <div style={{ padding: "30px", }}>
       <table className="table">
-        <thead>
-          <TableRow style={{ width: "100%" }}>
-            {headers?.map((header, i) => (
-              <TableHeader key={i}>
-                <Span
-                  style={{ cursor: "pointer" }}
-                  onClick={orderData}
-                  className={`span-header ${header === "ID" ? "index" : ""}`}
-                  label={header}
-                />
-              </TableHeader>
-            ))}
-          </TableRow>
-        </thead>
         <tbody>
           {dataSort.map((item, i) => (
             <TableRow key={i}>
-              <TableData className="table-index">
+              <TableData className="">
                 <Span
                   className="span-index"
                   style={{
@@ -52,7 +39,7 @@ export const Table = ({ data }) => {
                 />
               </TableData>
 
-              <TableData className="table-index">
+              <TableData className="">
                 <Span className="span-info" label={item.Ciudad} />
               </TableData>
 
@@ -182,7 +169,7 @@ export const Table = ({ data }) => {
                 )}
               </TableData>
 
-              <TableData style={{ backgroundColor: colorScale(item.Detected_Score) }}>
+              <TableData style={{ backgroundColor: colorScale(item.Detected_Score), border: '1px solid white' }}>
                 {item.Detected_Score !== "-" ? (
                   <Span className="span-info" label={item.Detected_Score} />
                 ) : (
@@ -206,7 +193,7 @@ export const Table = ({ data }) => {
 
             </TableRow>
           ))}
-          {/* <BottomTable /> */}
+          {/* <BottomTable tableInfo={data} /> */}
         </tbody>
       </table>
     </div >

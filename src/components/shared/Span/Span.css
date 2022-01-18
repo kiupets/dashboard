@@ -12,12 +12,12 @@
   display: flex;
   align-items: flex-start;
   text-align: center;
-  width: 108px;
+  /* width: 108px; */
 
 }
 
 .span-header {
-  /* width: 108px; */
+  /* width: 90px; */
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -31,18 +31,18 @@
 }
 
 .index {
-  /* width: 108px; */
+  width: 108px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 16px;
+  /* margin-left: 16px; */
 }
 
 .span-info {
   font-family: SFProText-Regular;
   font-style: normal;
   font-weight: normal;
-  width: 108px;
+  /* width: 108px; */
   color: #141518;
   display: flex;
   align-items: center;

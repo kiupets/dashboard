@@ -4,7 +4,7 @@
   height: 42px;
   text-align: center;
   width: 108px !important;
-  
+
 }
 
 .table-index {
@@ -14,11 +14,11 @@
 .table-index2 {
   padding-left: 16px;
   text-align: start;
-  max-width: 108px;
+  /* max-width: 108px; */
 }
 
 
-.rojo-claro-inferior {
+/* .rojo-claro-inferior {
   background-color: #FFF5F5 !important;
   font-weight: bold;
   opacity: 0.9;
@@ -120,4 +120,4 @@
   font-weight: bold;
   opacity: 0.9;
 
-}
+} */
