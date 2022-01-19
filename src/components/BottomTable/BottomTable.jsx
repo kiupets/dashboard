@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Dots } from "@dexma/ui-components";
 import { IncidentsRow } from "../shared/IncidentsRow/IncidentsRow";
 import { sortInfo } from "../../utils/sortInfo";
+import './BottomTable.css'
 
 export const BottomTable = ({ tableInfo }) => {
   const [data, setData] = useState([]);
@@ -21,7 +22,7 @@ export const BottomTable = ({ tableInfo }) => {
   }, [tableInfo,incidentsArray]);
 
   return (
-    <>
+    <div className='bottom-table'>
       <IncidentsRow
         className="total-incidencias"
         comunication={
@@ -43,6 +44,6 @@ export const BottomTable = ({ tableInfo }) => {
         }
         confort={data.Confort ? data.Confort : <Dots steps={3} size={2} />}
       />
-    </>
+    </div>
   );
 };

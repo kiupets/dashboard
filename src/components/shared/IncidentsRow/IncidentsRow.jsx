@@ -1,156 +1,143 @@
 import React from "react";
 import { TableRow, TableData, Span } from "..";
 
-export const IncidentsRow = ({ 
-    comunication,
-    pasarelaClima,
-    alumbrado,
-    clima,
-    banderola,
-    rotulo,
-    consumoClima,
-    confort
-  }) => {
-    return (
+export const IncidentsRow = ({
+  comunication,
+  pasarelaClima,
+  alumbrado,
+  clima,
+  banderola,
+  rotulo,
+  consumoClima,
+  confort,
+}) => {
+  return (
     <>
-      <TableRow className="table-row">
-        <TableData
-          colspan="3"
-          className="table-index2"
-        >
-          <Span
-            style={{ cursor: "pointer" }}
-            label="Total Incidencias"
-          />
+      <TableRow style={{ width: "100%" }}>
+        <TableData className="table-index2">
+          <Span style={{ cursor: "pointer" }} label="Total Incidencias" />
         </TableData>
-        <TableData
-        >
-          {comunication.false}
+        <TableData className="table-cell">{comunication.false}</TableData>
+        <TableData className="table-cell">
+          <Span className='span-info' label={pasarelaClima.false}/>
         </TableData>
-        <TableData
-        >
-          <p>{pasarelaClima.false}</p>
+        <TableData >
+          <Span label={alumbrado.false} className='span-info'/>
         </TableData>
-        <TableData
-        >
-          <p>{alumbrado.false}</p>
+        <TableData className="table-cell">
+          <Span label={clima.false} className='span-info'/>
         </TableData>
-        <TableData         
-        >
-          <p>{clima.false}</p>
+        <TableData className="table-cell">
+          <Span label={banderola.false} className='span-info'/>
         </TableData>
-        <TableData       
-        >
-          <p>{banderola.false}</p>
+        <TableData className="table-cell">
+          <Span label={rotulo.false} className='span-info'/>
         </TableData>
-        <TableData
-        >
-          <p>{rotulo.false}</p>
+        <TableData className="table-cell">
+          <Span className="span-info" label={consumoClima.false} />
         </TableData>
-        <TableData         
-        >
-          <p>{consumoClima.false}</p>
-        </TableData>
-        <TableData         
-        >
-          <p>{confort.false}</p>
+        <TableData className="table-cell">
+          <Span label={confort.false} className='span-info'/>
         </TableData>
       </TableRow>
       <TableRow className="table-row">
-        <TableData
-          colspan="3"
-          className="table-index2"         
-        >
-          <Span
-            style={{ cursor: "pointer" }}
-            label="Total Store"
-          />
+        <TableData className="table-index2">
+          <Span style={{ cursor: "pointer" }} label="Total Store" />
         </TableData>
-        <TableData         
-        >
-          <p>{comunication.true}</p>
+        <TableData className="table-cell">
+          <Span label={comunication.true}className='span-info'/>
         </TableData>
-        <TableData         
-        >
-          <p>{pasarelaClima.true}</p>
+        <TableData className="table-cell">
+          <Span label={pasarelaClima.true} className='span-info'/>
         </TableData>
-        <TableData         
-        >
-          <p>{alumbrado.true}</p>
+        <TableData className="table-cell">
+          <Span label={alumbrado.true} className='span-info'/>
         </TableData>
-        <TableData         
-        >
-          <p>{clima.true}</p>
+        <TableData className="table-cell">
+          <Span label={clima.true} className='span-info'/>
         </TableData>
-        <TableData         
-        >
-          <p>{banderola.true}</p>
+        <TableData className="table-cell">
+          <Span label={banderola.true} className='span-info'/>
         </TableData>
-        <TableData         
-        >
-          <p>{rotulo.true}</p>
+        <TableData className="table-cell">
+          <Span label={rotulo.true} className='span-info'/>
         </TableData>
-        <TableData         
-        >
-          <p>{consumoClima.true}</p>
+        <TableData className="table-cell">
+          <Span label={consumoClima.true}className='span-info'/>
         </TableData>
-        <TableData         
-        >
-          <p>{confort.true}</p>
+        <TableData className="table-cell">
+          <Span label={confort.true} className='span-info'/>
         </TableData>
       </TableRow>
       <TableRow className="table-row">
-        <TableData
-          colspan="3"
-          className="table-index2"
-          style={{ width: "100%"}}
-        >
-          <Span
-            style={{ cursor: "pointer" }}
-            label="% Incidents"
-          />
+        <TableData className="table-index2" style={{ width: "100%" }}>
+          <Span style={{ cursor: "pointer" }} label="% Incidents" />
         </TableData>
         <TableData
-        style={{  backgroundColor:`rgba(255, 99, 71, ${comunication?.percent})`,color:"black"}}
+          style={{
+            backgroundColor: `rgba(255, 99, 71, ${comunication?.percent})`,
+            color: "black",
+          }}
         >
-          <p>{comunication.percent}%</p>
+          <Span label={`${comunication.percent}%`} className='span-info'/>
         </TableData>
         <TableData
-        style={{  backgroundColor:`rgba(255, 99, 71, ${pasarelaClima?.percent})`,color:"black"}}
+          style={{
+            backgroundColor: `rgba(255, 99, 71, ${pasarelaClima?.percent})`,
+            color: "black",
+          }}
         >
-          <p>{pasarelaClima.percent}%</p>
+          <Span label={`${pasarelaClima.percent}%`} className='span-info'/>
         </TableData>
         <TableData
-        style={{  backgroundColor:`rgba(255, 99, 71, ${alumbrado?.percent})`,color:"black"}}
+          style={{
+            backgroundColor: `rgba(255, 99, 71, ${alumbrado?.percent})`,
+            color: "black",
+          }}
         >
-          <p>{alumbrado.percent}%</p>
+          <Span label={`${alumbrado.percent}%`} className='span-info'/>
         </TableData>
         <TableData
-        style={{  backgroundColor:`rgba(255, 99, 71, ${clima?.percent})`,color:"black"}}
+          style={{
+            backgroundColor: `rgba(255, 99, 71, ${clima?.percent})`,
+            color: "black",
+          }}
         >
-          <p>{clima.percent}%</p>
+          <Span label={`${clima.percent}%`} className='span-info'/>
         </TableData>
         <TableData
-        style={{  backgroundColor:`rgba(255, 99, 71, ${banderola?.percent})`,color:"black"}}
+          style={{
+            backgroundColor: `rgba(255, 99, 71, ${banderola?.percent})`,
+            color: "black",
+          }}
         >
-          <p>{banderola.percent}%</p>
+          <Span label={`${banderola.percent}%`} className='span-info'/>
         </TableData>
         <TableData
-        style={{  backgroundColor:`rgba(255, 99, 71, ${rotulo?.percent})`,color:"black"}}
+          style={{
+            backgroundColor: `rgba(255, 99, 71, ${rotulo?.percent})`,
+            color: "black",
+          }}
         >
-          <p>{rotulo.percent}%</p>
+          <Span label={`${rotulo.percent}%`} className='span-info'/>
         </TableData>
         <TableData
-        style={{  backgroundColor:`rgba(255, 99, 71, ${consumoClima?.percent})`,color:"black"}}
+          style={{
+            backgroundColor: `rgba(255, 99, 71, ${consumoClima?.percent})`,
+            color: "black",
+          }}
         >
-          <p>{consumoClima.percent}%</p>
+          <Span label={`${consumoClima.percent}%`} className='span-info'/>
         </TableData>
         <TableData
-        style={{  backgroundColor:`rgba(255, 99, 71, ${confort?.percent})`,color:"black"}}
+          style={{
+            backgroundColor: `rgba(255, 99, 71, ${confort?.percent})`,
+            color: "black",
+          }}
         >
-          <p>{confort.percent}%</p>
+          <Span label={`${confort.percent}%`} className='span-info'/>
         </TableData>
       </TableRow>
     </>
-  )
-}
+  );
+};

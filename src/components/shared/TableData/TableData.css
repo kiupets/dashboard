@@ -1,123 +1,27 @@
 .table-data {
   font-size: 14px;
   line-height: 20px;
-  height: 42px;
+  height: 43px;
   text-align: center;
-  width: 108px !important;
-  
+  border:1px solid white;
+width: 100px;
 }
 
 .table-index {
   padding-left: 16px;
 }
 
+.table-cell{
+  font-size: 14px;
+  line-height: 20px;
+  height: 43px;
+  /* text-align: center; */
+  border:1px solid white;
+width: 107px;
+}
+
 .table-index2 {
   padding-left: 16px;
   text-align: start;
-  max-width: 108px;
-}
-
-
-.rojo-claro-inferior {
-  background-color: #FFF5F5 !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.rojo-inferior {
-  background-color: #F87A79 !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.rojo-medio-inferior {
-  background-color: #FAA2A2 !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-
-.rojo-10 {
-  background-color: #F65D5B !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.rojo-13 {
-  background-color: #F76759 !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.rojo-16 {
-  background-color: #F87056 !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.orange {
-  background-color: #FDB845 !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.green {
-  background-color: #34B96A !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.light-green {
-  background-color: #7CBF5C !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.dark-green {
-  background-color: #0F7F3F !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.medio-green {
-  background-color: #65BD61 !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.medio-green2 {
-  background-color: #68BD60 !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.medio-green3 {
-  background-color: #BAC44F !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.yellow-green {
-  background-color: #C1C44E !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.yellow-43 {
-  background-color: #FDB845 !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.red {
-  background-color: #F25A5A !important;
-  font-weight: bold;
-  opacity: 0.9;
-}
-
-.yellow {
-  background-color: #FDB845 !important;
-  font-weight: bold;
-  opacity: 0.9;
-
+  width: 324px !important;
 }
