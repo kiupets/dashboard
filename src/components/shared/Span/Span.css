@@ -12,7 +12,9 @@
   display: flex;
   align-items: flex-start;
   text-align: center;
-  /* width: 108px; */
+  padding-left: 16px;
+  text-decoration: underline;
+  width: 107px;
 
 }
 
@@ -42,11 +44,11 @@
   font-family: SFProText-Regular;
   font-style: normal;
   font-weight: normal;
-  /* width: 108px; */
+  width: 107px;
   color: #141518;
   display: flex;
   align-items: center;
-  text-align: center;
+  height: 100%;
   justify-content: center;
 }
 
