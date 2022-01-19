@@ -10,7 +10,7 @@ export const Table = ({ data }) => {
       {data.map((item, i) => (
         <TableRow key={i}>
           <TableData >
-            <Span className="span-index" label={item["ID"]} />
+            <Span className="span-index" style={{padingLeft:"16px"}} label={item["ID"]} />
           </TableData>
 
           <TableData className="">
