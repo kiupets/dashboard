@@ -32,7 +32,7 @@ export const WidgetContent = () => {
   const widgets = widgetData.map((widget) => (
     <Widget key={widget.number}>
       {widget.toast ? (
-        <ToastContainer label="prueba" />
+        <ToastContainer />
       ) : (
         <WidgetLabels
           loading={loading}

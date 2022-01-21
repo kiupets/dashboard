@@ -16,8 +16,7 @@ export const WidgetLabels = ({
       ) : (
         <div className="icon-number">
           <Span
-            className={clase ? clase : ""}
-            style={{ marginRight: "10px" }}
+            className="dot-widget"
             label={icon ? icon : ""}
           />
           <Span

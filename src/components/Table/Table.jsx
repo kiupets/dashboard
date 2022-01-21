@@ -24,6 +24,7 @@ export const Table = ({ data }) => {
           <TableData>
             {item.Comunicación !== "-" ? (
               <Dot
+                className="dot-container"
                 style={{
                   backgroundColor: `${item.Comunicación ? "#00CC87" : "#F25A5A"
                     }`,
@@ -39,6 +40,7 @@ export const Table = ({ data }) => {
               <Span className="span-info" label="-" />
             ) : (
               <Dot
+                className="dot-container"
                 style={{
                   backgroundColor: `${item.Pasarela_Clima ? "#00CC87" : "#F25A5A"
                     }`,
@@ -50,6 +52,7 @@ export const Table = ({ data }) => {
           <TableData>
             {item["Alumbrado"] !== "-" ? (
               <Dot
+                className="dot-container"
                 style={{
                   backgroundColor: `${item.Alumbrado ? "#00CC87" : "#F25A5A"
                     }`,
@@ -63,6 +66,7 @@ export const Table = ({ data }) => {
           <TableData>
             {item["Clima"] !== "-" ? (
               <Dot
+                className="dot-container"
                 style={{
                   backgroundColor: `${item.Clima ? "#00CC87" : "#F25A5A"}`,
                 }}
@@ -75,6 +79,7 @@ export const Table = ({ data }) => {
           <TableData>
             {item.Banderola !== "-" ? (
               <Dot
+                className="dot-container"
                 style={{
                   backgroundColor: `${item.Banderola ? "#00CC87" : "#F25A5A"
                     }`,
@@ -88,6 +93,7 @@ export const Table = ({ data }) => {
           <TableData>
             {item.Rotulos !== "-" ? (
               <Dot
+                className="dot-container"
                 style={{
                   backgroundColor: `${item.Rotulos ? "#00CC87" : "#F25A5A"
                     }`,
@@ -101,6 +107,7 @@ export const Table = ({ data }) => {
           <TableData>
             {item.Consumo_Clima !== "-" ? (
               <Dot
+                className="dot-container"
                 style={{
                   backgroundColor: `${item.Consumo_Clima ? "#00CC87" : "#F25A5A"
                     }`,
@@ -114,6 +121,7 @@ export const Table = ({ data }) => {
           <TableData>
             {item["Confort"] !== "-" ? (
               <Dot
+                className="dot-container"
                 style={{
                   backgroundColor: `${item.Confort ? "#00CC87" : "#F25A5A"
                     }`,
