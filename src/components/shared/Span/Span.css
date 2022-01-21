@@ -1,10 +1,10 @@
-
 .span-container {
   display: flex;
   justify-items: start;
   align-items: center;
   height: 20px;
 }
+
 .span-index {
   color: #404145;
   font-family: SF Pro Text;
@@ -20,7 +20,8 @@
   display: flex;
   align-items: flex-start;
 }
-.span-special{
+
+.span-special {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -41,6 +42,16 @@
   text-align: center;
   align-items: center;
   justify-content: center; */
+}
+
+.span-header-anomalia {
+  width: 102px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #606266;
+  margin: auto;
 }
 
 .span-info {
