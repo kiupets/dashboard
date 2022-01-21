@@ -4,6 +4,17 @@
      border-radius: 50%;
      margin:  auto;
 }
+
 .dot-container{
-    width: 107px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin:  0rem 45.5px;
+}
+
+.dot-widget {
+    height: 16px;
+    border-radius: 50%;
+    width: auto;
+    margin: 1rem;
 }
