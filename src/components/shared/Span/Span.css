@@ -1,43 +1,55 @@
-@font-face {
-  font-family: "SFProText-Regular";
-  src: local("SFProText-Regular"),
-    url("../../../fonts/SFProText-Regular.ttf") format("truetype");
-}
 
+.span-container {
+  display: flex;
+  justify-items: start;
+  align-items: center;
+  height: 20px;
+}
 .span-index {
   color: #404145;
   font-family: SF Pro Text;
   font-style: normal;
   font-weight: 500;
-  display: flex;
-  align-items: flex-start;
-  text-align: center;
   padding-left: 16px;
   text-decoration: underline;
-  width: 107px;
-
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 20px;
+  display: flex;
+  align-items: flex-start;
 }
-
-.span-header {
-  /* width: 90px; */
+.span-special{
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 16px;
   color: #606266;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  /* padding-right: 5px; */
 }
 
-.index {
-  width: 108px;
-  display: flex;
+.span-header-anomalia {
+  width: 103px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #606266;
+  margin: auto;
+}
+
+
+.span-header {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #606266;
+  margin: auto;
+  /* display: flex;
+  text-align: center;
   align-items: center;
-  justify-content: flex-start;
-  /* margin-left: 16px; */
+  justify-content: center; */
 }
 
 .span-info {
@@ -48,19 +60,20 @@
   color: #141518;
   display: flex;
   align-items: center;
-  height: 100%;
+  padding-top: 14px;
+
   justify-content: center;
 }
 
 .span-no-data {
-  color: #A9ACB1;
+  color: #a9acb1;
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
 }
 
 .toast-span {
-  font-family: 'SFProText-Regular';
+  font-family: "SFProText-Regular";
   font-size: 16px;
   padding: 5px;
 }

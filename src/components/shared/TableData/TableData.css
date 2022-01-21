@@ -1,10 +1,9 @@
 .table-data {
   font-size: 14px;
   line-height: 20px;
-  height: 43px;
   text-align: center;
   border:1px solid white;
-width: 100px;
+  width: 108px !important;
 }
 
 .table-index {
@@ -15,13 +14,12 @@ width: 100px;
   font-size: 14px;
   line-height: 20px;
   height: 43px;
-  /* text-align: center; */
   border:1px solid white;
-width: 107px;
+  width: 107px;
 }
 
 .table-index2 {
   padding-left: 16px;
   text-align: start;
-  width: 324px !important;
+  width: 385px !important;
 }

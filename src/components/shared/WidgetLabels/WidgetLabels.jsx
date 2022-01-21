@@ -10,7 +10,7 @@ export const WidgetLabels = ({
   loading,
 }) => {
   return (
-    <div>
+    <div className="widget-container">
       {loading ? (
         <Loading />
       ) : (
