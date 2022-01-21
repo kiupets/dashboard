@@ -15,7 +15,7 @@ export const Headers = ({ orderData }) => {
               <Span
                 style={{
                   cursor: "pointer",
-                  paddingLeft: "5px",
+                  paddingLeft: "1px",
                 }}
                 onClick={orderData}
                 className={`${
