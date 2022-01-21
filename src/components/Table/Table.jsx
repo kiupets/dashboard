@@ -30,13 +30,13 @@ export const Table = ({ data }) => {
                 }}
               />
             ) : (
-              <Span className="span-no-data" label="-" />
+              <Span className="span-info" label="-" />
             )}
           </TableData>
 
           <TableData>
             {item.Tipologia !== "Completa" ? (
-              <Span className="span-no-data" label="-" />
+              <Span className="span-info" label="-" />
             ) : (
               <Dot
                 style={{
@@ -56,7 +56,7 @@ export const Table = ({ data }) => {
                 }}
               />
             ) : (
-              <Span className="span-no-data" label="-" />
+              <Span className="span-info" label="-" />
             )}
           </TableData>
 
@@ -68,7 +68,7 @@ export const Table = ({ data }) => {
                 }}
               />
             ) : (
-              <Span className="span-no-data" label="-" />
+              <Span className="span-info" label="-" />
             )}
           </TableData>
 
@@ -81,7 +81,7 @@ export const Table = ({ data }) => {
                 }}
               />
             ) : (
-              <Span className="span-no-data" label="-" />
+              <Span className="span-info" label="-" />
             )}
           </TableData>
 
@@ -94,7 +94,7 @@ export const Table = ({ data }) => {
                 }}
               />
             ) : (
-              <Span className="span-no-data" label="-" />
+              <Span className="span-info" label="-" />
             )}
           </TableData>
 
@@ -107,7 +107,7 @@ export const Table = ({ data }) => {
                 }}
               />
             ) : (
-              <Span className="span-no-data" label={item.Consumo_Clima} />
+              <Span className="span-info" label={item.Consumo_Clima} />
             )}
           </TableData>
 
@@ -120,7 +120,7 @@ export const Table = ({ data }) => {
                 }}
               />
             ) : (
-              <Span className="span-no-data" label={item.Confort} />
+              <Span className="span-info" label={item.Confort} />
             )}
           </TableData>
 
@@ -128,7 +128,7 @@ export const Table = ({ data }) => {
             {item["Anomalías"] !== "-" ? (
               <Span className="span-info" label={item.Anomalías} />
             ) : (
-              <Span className="span-no-data" label={item.Anomalías} />
+              <Span className="span-info" label={item.Anomalías} />
             )}
           </TableData>
 
@@ -140,7 +140,7 @@ export const Table = ({ data }) => {
               />
             ) : (
               <Span
-                className="span-no-data"
+                className="span-info"
                 label={item.Impacto_Anomalías}
               />
             )}
@@ -155,7 +155,7 @@ export const Table = ({ data }) => {
             {item.Detected_Score !== "-" ? (
               <Span className="span-info" label={item.Detected_Score} />
             ) : (
-              <Span className="span-no-data" label={item.Detected_Score} />
+              <Span className="span-info" label={item.Detected_Score} />
             )}
           </TableData>
 
@@ -167,7 +167,7 @@ export const Table = ({ data }) => {
               />
             ) : (
               <Span
-                className="span-no-data"
+                className="span-info"
                 label={`${item.Ahorro_Potencial}`}
               />
             )}

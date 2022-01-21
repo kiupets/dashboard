@@ -2,6 +2,9 @@ import React from "react";
 import "./Span.css";
 
 export const Span = (props) => {
-  return <span {...props}>{props.label}</span>;
+  return (
+    <div className="span-container">
+      <span {...props}>{props.label}</span>
+    </div>
+  )
 };
-

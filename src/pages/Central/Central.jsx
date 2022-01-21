@@ -7,14 +7,14 @@ import { Headers } from '../../components/Headers/Headers';
 import * as R from 'ramda'
 import { api } from "../../api/api";
 import "./Central.css";
-import data1 from '../../data.json'
+// import data1 from '../../data.json'
 
 
 const Central = () => {
-  const [data, setData] = useState(data1);
-  // useEffect(() => {
-  //   api.getDataTable().then((res) => setData(res));
-  // }, []);
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    api.getDataTable().then((res) => setData(res));
+  }, []);
 
   const orderData = (e) => {
     const key = e.target.innerText;
@@ -36,7 +36,7 @@ const Central = () => {
               <Dots steps={3} size={2} />
             </div>
           </div>
-          <div className="">
+          <div className="header-container">
             <Headers orderData={orderData} />
           </div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>

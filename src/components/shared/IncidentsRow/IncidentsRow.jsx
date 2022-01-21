@@ -13,7 +13,7 @@ export const IncidentsRow = ({
 }) => {
   return (
     <>
-      <TableRow style={{ width: "100%" }}>
+      <TableRow >
         <TableData className="table-index2">
           <Span style={{ cursor: "pointer" }} label="Total Incidencias" />
         </TableData>
@@ -70,8 +70,8 @@ export const IncidentsRow = ({
         </TableData>
       </TableRow>
       <TableRow className="table-row">
-        <TableData className="table-index2" style={{ width: "100%" }}>
-          <Span style={{ cursor: "pointer" }} label="% Incidents" />
+        <TableData className="table-index2">
+          <Span style={{ cursor: "pointer"}} label="% Incidents" />
         </TableData>
         <TableData
           style={{
