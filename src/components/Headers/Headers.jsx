@@ -10,6 +10,7 @@ export const Headers = ({ orderData }) => {
           {headersData?.map((header, i) => (
             <TableHeader className={`${header === "ID" ? "index" : ""}`} key={i}>
               <Span
+                divclassname='span-container'
                 style={{
                   cursor: "pointer",
                   paddingLeft: "5px",
@@ -20,7 +21,7 @@ export const Headers = ({ orderData }) => {
                   header === 'Impacto Anomalías'
                     || header === 'Ahorro Potencial'
                     ? "span-header-anomalia"
-                    : "span-header"}`}
+                    : "span-header "}`}
                 label={header}
               />
             </TableHeader>

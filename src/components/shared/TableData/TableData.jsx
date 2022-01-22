@@ -5,11 +5,10 @@ export const TableData = ({ children, className, ...props }) => {
   return (
     <td
       {...props}
-      className={`${
-        className === "table-cell" ? className : `table-data ${className?className:''}`
-      }`}
+      className={`${className === "table-cell" ? className : `table-data ${className ? className : ''}`
+        }`}
 
-      // {`table-data ${className?className:''}`}
+
     >
       {children}
     </td>

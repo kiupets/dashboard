@@ -16,8 +16,9 @@ export const WidgetLabels = ({
       ) : (
         <div className="icon-number">
           <Span
+            divclassname='span-widget-container'
             className={clase ? clase : ""}
-            style={{ marginRight: "10px" }}
+            style={{ paddingLeft: "10px" }}
             label={icon ? icon : ""}
           />
           <Span

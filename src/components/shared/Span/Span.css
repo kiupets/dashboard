@@ -1,8 +1,13 @@
 .span-container {
   display: flex;
-  justify-items: start;
+  justify-items: center;
   align-items: center;
   height: 20px;
+}
+
+.span-widget-container {
+
+  /* width: 90px; */
 }
 
 .span-index {
@@ -38,10 +43,7 @@
   line-height: 16px;
   color: #606266;
   margin: auto;
-  /* display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center; */
+
 }
 
 .span-header-anomalia {
@@ -58,7 +60,7 @@
   font-family: SFProText-Regular;
   font-style: normal;
   font-weight: normal;
-  width: 107px;
+  width: 108px;
   color: #141518;
   display: flex;
   align-items: center;

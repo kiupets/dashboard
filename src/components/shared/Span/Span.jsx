@@ -3,7 +3,7 @@ import "./Span.css";
 
 export const Span = (props) => {
   return (
-    <div className="span-container">
+    <div className={props.divclassname}>
       <span {...props}>{props.label}</span>
     </div>
   )
