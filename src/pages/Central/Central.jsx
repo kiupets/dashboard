@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Table } from "../../components/";
-import { BottomTable } from "../../components/BottomTable/BottomTable";
+import { Table,BottomTable,Headers } from "../../components/";
 import { Span } from "../../components/shared";
 import { Dots } from "@dexma/ui-components";
-import { Headers } from '../../components/Headers/Headers';
 import * as R from 'ramda'
 import { api } from "../../api/api";
 import "./Central.css";

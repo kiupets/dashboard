@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { ToastContainer, WidgetLabels } from "../shared";
-import { Widget } from "../";
-import { widgetData } from "./WidgetData";
 import { api } from "../../api/api";
+import { ToastContainer, WidgetLabels,Widget } from "../shared";
+import { widgetData } from "../../utils/WidgetData";
 import data from '../../data.json'
 
 
