@@ -5,10 +5,7 @@
   height: 20px;
 }
 
-.span-widget-container {
 
-  /* width: 90px; */
-}
 
 .span-index {
   color: #404145;
@@ -34,6 +31,15 @@
   color: #606266;
 }
 
+.span-header-anomalia {
+  width: 103px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  color: #606266;
+  margin: auto;
+}
 
 
 .span-header {

@@ -10,15 +10,13 @@ export const WidgetLabels = ({
   loading,
 }) => {
   return (
-    <div>
+    <div className="widget-container">
       {loading ? (
         <Loading />
       ) : (
         <div className="icon-number">
           <Span
-            divclassname='span-widget-container'
-            className={clase ? clase : ""}
-            style={{ paddingLeft: "10px" }}
+            className="dot-widget"
             label={icon ? icon : ""}
           />
           <Span

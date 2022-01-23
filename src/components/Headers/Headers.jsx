@@ -8,20 +8,23 @@ export const Headers = ({ orderData }) => {
       <thead>
         <TableRow style={{ width: "100%" }}>
           {headersData?.map((header, i) => (
-            <TableHeader className={`${header === "ID" ? "index" : ""}`} key={i}>
+            <TableHeader
+              className={`${header === "ID" ? "index" : ""}`}
+              key={i}
+            >
               <Span
-                divclassname='span-container'
                 style={{
                   cursor: "pointer",
-                  paddingLeft: "5px",
+                  paddingLeft: "1px",
                 }}
                 onClick={orderData}
-                className={`${header === "ID" ?
-                  "span-special" :
-                  header === 'Impacto Anomalías'
-                    || header === 'Ahorro Potencial'
-                    ? "span-header-anomalia"
-                    : "span-header "}`}
+                className={`${header === "ID"
+                    ? "span-special"
+                    : header === "Impacto Anomalías" ||
+                      header === "Ahorro Potencial"
+                      ? "span-header-anomalia"
+                      : "span-header"
+                  }`}
                 label={header}
               />
             </TableHeader>

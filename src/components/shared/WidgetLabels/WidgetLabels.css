@@ -14,11 +14,17 @@
 .icon1 {
   font-family: 'SFProText-Regular';
   color: #080808;
-
 }
 
 .icon2 {
   font-family: 'SFProText-Regular';
   font-size: larger;
   color: #0a0a0a;
+}
+.widget-container{
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
