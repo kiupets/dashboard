@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Dots } from "@dexma/ui-components";
-import { IncidentsRow } from "../shared/IncidentsRow/IncidentsRow";
+import { IncidentsRow } from "../shared/";
 import { sortInfo } from "../../utils/sortInfo";
 import './BottomTable.css'
 

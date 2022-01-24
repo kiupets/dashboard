@@ -22,7 +22,10 @@
   display: flex;
   align-items: flex-start;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f9c9cb3dddba31495ab18f950ff3fed550d27d15
 .span-special {
   font-style: normal;
   font-weight: normal;
@@ -41,7 +44,6 @@
   margin: auto;
 }
 
-
 .span-header {
   font-style: normal;
   font-weight: normal;
@@ -49,6 +51,7 @@
   line-height: 16px;
   color: #606266;
   margin: auto;
+<<<<<<< HEAD
 
 }
 
@@ -60,6 +63,8 @@
   line-height: 16px;
   color: #606266;
   margin: auto;
+=======
+>>>>>>> f9c9cb3dddba31495ab18f950ff3fed550d27d15
 }
 
 .span-info {

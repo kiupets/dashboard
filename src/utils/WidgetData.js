@@ -1,4 +1,4 @@
-import { Dot } from "../shared";
+import { Dot } from "../components/shared";
 export const widgetData = [
     {
         number: "126",

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Dots } from "@dexma/ui-components";
-import { Toast, Span, Loading } from "../";
-import { DropDownTags } from "../DropDownTags/DropDownTags";
-
 import "./ToastContainer.css";
 import { api } from "../../../api/api";
+import { Dots } from "@dexma/ui-components";
+import { Toast, Span, Loading,DropDownTags } from "../";
 
 export const ToastContainer = () => {
   const [toasts, setToast] = useState([]);

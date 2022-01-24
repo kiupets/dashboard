@@ -1,6 +1,6 @@
 import React from "react";
 import { Span, TableRow, TableHeader } from "../shared/";
-import { headersData } from "./headersData";
+import { headersData } from "../../utils/headersData";
 import "./headers.css";
 export const Headers = ({ orderData }) => {
   return (

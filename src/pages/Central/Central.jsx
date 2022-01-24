@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Table } from "../../components/";
-import { BottomTable } from "../../components/BottomTable/BottomTable";
+import { Table, BottomTable, Headers } from "../../components/";
 import { Span } from "../../components/shared";
 import { Dots } from "@dexma/ui-components";
-import { Headers } from '../../components/Headers/Headers';
-import * as R from 'ramda'
+import * as R from "ramda";
 import { api } from "../../api/api";
 import "./Central.css";
 // import data1 from '../../data.json'
 
-
 const Central = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    api.getDataTable().then((res) => setData(res));
+    api.getDataTable().then((res) => setData(res.table));
   }, []);
 
   const orderData = (e) => {
@@ -25,33 +22,34 @@ const Central = () => {
 
   return (
     <div className="central">
-      {data.length !== 0 ? (
-        <>
-          <div className="header-table">
-            <Span
-              style={{ fontSize: "18px", fontWeight: "bold" }}
-              label="Estados por store"
-            />
-            <div className="dots">
-              <Dots steps={3} size={2} />
+      <div className="central-container">
+        {data.length !== 0 ? (
+          <>
+            <div className="header-table">
+              <Span
+                style={{ fontSize: "18px", fontWeight: "bold" }}
+                label="Estados por store"
+              />
+              <div className="dots">
+                <Dots steps={3} size={2} />
+              </div>
             </div>
-          </div>
-          <div className="header-container">
-            <Headers orderData={orderData} />
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <div className="table-scroll">
-              <Table data={data} />
+            <div className="header-container">
+              <Headers orderData={orderData} />
             </div>
-            <div className="bottom-table">
-              <BottomTable tableInfo={data} />
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div className="table-scroll">
+                <Table data={data} />
+              </div>
+              <div className="bottom-table">
+                <BottomTable tableInfo={data} />
+              </div>
             </div>
-          </div>
-
-        </>
-      ) : (
-        <Dots steps={3} size={10} />
-      )}
+          </>
+        ) : (
+          <Dots steps={3} size={10} />
+        )}
+      </div>
     </div>
   );
 };
