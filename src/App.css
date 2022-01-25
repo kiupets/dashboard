@@ -1,17 +1,17 @@
-
-
 .App {
-  display: flex;
+  /* display: flex; */
+  /* 
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 30px 30px;
   text-align: center;
   height: 100%;
-  width:100%;
+  width: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  font-family: SF Pro Text;
+  font-family: SF Pro Text; */
+  position: absolute;
 }
 
 tr:nth-child(even) {
@@ -22,8 +22,9 @@ tr:hover {
   background-color: #f6f6f6f3;
 }
 
-body{
+body {
   background-color: #f1f2f3;
+
   @font-face {
     font-family: "SFProText-Regular";
     src: local("SFProText-Regular"),
