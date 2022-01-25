@@ -6,7 +6,7 @@ import "./Table.css";
 export const Table = ({ data }) => {
 
   return (
-    <>
+    <table>
       {data.map((item, i) => (
         <TableRow key={i}>
           <TableData >
@@ -183,6 +183,6 @@ export const Table = ({ data }) => {
         </TableRow>
       ))}
 
-    </>
+    </table>
   );
 };

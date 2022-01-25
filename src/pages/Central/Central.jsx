@@ -22,34 +22,34 @@ const Central = () => {
 
   return (
     <div className="central">
-      <div className="central-container">
-        {data.length !== 0 ? (
-          <>
-            <div className="header-table">
-              <Span
-                style={{ fontSize: "18px", fontWeight: "bold" }}
-                label="Estados por store"
-              />
-              <div className="dots">
-                <Dots steps={3} size={2} />
-              </div>
+      {data.length !== 0 ? (
+        <div className="central-container">
+          <div className="header-table">
+            <Span
+              style={{ fontSize: "18px", fontWeight: "bold" }}
+              label="Estados por store"
+            />
+            <div className="dots">
+              <Dots steps={3} size={2} />
             </div>
-            <div className="header-container">
-              <Headers orderData={orderData} />
+          </div>
+          <div className="header-container">
+            <Headers orderData={orderData} />
+          </div>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div className="table-scroll">
+              <Table data={data} />
             </div>
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <div className="table-scroll">
-                <Table data={data} />
-              </div>
-              <div className="bottom-table">
-                <BottomTable tableInfo={data} />
-              </div>
+            <div className="bottom-table">
+              <BottomTable tableInfo={data} />
             </div>
-          </>
-        ) : (
+          </div>
+        </div>
+      ) : (
+        <div className="loading-container">
           <Dots steps={3} size={10} />
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

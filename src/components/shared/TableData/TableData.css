@@ -3,7 +3,7 @@
   line-height: 20px;
   text-align: center;
   border:1px solid white;
-  width: 108px !important;
+  width: 100px !important;
 }
 
 .table-index {
@@ -15,11 +15,11 @@
   line-height: 20px;
   height: 43px;
   border:1px solid white;
-  width: 107px;
+  width: 90px !important;
 }
 
 .table-index2 {
   padding-left: 16px;
   text-align: start;
-  width: 385px !important;
+  width: 300px !important;
 }
