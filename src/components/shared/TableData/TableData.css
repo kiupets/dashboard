@@ -2,8 +2,13 @@
   font-size: 14px;
   line-height: 20px;
   text-align: center;
+<<<<<<< HEAD
   border: 1px solid white;
   width: 108px !important;
+=======
+  border:1px solid white;
+  width: 100px !important;
+>>>>>>> 96e44b74dc32ed158b3ed58dd37bf488d255b095
 }
 
 .table-index {
@@ -14,12 +19,22 @@
   font-size: 14px;
   line-height: 20px;
   height: 43px;
+<<<<<<< HEAD
   border: 1px solid white;
   width: 107px;
+=======
+  border:1px solid white;
+  width: 90px !important;
+>>>>>>> 96e44b74dc32ed158b3ed58dd37bf488d255b095
 }
 
 .table-index2 {
   padding-left: 16px;
   text-align: start;
+<<<<<<< HEAD
   width: 385px !important;
 }
+=======
+  width: 300px !important;
+}
+>>>>>>> 96e44b74dc32ed158b3ed58dd37bf488d255b095
