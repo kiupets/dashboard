@@ -3,15 +3,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
-## Step to run project 
+## Deployment
 
-In the project directory, you need to change the .env file to the base url you are going to use.
+### Build and run Docker container
 
-`REACT_APP_API_BASEURL= API-URL`
-
-development example:
-
-`REACT_APP_BACKEND_URL= http://ec2-34-220-38-243.us-west-2.compute.amazonaws.com:8000/dashboard`
+```
+docker build --build-arg APP_BACKEND_URL='http://ec2-54-218-93-198.us-west-2.compute.amazonaws.com:8000/dashboard/' -t caixa-dashboard-front .
+docker run -d -p 80:80 caixa-dashboard-front
+```
 
 ## Scripts
 
