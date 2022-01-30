@@ -1,11 +1,13 @@
-import React from "react";
 import "./App.css";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import { Bottom } from "./pages/bottom/Bottom";
+import { Top } from "./pages/top/Top";
 
 function App() {
   return (
     <div className="App">
-      <Dashboard />
+      <Top />
+      <div className="line"> </div>
+      <Bottom />
     </div>
   );
 }

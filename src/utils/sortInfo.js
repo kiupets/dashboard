@@ -1,3 +1,4 @@
+
 export const sortInfo = (array1, array2) => {
   let falseCount, trueCount;
   const sortData = {};
@@ -24,3 +25,4 @@ export const sortInfo = (array1, array2) => {
   });
   return sortData;
 };
+

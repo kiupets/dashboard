@@ -1,12 +1,12 @@
 import React from "react";
-import { DropDownItems } from "../";
+import { DropDownItems } from "../DropDownItems/DropDownItems";
 import "./DropDownTags.css";
 
 export const DropDownTags = ({ tags }) => {
   const dropDownItems = tags.map((toast) => {
     return (
       <DropDownItems key={toast.id}>
-        <div>{toast.label}</div>
+        <div>{toast}</div>
       </DropDownItems>
     );
   });
