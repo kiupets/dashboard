@@ -1,10 +1,25 @@
 .top {
+    column-gap: 7.75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 155px;
+    width: 1736px;
+}
+
+.store-with-dot {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-content: center;
     align-items: center;
-    width: 1680px;
-    margin-top: 20px;
-    padding: 0px 0px 10px 0;
-    border-radius: 8px;
-    border-radius: 8px;
+}
+
+.top-label {
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.loading {
+    width: 30px;
+    height: 30px;
 }
