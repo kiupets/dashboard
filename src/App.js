@@ -3,7 +3,7 @@ import { api } from "./api/api";
 import "./App.css";
 import { TableContext } from "./context/TableContext";
 import { Bottom } from "./pages/bottom/Bottom";
-import { Top } from "./pages/top/Top";
+import { Top } from "./pages/Top/Top";
 
 function App() {
   const [data, setData] = useState({
