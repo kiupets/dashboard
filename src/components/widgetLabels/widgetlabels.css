@@ -1,0 +1,37 @@
+.widget-label-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.widget-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 80px;
+  width: 150px;
+}
+.widget-top-labels{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.widget-tag{
+    color: #404145;
+    background-color:#F7F9FA;
+}
+.widget-dots{
+    align-items: center;
+    border-radius: 50%;
+    border:1px solid rgb(222, 224, 226);
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    width: 20px;
+    margin: .2rem;
+}
+.widget-dots:hover {
+    cursor: pointer;
+}

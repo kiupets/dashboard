@@ -1,3 +1,4 @@
+
 export const sortInfo = (array1, array2) => {
   let falseCount, trueCount;
   const sortData = {};
@@ -15,7 +16,7 @@ export const sortInfo = (array1, array2) => {
     percent =
       falseCount === 0 && trueCount === 0
         ? 0
-        : (falseCount / (falseCount + trueCount)).toFixed(1);
+        : ((falseCount)/ (falseCount + trueCount)*100).toFixed(1);
     sortData[incident] = {
       false: falseCount,
       true: trueCount,
@@ -24,3 +25,4 @@ export const sortInfo = (array1, array2) => {
   });
   return sortData;
 };
+

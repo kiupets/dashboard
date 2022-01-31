@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+  @font-face {
+    font-family: "SFProText-Regular";
+    src: local("SFProText-Regular"),
+      url("./fonts/SFProText-Regular.ttf") format("truetype");
+  }
+}
