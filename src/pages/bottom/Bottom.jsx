@@ -27,7 +27,7 @@ export const Bottom = ({data}) => {
 
   useEffect(() => {
     data?.length !== 0 && setDataSort(data);
-  }, [data]);
+  }, []);
 
   return (
     <div className="bottom">
