@@ -142,3 +142,14 @@
 tr:hover {
   background-color: #f7f9fa;
 }
+
+
+@media (max-width: 1000px) {
+  .bottom {
+    width:100%;
+  }
+  .table-container{
+    width: 100%;
+    height: 100%;
+  }
+}
