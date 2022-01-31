@@ -42,6 +42,7 @@
 .headers-container2 {
     cursor: pointer;
     display: flex;
+    width: 100%;
 }
 
 .headers {
@@ -50,6 +51,7 @@
     display: flex;
     align-items: center;
     justify-items: center;
+    width: 100%;
 }
 
 .headers-widths-id {
@@ -92,7 +94,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 105.73px;
+    width: 95px;
     height: 32px;
     padding-left: 1.5px;
 }
