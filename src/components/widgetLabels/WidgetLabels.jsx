@@ -10,7 +10,7 @@ export const WidgetLabels = () => {
   const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
-    api.getLocationTags().then(({ location_tags }) => setToast(location_tags));
+    api.getLocationTags().then((res) => setToast(res.location_tags));
   }, []);
 
   const labels = toasts
