@@ -3,7 +3,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     height: 155px;
-    width: 1736px;
+    width: 1500px;
+    justify-content: center;
+    align-items: center;
 }
 
 .store-with-dot {

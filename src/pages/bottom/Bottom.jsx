@@ -7,8 +7,7 @@ import "./bottom.css";
 import "./headersWidths.css";
 import { ExcelTable } from "../../utils/exelData";
 
-export const Bottom = () => {
-  const [data, setData] = useState([]);
+export const Bottom = ({data}) => {
   const [newData, setNewData] = useState();
   const [incidentsArray] = useState([
     "Comunicacion",
@@ -22,9 +21,6 @@ export const Bottom = () => {
   ]);
 
   const [dataSort, setDataSort] = useState(data);
-  useEffect(() => {
-    api.getDataTable().then((res) => setData(res.table));
-  }, []);
   useEffect(() => {
     data?.length !== 0 && setNewData(sortInfo(incidentsArray, data));
   }, [data, incidentsArray]);
