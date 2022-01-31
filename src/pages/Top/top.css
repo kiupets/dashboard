@@ -3,7 +3,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     height: 155px;
-    width: 1500px;
+    width: 1550px;
     justify-content: center;
     align-items: center;
 }

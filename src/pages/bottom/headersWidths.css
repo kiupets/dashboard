@@ -29,14 +29,14 @@
     display: flex;
     justify-content: center;
     margin-left: 33px;
-    width: 18.5%;
+    width: 16%;
 }
 
 .headers-container1 {
     cursor: pointer;
     display: flex;
     padding-left: 12px;
-    width: 50.5%;
+    width: 55%;
 }
 
 .headers-container2 {
@@ -82,7 +82,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 108px;
+    width: 100px;
+    padding-left:5px ;
     height: 32px;
 }
 
@@ -91,7 +92,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 108.73px;
+    width: 105.73px;
     height: 32px;
     padding-left: 1.5px;
 }
