@@ -46,7 +46,7 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  padding-right: 40px;
+  justify-content: center;
   justify-content: space-between;
   width: 100%;
 }
@@ -63,7 +63,6 @@
 }
 
 .table-bottom-container {
-  padding-right: 16px;
   width: 1550px;
   margin-top: 1px;
 
@@ -89,7 +88,7 @@
   border-bottom: 1px solid #dee0e2;
   border-right: 1px solid white;
   height: 40px;
-  width: 314px;
+  width: 305.11px;
   text-align: flex-start;
 }
 
@@ -115,19 +114,19 @@
   border-right: 1px solid white;
   height: 40px;
   text-align: center;
-  width: 105px;
+  width: 99px;
   font-size: 14px;
   font-weight: bold;
 }
 
 .table-bottom-data-space {
-  width: 25px;
+  width: 30px;
   height: 42px;
   background-color: white;
 }
 
 .table-bottom-data-space-big {
-  width: 320px;
+  width: 385px;
   height: 42px;
   background-color: white;
 }

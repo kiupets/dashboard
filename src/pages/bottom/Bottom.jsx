@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { api } from "../../api/api";
 import { DotTable } from "../../components/shared/dotTable/DotTable";
 import { Dots } from "@dexma/ui-components";
 import { colorScale, sortInfo, headersData, sortHeaders } from "../../utils/";
 import "./bottom.css";
 import "./headersWidths.css";
 import { ExcelTable } from "../../utils/exelData";
+import usetable from "../../hooks/usetable";
 
-export const Bottom = ({data}) => {
+
+export const Bottom = () => {
+  const {table} = usetable()
   const [newData, setNewData] = useState();
   const [incidentsArray] = useState([
     "Comunicacion",
@@ -19,14 +21,14 @@ export const Bottom = ({data}) => {
     "Consumo_Clima",
     "Confort",
   ]);
-
-  const [dataSort, setDataSort] = useState(data);
-  useEffect(() => {
-    data?.length !== 0 && setNewData(sortInfo(incidentsArray, data));
-  }, [data, incidentsArray]);
+  const [dataSort, setDataSort] = useState(table);
 
   useEffect(() => {
-    data?.length !== 0 && setDataSort(data);
+    table?.length !== 0 && setNewData(sortInfo(incidentsArray, table));
+  }, [table, incidentsArray]);
+
+  useEffect(() => {
+    table?.length !== 0 && setDataSort(table);
   }, []);
 
   return (
@@ -34,9 +36,7 @@ export const Bottom = ({data}) => {
       <div className="top-bottom">
         <div className="headers-top">
           <span className="span-estado-store">Estados por store</span>
-          {dataSort.length !== 0 ?
-            <span style={{ cursor: 'pointer' }} onClick={ExcelTable(data)}>...</span>
-            : <div style={{ width: '20px' }}><Dots steps='3' size='3' /></div>}
+          <span className="span-estado-store" onClick={ExcelTable(table)}>...</span>
         </div>
         <div className="headers-super-container">
           <div className="headers-container0">
@@ -84,10 +84,10 @@ export const Bottom = ({data}) => {
         </div>
       </div>
 
-      {data.length !== 0 ? (
+      {table.length !== 0 ? (
         <div className="table-container">
           <table className="table-container-table">
-            {data.map((item) => (
+            {table.map((item) => (
               <tr key={item.ID} className="table-row">
                 <td key={item.ID} className="table-space">
                   {" "}

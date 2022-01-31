@@ -2,7 +2,7 @@ import * as R from 'ramda'
 import XLSX from 'xlsx';
 
 export const ExcelTable = (data) => {
-    const incidentsDataReduce = data.map(item => {
+    const incidentsDataReduce = data?.map(item => {
         return R.values(R.pick(
             [
                 "Comunicacion",
@@ -15,11 +15,11 @@ export const ExcelTable = (data) => {
                 "Confort"], item))
     })
 
-    const totalIncidencias = incidentsDataReduce.map(item => {
-        return item.map(ite => ite === false ? 1 : ite === true ? 0 : '')
+    const totalIncidencias = incidentsDataReduce?.map(item => {
+        return item?.map(ite => ite === false ? 1 : ite === true ? 0 : '')
     })
-    const totalStores = incidentsDataReduce.map(item => {
-        return item.map(ite => ite === false ? 0 : ite === true ? 1 : '')
+    const totalStores = incidentsDataReduce?.map(item => {
+        return item?.map(ite => ite === false ? 0 : ite === true ? 1 : '')
     })
 
     const mapI = R.addIndex(R.map);
@@ -44,11 +44,11 @@ export const ExcelTable = (data) => {
 
 
     const headersArray = Object.keys(data[0])
-    const superDummy = data.map(data => R.values(data))
+    const superDummy = data?.map(data => R.values(data))
     const tabla = [headersArray].concat(superDummy).concat(superExcelArray)
 
     const downloadExcel = () => {
-        const newData = tabla.map(row => {
+        const newData = tabla?.map(row => {
             delete row.tableData
             return row
         })

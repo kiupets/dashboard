@@ -52,7 +52,7 @@ export const WidgetLabels = () => {
 )}
 
       </div>
-      <div className="widget-top">
+      <div className="widget-top-labels">
         {labels?.length > 0 ? (
           <span>Tags seleccionados</span>
         ) : (

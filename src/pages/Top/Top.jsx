@@ -5,7 +5,10 @@ import { Dot } from "../../components/shared";
 import { Dots } from "@dexma/ui-components";
 import { api } from "../../api/api";
 import "./top.css";
+import usetable from "../../hooks/usetable";
 export const Top = () => {
+
+  const {incidents,perc_stores_without_incidents,uncommunicated_stores} = usetable()
   const [locations, setLocations] = useState(null);
   const [storesComunication, setStoresComunication] = useState(null);
   const [storeIncidents, setStoreIncidents] = useState(null);
@@ -18,12 +21,12 @@ export const Top = () => {
   }, []);
 
   useEffect(() => {
-    api.getDataTable().then((res) => {
-      setStoresComunication(res.uncommunicated_stores);
-      setStoreIncidents(res.incidents);
-      setStoresWithoutIncidents(res.perc_stores_without_incidents);
-    });
-  }, []);
+    
+      setStoresComunication(uncommunicated_stores);
+      setStoreIncidents(incidents);
+      setStoresWithoutIncidents(perc_stores_without_incidents);
+   
+  }, [uncommunicated_stores,incidents,perc_stores_without_incidents]);
 
   return (
     <div className="top"> 
