@@ -5,10 +5,7 @@ const createDataContext = (redu, actions, initVal) => {
   const Context = React.createContext()
   const Provider = ({ children }) => {
     const [state, dispatch] = useReducer(redu, initVal)
-
-
     const boundActions = R.map((key) => key(dispatch), actions)
-
     return (
       <Context.Provider value={{ state, ...boundActions }}>
         {children}
