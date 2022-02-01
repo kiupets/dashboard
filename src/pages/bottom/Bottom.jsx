@@ -5,11 +5,11 @@ import { colorScale, sortInfo, headersData, sortHeaders } from "../../utils/";
 import "./bottom.css";
 import "./headersWidths.css";
 import { ExcelTable } from "../../utils/exelData";
-import usetable from "../../hooks/usetable";
+import { useSelector } from "react-redux";
 
 
 export const Bottom = () => {
-  const {table} = usetable()
+  const {table}= useSelector(state=>state.table.data)
   const [newData, setNewData] = useState();
   const [incidentsArray] = useState([
     "Comunicacion",
@@ -29,7 +29,7 @@ export const Bottom = () => {
 
   useEffect(() => {
     table?.length !== 0 && setDataSort(table);
-  }, []);
+  }, [table]);
 
   return (
     <div className="bottom">

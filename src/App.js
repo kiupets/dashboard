@@ -1,44 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { api } from "./api/api";
 import "./App.css";
-import { TableContext } from "./context/TableContext";
 import { Bottom } from "./pages/bottom/Bottom";
 import { Top } from "./pages/top/Top";
+import { SET_TABLE, SET_LOCATIONS } from "./redux/tableSlice/TableSlice";
 
 function App() {
-  const [data, setData] = useState({
-    incidents: null,
-    uncommunicated_stores: null,
-    perc_stores_without_incidents: null,
-    table: [
-      {
-        ID: "-",
-        Ciudad: "-",
-        Tipologia: "-",
-        Comunicacion: "",
-        Pasarela_Clima: "",
-        Alumbrado: "",
-        Clima: "",
-        Banderola: "",
-        Rotulo: "",
-        Consumo_Clima: "",
-        Confort: "",
-      },
-    ],
-  });
+  const dispatch = useDispatch();
   useEffect(() => {
-    api.getDataTable().then((res) => setData(res));
+    api.getDataTable().then((res) => dispatch(SET_TABLE(res)));
   }, []);
-  const tableInfo = data;
+
+  useEffect(() => {
+    api
+      .getLocations()
+      .then(({ total_locations }) => dispatch(SET_LOCATIONS(total_locations)));
+  }, []);
 
   return (
-    <TableContext.Provider value={tableInfo}>
-      <div className="App">
-        <Top data={data} />
-        <div className="line"> </div>
-        <Bottom data={data} />
-      </div>
-    </TableContext.Provider>
+    <div className="App">
+      <Top />
+      <div className="line"> </div>
+      <Bottom />
+    </div>
   );
 }
 
