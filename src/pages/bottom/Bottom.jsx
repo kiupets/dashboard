@@ -1,16 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { DotTable } from "../../components/shared/dotTable/DotTable";
 import { Dots } from "@dexma/ui-components";
 import { colorScale, sortInfo, headersData, sortHeaders } from "../../utils/";
+import { api } from "../../api/api";
 import "./bottom.css";
 import "./headersWidths.css";
+import { Context } from "../../context/tableContext";
 import { ExcelTable } from "../../utils/exelData";
-import usetable from "../../hooks/usetable";
-
 
 export const Bottom = () => {
-  const {table} = usetable()
+
+  const { state, setData } = useContext(Context);
+  const { data, incidents,
+    uncommunicated_stores,
+    perc_stores_without_incidents,
+  } = state
+
+  const { table, locations } = data
+
   const [newData, setNewData] = useState();
+
+  useEffect(() => {
+    api.getDataTable().then((res) => setData(res));
+  }, []);
+
   const [incidentsArray] = useState([
     "Comunicacion",
     "Pasarela_Clima",
@@ -36,7 +49,14 @@ export const Bottom = () => {
       <div className="top-bottom">
         <div className="headers-top">
           <span className="span-estado-store">Estados por store</span>
-          <span className="span-estado-store" onClick={ExcelTable(table)}>...</span>
+          <span className="span-estado-store"
+            onClick={ExcelTable(
+              table,
+              incidents,
+              uncommunicated_stores,
+              perc_stores_without_incidents,
+              locations
+            )}>...</span>
         </div>
         <div className="headers-super-container">
           <div className="headers-container0">
@@ -104,7 +124,7 @@ export const Bottom = () => {
                 <td key={item.ID} className="table-data">
                   {item.Comunicacion?.length !== 0 ? (
                     <DotTable
-                      className={item.Comunicacion ? "green" : "red"}
+                      className={item.Pasarela_Clima ? "green" : "red"}
                     />
                   ) : (
                     "-"

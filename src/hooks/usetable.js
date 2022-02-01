@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
-import { TableContext } from "../context/TableContext";
+// import React, { useContext } from "react";
+// import { TableContext } from "../context/TableContext";
 
-export default () => useContext(TableContext);
+// export default () => useContext(TableContext);

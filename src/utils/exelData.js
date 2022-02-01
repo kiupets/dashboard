@@ -1,7 +1,12 @@
 import * as R from 'ramda'
 import XLSX from 'xlsx';
 
-export const ExcelTable = (data) => {
+export const ExcelTable = (data, ...top) => {
+    console.log(top)
+    const widgetsArray = ['Tags selectionados', 'Localizaciones', 'Tags no seleccionados', 'Stores sin comunicacion', 'Incidencias', 'Stores con incidencias']
+    const topArray = [widgetsArray, top]
+    console.log(topArray)
+
     const incidentsDataReduce = data?.map(item => {
         return R.values(R.pick(
             [
@@ -37,7 +42,6 @@ export const ExcelTable = (data) => {
 
     //para modificar cuando este toda la data
     const finalPercentage = percentage.map(p => p === 'NaN' ? 0 : p)
-
     const inciArray = ['Total Incidencias', 'Total Stores', '% Incidencias',]
     const excelArray = R.zip(inciArray, [R.flatten(['', '', totalInci]), R.flatten(['', '', totalScore]), R.flatten(['', '', finalPercentage])])
     const superExcelArray = excelArray.map(arr => R.flatten(arr))
@@ -45,7 +49,7 @@ export const ExcelTable = (data) => {
 
     const headersArray = Object.keys(data[0])
     const superDummy = data?.map(data => R.values(data))
-    const tabla = [headersArray].concat(superDummy).concat(superExcelArray)
+    const tabla = topArray.concat([headersArray]).concat(superDummy).concat(superExcelArray)
 
     const downloadExcel = () => {
         const newData = tabla?.map(row => {
@@ -55,6 +59,7 @@ export const ExcelTable = (data) => {
 
         const workSheet = XLSX.utils.aoa_to_sheet(newData)
         const workBook = XLSX.utils.book_new()
+
         XLSX.utils.book_append_sheet(workBook, workSheet, "dashboard")
         let buf = XLSX.write(workBook, { bookType: "xlsx", type: "buffer" })
         XLSX.write(workBook, { bookType: "xlsx", type: "binary" })
