@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { api } from "./api/api";
 import "./App.css";
 import { Bottom } from "./pages/bottom/Bottom";
-import { Top } from "./pages/top/Top";
+import { Top } from "./pages/Top/Top";
 import { SET_TABLE, SET_LOCATIONS } from "./redux/tableSlice/TableSlice";
 
 function App() {

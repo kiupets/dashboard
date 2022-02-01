@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Widget } from "../../components/widget/Widget";
 import { WidgetLabels } from "../../components/widgetLabels/WidgetLabels";
-import { Dot } from "../../components/shared";
+import { Dot } from "../../components/shared/Dot/Dot";
 import { Dots } from "@dexma/ui-components";
 import "./top.css";
 import { useSelector } from "react-redux";
