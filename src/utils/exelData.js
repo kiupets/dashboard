@@ -1,11 +1,13 @@
 import * as R from 'ramda'
 import XLSX from 'xlsx';
 
-export const ExcelTable = (data, ...top) => {
+export const ExcelTable = (data, top) => {
     console.log(top)
-    const widgetsArray = ['Tags selectionados', 'Localizaciones', 'Tags no seleccionados', 'Stores sin comunicacion', 'Incidencias', 'Stores con incidencias']
-    const topArray = [widgetsArray, top]
+
+    const widgetsArray = ['Localizaciones', 'Tags no seleccionados', 'Stores sin comunicacion', 'Incidencias', 'Stores con incidencias']
+    const topArray = [widgetsArray, top, ['', '', '', '', '']]
     console.log(topArray)
+
 
     const incidentsDataReduce = data?.map(item => {
         return R.values(R.pick(

@@ -5,17 +5,18 @@ import { colorScale, sortInfo, headersData, sortHeaders } from "../../utils/";
 import { api } from "../../api/api";
 import "./bottom.css";
 import "./headersWidths.css";
-import { Context } from "../../context/tableContext";
 import { ExcelTable } from "../../utils/exelData";
 import { useSelector } from "react-redux";
 
 export const Bottom = () => {
-  const { table } = useSelector((state) => state.table.data);
+  const { table, incidents,
+    uncommunicated_stores,
+    perc_stores_without_incidents } = useSelector((state) => state.table.data);
+  console.log(incidents, uncommunicated_stores, perc_stores_without_incidents)
+  const { total_locations } = useSelector((state) => state.table)
   const [newData, setNewData] = useState();
 
-  useEffect(() => {
-    api.getDataTable().then((res) => setData(res));
-  }, []);
+
 
   const [incidentsArray] = useState([
     "Comunicacion",
@@ -42,7 +43,14 @@ export const Bottom = () => {
       <div className="top-bottom">
         <div className="headers-top">
           <span className="span-estado-store">Estados por store</span>
-          <span className="span-estado-store" onClick={ExcelTable(table)}>
+          <span className="span-estado-store"
+            onClick={ExcelTable(
+              table,
+              [total_locations, 'tags n s', uncommunicated_stores,
+                incidents,
+                `${perc_stores_without_incidents}%`]
+            )
+            }>
             ...
           </span>
         </div>
