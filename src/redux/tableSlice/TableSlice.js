@@ -22,6 +22,7 @@ const initialState = {
     ],
   },
   total_locations: null,
+  location_tags:null
 };
 
 export const tableSlice = createSlice({
@@ -34,10 +35,13 @@ export const tableSlice = createSlice({
     SET_LOCATIONS: (state, action) => {
         state.total_locations = action.payload;
       },
+    SET_TAGS: (state, action) => {
+        state.location_tags = action.payload;
+      },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { SET_TABLE ,SET_LOCATIONS} = tableSlice.actions;
+export const { SET_TABLE ,SET_LOCATIONS,SET_TAGS} = tableSlice.actions;
 
 export default tableSlice.reducer;
