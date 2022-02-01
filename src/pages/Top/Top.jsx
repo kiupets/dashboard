@@ -19,7 +19,7 @@ export const Top = () => {
     setStoreIncidents(incidents);
     setStoresWithoutIncidents(perc_stores_without_incidents);
     setLocations(total_locations);
-  }, [uncommunicated_stores, incidents, perc_stores_without_incidents]);
+  }, [uncommunicated_stores, incidents, perc_stores_without_incidents,total_locations]);
 
   return (
     <div className="top">
