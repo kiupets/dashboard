@@ -104,7 +104,9 @@ export const Bottom = () => {
                 </td>
                 <td key={item.ID} className="table-data">
                   {item.Comunicacion?.length !== 0 ? (
-                    <DotTable className={item.Comunicacion ? "green" : "red"} />
+                    <DotTable
+                      className={item.Comunicacion ? "green" : "red"}
+                    />
                   ) : (
                     "-"
                   )}
