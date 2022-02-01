@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Tag, Dots } from "@dexma/ui-components";
-import { api } from "../../api/api";
 import { DropDownTags } from "../shared/DropDownTags/DropDownTags";
 import "./widgetlabels.css";
+import { useSelector } from "react-redux";
 
 export const WidgetLabels = () => {
+  const { location_tags } = useSelector((state) => state.table);
+
   const [toasts, setToast] = useState([]);
   const [toggle, setToggle] = useState(false);
 
-  
   useEffect(() => {
-    api.getLocationTags().then((res) => setToast(res.location_tags));
-  }, []);
+    setToast(location_tags);
+  }, [location_tags]);
 
   const labels = toasts?.slice(0, 5).map((toast) => (
     <Tag
@@ -43,14 +44,13 @@ export const WidgetLabels = () => {
   return (
     <div className=".widget-label-container">
       <div className="widget-top">
-      {labels?.length > 0 ? labels : <Dots steps={3} size={6} />}
- {labels?.length >= 5 && (
-  <div className="widget-dots" onClick={handleToggle}>
-    <Dots steps={3} size={2} />
-    {toggle ? <DropDownTags tags={labels} /> : null}
-  </div>
-)}
-
+        {labels?.length > 0 ? labels : <Dots steps={3} size={6} />}
+        {labels?.length >= 5 && (
+          <div className="widget-dots" onClick={handleToggle}>
+            <Dots steps={3} size={2} />
+            {toggle ? <DropDownTags tags={labels} /> : null}
+          </div>
+        )}
       </div>
       <div className="widget-top-labels">
         {labels?.length > 0 ? (
@@ -62,5 +62,3 @@ export const WidgetLabels = () => {
     </div>
   );
 };
-
-
