@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import { Widget } from "../../components/widget/Widget";
 import { WidgetLabels } from "../../components/widgetLabels/WidgetLabels";
 import { Dot } from "../../components/shared/Dot/Dot";
