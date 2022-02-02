@@ -27,6 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 100%;
 }
 
@@ -36,14 +37,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 15px;
+  /* margin-left: 10px; */
+  padding-left: 20px;
   width: 20%;
 }
 
 .headers-container1 {
+  box-sizing: border-box;
+  padding-left: 10px;
   cursor: pointer;
   display: flex;
-  width: 55%;
+  width: 53%;
 }
 
 .headers-container2 {
@@ -52,8 +56,8 @@
   justify-content: center;
   cursor: pointer;
   display: flex;
-  padding-right: 8px;
-  /* width: 100%; */
+  padding-right: 15px;
+  width: 27%;
   font-family: "SFProText-Regular" !important;
   font-size: 12px;
 }
@@ -70,6 +74,7 @@
 .headers-widths-id {
   display: flex;
   align-items: center;
+  padding-left: 10px;
   justify-content: flex-start;
   box-sizing: border-box;
   width: 108px;
@@ -80,8 +85,9 @@
 .headers-widths-ciudad {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   box-sizing: border-box;
+  padding-left: 20px;
   margin: 1px;
   width: 108px;
   height: 32px;
