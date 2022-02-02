@@ -3,18 +3,21 @@ import XLSX from 'xlsx';
 
 export const ExcelTable = (data, top) => {
 
-    const topTag = () => {
-        return top[0].length !== 0
-            ? top[0].map((tag, i) => top.map((row, j) => {
-                return j % 6 === 0 ? tag : i === 0 ? top[j] : ''
-            }))
-            : [top]
-    }
+    const topTag = () => top[0].length !== 0
+        ? top[0].map((tag, i) => top.map((row, j) =>
+            j % 6 === 0
+                ? tag
+                : i === 0
+                    ? top[j]
+                    : ''
+        ))
+        : [top]
+
     const widgetsArray = ['Location tags', 'Localizaciones', 'Tags no seleccionados',
         'Stores sin comunicacion', 'Incidencias', 'Stores con incidencias']
 
-    const incidentsDataReduce = data?.map(item => {
-        return R.values(R.pick(
+    const incidentsDataReduce = data?.map(item =>
+        R.values(R.pick(
             [
                 "Comunicacion",
                 "Pasarela_Clima",
@@ -24,14 +27,14 @@ export const ExcelTable = (data, top) => {
                 "Rotulo",
                 "Consumo_Clima",
                 "Confort"], item))
-    })
+    )
 
-    const totalIncidencias = incidentsDataReduce?.map(item => {
-        return item?.map(ite => ite === false ? 1 : ite === true ? 0 : '')
-    })
-    const totalStores = incidentsDataReduce?.map(item => {
-        return item?.map(ite => ite === false ? 0 : ite === true ? 1 : '')
-    })
+    const totalIncidencias = incidentsDataReduce?.map(item =>
+        item?.map(ite => ite === false ? 1 : ite === true ? 0 : '')
+    )
+    const totalStores = incidentsDataReduce?.map(item =>
+        item?.map(ite => ite === false ? 0 : ite === true ? 1 : '')
+    )
 
     const mapI = R.addIndex(R.map);
     const zipNReduce = R.curry(function (fn, lists) {
@@ -56,7 +59,13 @@ export const ExcelTable = (data, top) => {
     const headersArray = Object.keys(data[0])
     const superDummy = data?.map(data => R.values(data))
 
-    const tabla = [widgetsArray].concat(topTag()).concat([headersArray]).concat(superDummy).concat(superExcelArray)
+    const tabla = [widgetsArray]
+        .concat(topTag())
+        .concat(['', ''])
+        .concat([headersArray])
+        .concat(superDummy)
+        .concat(['', ''])
+        .concat(superExcelArray)
 
     const downloadExcel = () => {
         const newData = tabla?.map(row => {
