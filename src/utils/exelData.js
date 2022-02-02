@@ -77,7 +77,6 @@ export const ExcelTable = (data, top) => {
         const workBook = XLSX.utils.book_new()
 
         XLSX.utils.book_append_sheet(workBook, workSheet, "dashboard")
-        let buf = XLSX.write(workBook, { bookType: "xlsx", type: "buffer" })
         XLSX.write(workBook, { bookType: "xlsx", type: "binary" })
         XLSX.writeFile(workBook, "dashboard.xlsx")
     }
