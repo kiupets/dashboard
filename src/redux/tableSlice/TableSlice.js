@@ -22,7 +22,7 @@ const initialState = {
     ],
   },
   total_locations: null,
-  location_tags: ['uno', 'dos', 'tres'],
+  location_tags: [],
 };
 
 export const tableSlice = createSlice({
