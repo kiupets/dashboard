@@ -19,7 +19,7 @@ export const Top = () => {
     setStoreIncidents(incidents);
     setStoresWithoutIncidents(perc_stores_without_incidents);
     setLocations(total_locations);
-  }, [uncommunicated_stores, incidents, perc_stores_without_incidents,total_locations]);
+  }, [uncommunicated_stores, incidents, perc_stores_without_incidents, total_locations]);
 
   return (
     <div className="top">
@@ -54,8 +54,8 @@ export const Top = () => {
             <Dots steps={3} size={6} />
           )}
           <span className="widget-label">Store sin comunicación</span>
-        </div>
-      </Widget>
+        </div >
+      </Widget >
       <Widget>
         <div className="store-with-dot">
           {storeIncidents !== null || undefined ? (
@@ -74,18 +74,19 @@ export const Top = () => {
             <Dots steps={3} size={6} />
           )}
           <span className="widget-label">Incidencias</span>
-        </div>
-      </Widget>
+        </div >
+      </Widget >
       <Widget>
         <div className="widget-left">
           {storesWithoutIncidents !== null || undefined ? (
             <span className="widget-number">{`${storesWithoutIncidents}%`}</span>
           ) : (
             <Dots steps={3} size={6} />
-          )}
+          )
+          }
           <span className="widget-label">Store con incidencias</span>
-        </div>
-      </Widget>
-    </div>
+        </div >
+      </Widget >
+    </div >
   );
 };

@@ -8,8 +8,13 @@ import { ExcelTable } from "../../utils/exelData";
 import { useSelector } from "react-redux";
 
 export const Bottom = () => {
-  const { table } = useSelector((state) => state.table.data);
+  const { table, incidents,
+    uncommunicated_stores,
+    perc_stores_without_incidents } = useSelector((state) => state.table.data);
+  const { total_locations, location_tags } = useSelector((state) => state.table)
   const [newData, setNewData] = useState();
+
+
   const [incidentsArray] = useState([
     "Comunicacion",
     "Pasarela_Clima",
@@ -35,7 +40,14 @@ export const Bottom = () => {
       <div className="top-bottom">
         <div className="headers-top">
           <span className="span-estado-store">Estados por store</span>
-          <span className="span-estado-store" onClick={ExcelTable(table)}>
+          <span className="span-estado-store"
+            onClick={ExcelTable(
+              table,
+              [location_tags, total_locations, 'tags n s', uncommunicated_stores,
+                incidents,
+                `${perc_stores_without_incidents}%`]
+            )
+            }>
             ...
           </span>
         </div>
@@ -105,7 +117,7 @@ export const Bottom = () => {
                 <td key={item.ID} className="table-data">
                   {item.Comunicacion?.length !== 0 ? (
                     <DotTable
-                      className={item.Comunicacion ? "green" : "red"}
+                      className={item.Pasarela_Clima ? "green" : "red"}
                     />
                   ) : (
                     "-"

@@ -146,9 +146,10 @@ tr:hover {
 
 @media (max-width: 1000px) {
   .bottom {
-    width:100%;
+    width: 100%;
   }
-  .table-container{
+
+  .table-container {
     width: 100%;
     height: 100%;
   }

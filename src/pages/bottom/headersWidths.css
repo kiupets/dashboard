@@ -14,6 +14,7 @@
   font-size: 18px;
   cursor: pointer;
 }
+
 .span-dots-excel {
   cursor: pointer;
   display: flex;
@@ -26,6 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 100%;
 }
 
@@ -35,14 +37,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 15px;
+  /* margin-left: 10px; */
+  padding-left: 20px;
   width: 20%;
 }
 
 .headers-container1 {
+  box-sizing: border-box;
+  padding-left: 10px;
   cursor: pointer;
   display: flex;
-  width: 55%;
+  width: 53%;
 }
 
 .headers-container2 {
@@ -51,7 +56,8 @@
   justify-content: center;
   cursor: pointer;
   display: flex;
-  width: 100%;
+  padding-right: 15px;
+  width: 27%;
   font-family: "SFProText-Regular" !important;
   font-size: 12px;
 }
@@ -68,6 +74,7 @@
 .headers-widths-id {
   display: flex;
   align-items: center;
+  padding-left: 10px;
   justify-content: flex-start;
   box-sizing: border-box;
   width: 108px;
@@ -78,8 +85,9 @@
 .headers-widths-ciudad {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   box-sizing: border-box;
+  padding-left: 20px;
   margin: 1px;
   width: 108px;
   height: 32px;
@@ -95,13 +103,16 @@
 }
 
 .headers-widths-impacto {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 105px;
+  width: 108px;
+  /* padding-right: 5px; */
   height: 32px;
   padding-left: 1.5px;
 }
+
 @media (max-width: 1000px) {
   .headers {
     display: flex;
@@ -109,11 +120,13 @@
     align-items: center;
     width: 100%;
   }
+
   .headers-widths-id {
     width: 100%;
     display: flex;
     align-items: center;
   }
+
   .headers-widths-impacto {
     display: flex;
     align-items: center;
