@@ -4,7 +4,7 @@ import XLSX from 'xlsx';
 export const ExcelTable = (data, top) => {
 
     const topTag = () => {
-        return top[0] === null || top[0].length !== 0
+        return top[0].length !== 0
             ? top[0].map((tag, i) => top.map((row, j) => {
                 return j % 6 === 0 ? tag : i === 0 ? top[j] : ''
             }))
