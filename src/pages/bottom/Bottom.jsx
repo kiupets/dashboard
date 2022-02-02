@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { DotTable } from "../../components/shared/dotTable/DotTable";
 import { Dots } from "@dexma/ui-components";
 import { colorScale, sortInfo, headersData, sortHeaders } from "../../utils/";
@@ -13,7 +13,6 @@ export const Bottom = () => {
     perc_stores_without_incidents } = useSelector((state) => state.table.data);
   const { total_locations, location_tags } = useSelector((state) => state.table)
   const [newData, setNewData] = useState();
-
 
 
   const [incidentsArray] = useState([
