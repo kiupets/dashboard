@@ -2,12 +2,16 @@ import * as R from 'ramda'
 import XLSX from 'xlsx';
 
 export const ExcelTable = (data, top) => {
-    console.log(top)
 
-    const widgetsArray = ['Localizaciones', 'Tags no seleccionados', 'Stores sin comunicacion', 'Incidencias', 'Stores con incidencias']
-    const topArray = [widgetsArray, top, ['', '', '', '', '']]
-    console.log(topArray)
-
+    const topTag = () => {
+        return top[0] === null || top[0].length !== 0
+            ? top[0].map((tag, i) => top.map((row, j) => {
+                return j % 6 === 0 ? tag : i === 0 ? top[j] : ''
+            }))
+            : [top]
+    }
+    const widgetsArray = ['Location tags', 'Localizaciones', 'Tags no seleccionados',
+        'Stores sin comunicacion', 'Incidencias', 'Stores con incidencias']
 
     const incidentsDataReduce = data?.map(item => {
         return R.values(R.pick(
@@ -51,7 +55,8 @@ export const ExcelTable = (data, top) => {
 
     const headersArray = Object.keys(data[0])
     const superDummy = data?.map(data => R.values(data))
-    const tabla = topArray.concat([headersArray]).concat(superDummy).concat(superExcelArray)
+
+    const tabla = [widgetsArray].concat(topTag()).concat([headersArray]).concat(superDummy).concat(superExcelArray)
 
     const downloadExcel = () => {
         const newData = tabla?.map(row => {

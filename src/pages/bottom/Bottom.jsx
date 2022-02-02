@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from "react";
 import { DotTable } from "../../components/shared/dotTable/DotTable";
 import { Dots } from "@dexma/ui-components";
 import { colorScale, sortInfo, headersData, sortHeaders } from "../../utils/";
-import { api } from "../../api/api";
 import "./bottom.css";
 import "./headersWidths.css";
 import { ExcelTable } from "../../utils/exelData";
@@ -12,8 +11,7 @@ export const Bottom = () => {
   const { table, incidents,
     uncommunicated_stores,
     perc_stores_without_incidents } = useSelector((state) => state.table.data);
-  console.log(incidents, uncommunicated_stores, perc_stores_without_incidents)
-  const { total_locations } = useSelector((state) => state.table)
+  const { total_locations, location_tags } = useSelector((state) => state.table)
   const [newData, setNewData] = useState();
 
 
@@ -46,7 +44,7 @@ export const Bottom = () => {
           <span className="span-estado-store"
             onClick={ExcelTable(
               table,
-              [total_locations, 'tags n s', uncommunicated_stores,
+              [location_tags, total_locations, 'tags n s', uncommunicated_stores,
                 incidents,
                 `${perc_stores_without_incidents}%`]
             )
