@@ -44,7 +44,7 @@ export const WidgetLabels = () => {
   return (
     <div className=".widget-label-container">
       <div className="widget-top">
-        {/* {labels?.length > 0 ? labels : <Dots steps={3} size={6} />} */}
+        {labels?.length !== 0 ? labels : <Dots steps={3} size={6} />}
         {labels?.length >= 5 && (
           <div className="widget-dots" onClick={handleToggle}>
             <Dots steps={3} size={2} />

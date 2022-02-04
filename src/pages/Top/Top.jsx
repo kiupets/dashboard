@@ -84,7 +84,7 @@ export const Top = () => {
             <Dots steps={3} size={6} />
           )
           }
-          <span className="widget-label">Store con incidencias</span>
+          <span className="widget-label">Stores sin incidencias</span>
         </div >
       </Widget >
     </div >
