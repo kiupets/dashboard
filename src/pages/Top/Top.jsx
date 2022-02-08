@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Widget } from "../../components/widget/Widget";
 import { WidgetLabels } from "../../components/widgetLabels/WidgetLabels";
 import { Dot } from "../../components/shared/dot/Dot";
@@ -9,34 +9,22 @@ export const Top = () => {
 
   const { incidents, perc_stores_without_incidents, uncommunicated_stores } = useSelector((state) => state.table.data);
   const { total_locations, location_tags } = useSelector((state) => state.table);
-  const [locations, setLocations] = useState(null);
-  const [storesComunication, setStoresComunication] = useState(null);
-  const [storeIncidents, setStoreIncidents] = useState(null);
-  const [storesWithoutIncidents, setStoresWithoutIncidents] = useState(null);
-
-  useEffect(() => {
-    setStoresComunication(uncommunicated_stores);
-    setStoreIncidents(incidents);
-    setStoresWithoutIncidents(perc_stores_without_incidents);
-    setLocations(total_locations);
-  }, [uncommunicated_stores, incidents, perc_stores_without_incidents, total_locations]);
-
 
   const widgetsData = [
-    ['Localizaciones', locations],
-    ['Tags Seleccionadas', <WidgetLabels />, 'Tags no seleccionadas'],
-    ['Store sin comunicacion', storesComunication],
-    ['Incidencias', storeIncidents],
-    ['Store sin incidencias', storesWithoutIncidents]
+    ['Localizaciones', total_locations],
+    ['Tags Seleccionadas', <WidgetLabels loc_tags={location_tags} />, 'Tags no seleccionadas'],
+    ['Store sin comunicacion', uncommunicated_stores],
+    ['Incidencias', incidents],
+    ['Store sin incidencias', perc_stores_without_incidents]
   ]
-
   const widgets = widgetsData.map((widget, index) => {
     return (
       <>
         {widget[0] === 'Store sin comunicacion' || widget[0] === 'Incidencias'
+
           ? < Widget key={index}>
             <div className="store-with-dot">
-              {storeIncidents !== null || undefined ? (
+              {perc_stores_without_incidents !== null || undefined ? (
                 <div className="top-label">
                   <Dot
                     style={{
@@ -61,8 +49,11 @@ export const Top = () => {
               {location_tags.length !== 0
                 ?
                 <div className="widget-tags-top">
-                  {storeIncidents !== null || undefined ? (
-                    <span>{widget[1]}</span>
+                  {perc_stores_without_incidents !== null || undefined ? (
+                    <div className="tags">
+                      {widget[1]}
+                    </div>
+
                   ) : (
                     <Dots steps={3} size={6} />
                   )}
@@ -73,11 +64,10 @@ export const Top = () => {
 
             </Widget>
 
-
             : widget[0] === 'Store sin incidencias'
               ? < Widget >
                 <div className="widget-left">
-                  {storeIncidents !== null || undefined ? (
+                  {perc_stores_without_incidents !== null || undefined ? (
                     <span className="widget-number">{`${widget[1]}%`}</span>
                   ) : (
                     <Dots steps={3} size={6} />
@@ -86,11 +76,9 @@ export const Top = () => {
                 </div>
               </Widget> :
 
-
-
               < Widget >
                 <div className="widget-left">
-                  {storeIncidents !== null || undefined ? (
+                  {perc_stores_without_incidents !== null || undefined ? (
                     <span className="widget-number">{widget[1]}</span>
                   ) : (
                     <Dots steps={3} size={6} />
