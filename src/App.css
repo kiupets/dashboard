@@ -1,13 +1,10 @@
 .App {
-  align-items: center;
   background-color: #F1F2F3;
-  display: flex;
-  flex-direction: column;
   height: 100%;
-  padding: 30px;
   justify-content: center;
-  overflow: visible;
-
+  align-items: center;
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
 }
 
 .line {
