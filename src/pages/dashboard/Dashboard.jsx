@@ -97,7 +97,8 @@ export const Dashboard = () => {
                         {/* ///////////CENTRAL-TABLE-GRID/////////////////////////////// */}
 
                         <div className="table-container">
-                            {table?.length !== 0
+                            {/* para que se vean los puntos sino carga la tabla inicial en redux */}
+                            {table[1]
                                 ? <div className='grid-container'>
                                     {info}
                                 </div>
@@ -135,7 +136,11 @@ export const Dashboard = () => {
                                                         row === '% Incidencias' ? 'table-data-bottom-headers' : 'table-data-bottom-headers2'
                                                 }>
                                                     {i === 2
-                                                        ? `${row}%`
+                                                        ? `${row === '% Incidencias'
+                                                            ? '% Incidencias'
+                                                            : row.length !== 0
+                                                                ? `${row}%`
+                                                                : '-'}`
                                                         : (i === 1 || i === 0) && row.length !== 0
                                                             ? row
                                                             : '-'}
