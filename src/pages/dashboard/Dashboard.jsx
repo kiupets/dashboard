@@ -97,7 +97,7 @@ export const Dashboard = () => {
                         {/* ///////////CENTRAL-TABLE-GRID/////////////////////////////// */}
                         <div className="table-container">
                             {/* para que se vean los puntos sino carga la tabla inicial en redux */}
-                            {table.ID === '-'
+                            {table[0].ID !== '-'
                                 ? <div className='grid-container'>
                                     {info}
                                 </div>
