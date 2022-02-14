@@ -1,0 +1,14 @@
+.menu-item {
+  display: flex;
+  height: 20px;
+  align-items: center;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  padding: 0.5rem;
+  color: #221b3d;
+}
+
+.menu-item:hover {
+  background-color: #f1f2f3;
+  cursor: pointer;
+}

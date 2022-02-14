@@ -1,0 +1,5 @@
+export { colorScale } from './colorScale'
+export { colorRedScale } from './colorScale'
+export { headersData } from './headersData'
+export { sortHeaders } from './sortHeaders'
+export { dummyData } from './dummyData'

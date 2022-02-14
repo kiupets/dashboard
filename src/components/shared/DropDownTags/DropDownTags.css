@@ -1,0 +1,13 @@
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  top: 190px;
+  left: 400px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dee0e2;
+  border-radius: 5px;
+  overflow: hidden;
+}
