@@ -1,5 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const tableEmpty = {
+  data: {
+    incidents: 0,
+    uncommunicated_stores: 0,
+    perc_stores_without_incidents: 0,
+    table: [
+      {
+        ID: "Sin Datos",
+        Ciudad: "-",
+        Tipologia: "-",
+        Comunicacion: "-",
+        Pasarela_Clima: "-",
+        Alumbrado: "-",
+        Clima: "-",
+        Banderola: "-",
+        Rotulo: "-",
+        Consumo_Clima: "-",
+        Confort: "-",
+      },
+    ],
+  },
+};
 const initialState = {
   data: {
     incidents: null,
@@ -23,7 +45,7 @@ const initialState = {
   },
   total_locations: null,
   location_tags: [],
-  dropdown_tagss: false
+  dropdown_tagss: false,
 };
 
 export const tableSlice = createSlice({
@@ -39,10 +61,14 @@ export const tableSlice = createSlice({
     SET_TAGS: (state, action) => {
       state.location_tags = action.payload;
     },
+    SET_TABLE_EMPTY: (state) => {
+      state.data = tableEmpty.data;
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { SET_TABLE, SET_LOCATIONS, SET_TAGS } = tableSlice.actions;
+export const { SET_TABLE, SET_LOCATIONS, SET_TAGS, SET_TABLE_EMPTY } =
+  tableSlice.actions;
 
 export default tableSlice.reducer;

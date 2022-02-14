@@ -7,6 +7,7 @@ import {
   SET_TABLE,
   SET_LOCATIONS,
   SET_TAGS,
+  SET_TABLE_EMPTY,
 } from "./redux/tableSlice/TableSlice";
 
 function App() {
@@ -14,13 +15,19 @@ function App() {
   useEffect(() => {
     api
       .getLocationTags()
-      .then(({ location_tags }) =>
-        dispatch(SET_TAGS(location_tags))
-      ).catch(() => SET_TAGS([]));
+      .then(({ location_tags }) => dispatch(SET_TAGS(location_tags)))
+      .catch(() => SET_TAGS([]));
   }, [dispatch]);
 
   useEffect(() => {
-    api.getDataTable().then((res) => dispatch(SET_TABLE(res)));
+    api.getDataTable().then((res) => {
+      console.log(res);
+      if (res?.table.length !== 0) {
+        dispatch(SET_TABLE(res));
+      } else {
+        dispatch(SET_TABLE_EMPTY());
+      }
+    });
   }, [dispatch]);
 
   useEffect(() => {
