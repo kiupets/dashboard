@@ -31,14 +31,12 @@ export const bottomTable = (data) => {
     const totalInci = sumByIndex(totalIncidencias)
     const totalScore = sumByIndex(totalStores)
     const f = (a, b) => {
-        console.log(a, b)
         return ((a / b) * 100).toFixed(2)
     }
     const percentage = R.zipWith(f, totalInci, totalScore)
 
     //para modificar cuando este toda la data
     const finalPercentage = percentage.map(p => {
-        console.log(p)
         return p === 'NaN' ? 0 : p
     })
 
