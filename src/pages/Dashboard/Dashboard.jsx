@@ -5,7 +5,7 @@ import { colorScale, headersData, sortHeaders } from "../../utils";
 import * as R from "ramda";
 import { ExcelTable } from "../../utils/exelData";
 import { useSelector } from "react-redux";
-import './dashboard.css'
+import './Dashboard.css'
 import { bottomTable } from "../../utils/bottomData";
 import { Top } from '../Top/Top'
 
