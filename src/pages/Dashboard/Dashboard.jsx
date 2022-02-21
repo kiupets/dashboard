@@ -23,7 +23,7 @@ export const Dashboard = () => {
     }, [table]);
 
     const tableDataApi = R.map(table => R.values(table),
-        dataSort.map(item => ({ ...item, 'a': '-', 'b': '-', 'c': '-', 'd': '-' })))
+        dataSort.map(item => ({ ...item, Score:item.Detected_Score, Ahorro:item.Ahorro_Potencial  })))
 
     const headers = headersData.map(header => {
         return <div
@@ -44,18 +44,24 @@ export const Dashboard = () => {
                     <div className="table-data"
                         style={{
                             backgroundColor: `${col === 13
-                                ? colorScale(item[col])
+                                ? colorScale(row)
                                 : even(i) ? '#f5f5f5' : 'white'}`,
                             textDecoration: `${col === 0 ? 'underline' : 'none'}`
                         }}>
 
                         {row === true
-                            ? <DotTable className='green' />
-                            : row === false
-                                ? <DotTable className='red' />
-                                : row.length !== 0
-                                    ? row
-                                    : '-'
+                        ? <DotTable className='green' />
+                        : row === false
+                            ? <DotTable className='red' />
+                            : col === 11 || col === 12
+                            ? '-'
+                            : col === 13    
+                            ? row     
+                            : col === 14
+                            ? `${row}€`       
+                            : row.length !== 0 
+                                ? row
+                                :'-'
                         }
                     </div>
                 </div>
