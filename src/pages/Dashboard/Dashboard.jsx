@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { DotTable } from "../../components/shared/dotTable/DotTable";
-import { Dots } from "@dexma/ui-components";
+import { Dots, } from "@dexma/ui-components";
 import { colorScale, headersData, sortHeaders } from "../../utils";
 import * as R from "ramda";
 import { ExcelTable } from "../../utils/exelData";
@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import './Dashboard.css'
 import { bottomTable } from "../../utils/bottomData";
 import { Top } from '../Top/Top'
+import downExe from './downExe.png'
 
 const even = (n) => n % 2 === 0;
 export const Dashboard = () => {
@@ -88,7 +89,9 @@ export const Dashboard = () => {
                                     `${perc_stores_without_incidents}%`]
                             )
                             }>
-                            ...
+                                
+                                <img  src={downExe}   />
+                                
                         </span>
                     </div>
 
