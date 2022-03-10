@@ -46,7 +46,7 @@ export const ExcelTable = (data, top) => {
     const sumByIndex = zipNReduce(R.sum);
     const totalInci = sumByIndex(totalIncidencias)
     const totalScore = sumByIndex(totalStores)
-    const f = (a, b) => `${(a / (a + b) * 100).toFixed(0)}%`
+    const f = (a, b) => `${(a / (a + b) * 100).toFixed(2)}%`
     const percentage = R.zipWith(f, totalInci, totalScore)
 
     //para modificar cuando este toda la data

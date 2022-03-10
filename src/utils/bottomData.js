@@ -31,7 +31,8 @@ export const bottomTable = (data) => {
     const totalInci = sumByIndex(totalIncidencias)
     const totalScore = sumByIndex(totalStores)
     const f = (a, b) => {
-        return ((a / b) * 100).toFixed(0)
+        return ((a / b) * 100).toFixed(2
+            )
     }
     const percentage = R.zipWith(f, totalInci, totalScore)
 
