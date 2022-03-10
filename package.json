@@ -1,6 +1,6 @@
 {
   "name": "caixa-dashboards-front",
-  "version": "0.4.6-snapshot",
+  "version": "0.4.7-snapshot",
   "private": true,
   "dependencies": {
     "@dexma/ui-components": "^4.8.0",
