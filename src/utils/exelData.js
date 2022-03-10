@@ -13,7 +13,7 @@ export const ExcelTable = (data, top) => {
         ))
         : [top]
 
-    const widgetsArray = ['Location tags', 'Localizaciones', 'Tags no seleccionados',
+    const widgetsArray = [`${top[0].length === 0 ? 'tags no seleccionadas' : 'tags seleccionadas'}`, 'Localizaciones',
         'Stores sin comunicación', 'Incidencias', 'Stores con incidencias']
 
     const incidentsDataReduce = data?.map(item =>

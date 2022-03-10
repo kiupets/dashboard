@@ -10,6 +10,7 @@ import { bottomTable } from "../../utils/bottomData";
 import { Top } from '../Top/Top'
 import downExe from './downExe.png'
 
+
 const even = (n) => n % 2 === 0;
 export const Dashboard = () => {
     const { table, incidents,
@@ -84,7 +85,7 @@ export const Dashboard = () => {
                         <span className="span-estado-store"
                             onClick={ExcelTable(
                                 table,
-                                [location_tags, total_locations, 'tags', uncommunicated_stores,
+                                [location_tags, total_locations, uncommunicated_stores,
                                     incidents,
                                     `${perc_stores_without_incidents}%`]
                             )
