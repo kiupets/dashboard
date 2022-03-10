@@ -14,7 +14,7 @@ export const ExcelTable = (data, top) => {
         : [top]
 
     const widgetsArray = ['Location tags', 'Localizaciones', 'Tags no seleccionados',
-        'Stores sin comunicacion', 'Incidencias', 'Stores con incidencias']
+        'Stores sin comunicación', 'Incidencias', 'Stores con incidencias']
 
     const incidentsDataReduce = data?.map(item =>
         R.values(R.pick(
