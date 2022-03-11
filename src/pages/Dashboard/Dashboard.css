@@ -70,6 +70,7 @@
     margin-bottom: 20px;
     font-size: 18px;
     cursor: pointer;
+    width: 100%;
 }
 
 .span-download {
@@ -437,6 +438,7 @@
         display: flex;
         font-family: "SFProText-Regular";
         height: 20px;
+        width: 100%;
         padding-left: 20px;
         margin-top: 20px;
         line-height: 20px;
