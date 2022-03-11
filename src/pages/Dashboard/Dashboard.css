@@ -61,6 +61,7 @@
 .span-estado-store {
     display: flex;
     font-family: "SFProText-Regular";
+    flex: 2;
     height: 20px;
     padding-left: 20px;
     padding-right: 15px;
@@ -71,23 +72,19 @@
     font-size: 18px;
     cursor: pointer;
     width: 100%;
+    flex: 2;
 }
 
 .span-download {
     display: flex;
-    font-family: "SFProText-Regular";
-    height: 20px;
-    padding-left: 20px;
-    padding-right: 15px;
-    margin-top: 20px;
-    line-height: 20px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    font-size: 18px;
-    cursor: pointer;
-    align-self: flex-end;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 40px;
 }
-
+.img-download{
+    width: 20px!important;
+    padding-right: 10px;
+}
 
 .table-data {
     display: flex;
@@ -438,6 +435,7 @@
         display: flex;
         font-family: "SFProText-Regular";
         height: 20px;
+        flex: 2;
         width: 100%;
         padding-left: 20px;
         margin-top: 20px;

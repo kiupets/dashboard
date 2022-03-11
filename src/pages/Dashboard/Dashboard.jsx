@@ -82,7 +82,7 @@ export const Dashboard = () => {
                 <div className="top-bottom">
                     <div className="headers-top">
                         <span className="span-estado-store">Estados por store</span>
-                        <span className="span-download"
+                        <div className="span-download"
                             onClick={ExcelTable(
                                 table,
                                 [location_tags, total_locations, uncommunicated_stores,
@@ -91,9 +91,9 @@ export const Dashboard = () => {
                             )
                             }>
                                 
-                                <img  src={downExe}  alt="" />
+                                <img   className="img-download" src={downExe}  alt="excel" />
                                 
-                        </span>
+                        </div>
                     </div>
 
                     {/* ///////////HEADERS-GRID/////////////////////////////// */}
