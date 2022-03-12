@@ -10,7 +10,6 @@ import { bottomTable } from "../../utils/bottomData";
 import { Top } from '../Top/Top'
 import downExe from './downExe.png'
 
-
 const even = (n) => n % 2 === 0;
 export const Dashboard = () => {
     const { table, incidents,
@@ -34,7 +33,6 @@ export const Dashboard = () => {
             <div className="header-in">
                 {header}
             </div>
-
         </div>
     })
 
@@ -50,7 +48,6 @@ export const Dashboard = () => {
                                 : even(i) ? '#f5f5f5' : 'white'}`,
                             textDecoration: `${col === 0 ? 'underline' : 'none'}`
                         }}>
-
                         {row === true
                         ? <DotTable className='green' />
                         : row === false
@@ -68,12 +65,10 @@ export const Dashboard = () => {
                     </div>
                 </div>
             )
-
         }
         )
     })
     return (
-
         <div className="dashboad-container" >
             <div style={{ backgroundColor: '#F1F2F3', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
                 <Top />
@@ -89,15 +84,12 @@ export const Dashboard = () => {
                                     incidents,
                                     `${perc_stores_without_incidents}%`]
                             )
-                            }>
-                                
-                                <img   className="img-download" src={downExe}  alt="excel" />
-                                
+                            }
+                        >  
+                             <img   className="img-download" src={downExe}  alt="excel" />    
                         </div>
                     </div>
-
                     {/* ///////////HEADERS-GRID/////////////////////////////// */}
-
                     <div className="headers-magic">
                         <div className="headers-super-scroll">
                             <div className='grid-container-headers'>
@@ -116,19 +108,18 @@ export const Dashboard = () => {
                                 </div>}
                         </div>
                     </div>
-
                     {/* ///////////BOTTOM GRID/////////////////////////////// */}
                     <div className="bottom-bottom-grid">
-
                         {table?.length !== 0
-                            ? <div className="bottom-grid-container">
-
+                            ? <div 
+                                className="bottom-grid-container"
+                                style={table?.length > 12 ? {paddingRight: "1rem"} : {padding: ""}}
+                            >
                                 {
                                     bottomTable(table).map((column, i) => column.map((row, j) => {
                                         const colorValue = i === 2 && row !== '% Incidencias' && row.length !== 0
                                         return (
                                             <div
-
                                                 className={row === 'Total Incidencias' ||
                                                     row === 'Total Stores' ||
                                                     row === '% Incidencias' ? 'bottom-bottom-grid-headers' : ''}
@@ -138,7 +129,6 @@ export const Dashboard = () => {
                                                         : i === 1 ? '#f5f5f5'
                                                             : 'white'}`
                                                 }}>
-
                                                 <div className={
                                                     row === 'Total Incidencias' ||
                                                         row === 'Total Stores' ||
@@ -165,7 +155,6 @@ export const Dashboard = () => {
                     </div>
                 </div>
             </div>
-
         </div >
     )
 };
