@@ -11,6 +11,7 @@ import { Top } from '../Top/Top'
 import downExe from './downExe.png'
 
 
+
 const even = (n) => n % 2 === 0;
 export const Dashboard = () => {
     const { table, incidents,
@@ -51,6 +52,8 @@ export const Dashboard = () => {
                         }}>
                         {row === true
                         ? <DotTable className='green' />
+                        : row === 0
+                        ? '-'
                         : row === false
                             ? <DotTable className='red' />
                             : col === 11 || col === 12
