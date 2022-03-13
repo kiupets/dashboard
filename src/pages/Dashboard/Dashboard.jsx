@@ -9,6 +9,7 @@ import './Dashboard.css'
 import { bottomTable } from "../../utils/bottomData";
 import { Top } from '../Top/Top'
 import downExe from './downExe.png'
+import { dummyData } from "../../utils";
 
 const even = (n) => n % 2 === 0;
 export const Dashboard = () => {
@@ -24,7 +25,7 @@ export const Dashboard = () => {
     }, [table]);
 
     const tableDataApi = R.map(table => R.values(table),
-        dataSort.map(item => ({ ...item, Score:item.Detected_Score, Ahorro:item.Ahorro_Potencial  })))
+        dataSort.map(item => ({ ...item, Score:item.Detected_Score, Ahorro:item.Ahorro_Potencial })))
 
     const headers = headersData.map(header => {
         return <div
@@ -98,8 +99,9 @@ export const Dashboard = () => {
                         </div>
                         {/* ///////////CENTRAL-TABLE-GRID/////////////////////////////// */}
                         <div className="table-container">
+                        {/* [0].ID !== '-' */}
                             {/* para que se vean los puntos sino carga la tabla inicial en redux */}
-                            {table[0].ID !== '-'
+                            {table
                                 ? <div className='grid-container'>
                                     {info}
                                 </div>
