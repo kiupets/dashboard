@@ -9,7 +9,7 @@ import './Dashboard.css'
 import { bottomTable } from "../../utils/bottomData";
 import { Top } from '../Top/Top'
 import downExe from './downExe.png'
-import { dummyData } from "../../utils";
+
 
 const even = (n) => n % 2 === 0;
 export const Dashboard = () => {
