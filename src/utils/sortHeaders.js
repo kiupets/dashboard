@@ -19,5 +19,5 @@ export const sortHeaders = (e, data) => {
 				.sort((a, b) => {
 					return a[_key] - b[_key];
 				})
-		: R.sort(R.descend(R.prop(_key.replace(' ', '_'))), data);
+		: R.sort(R.ascend(R.prop(_key.replace(' ', '_'))), data);
 };
