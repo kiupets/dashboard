@@ -26,7 +26,7 @@ export const Dashboard = () => {
     }, [table]);
 
     const tableDataApi = R.map(table => R.values(table),
-        dataSort.map(item => ({ ...item, Score:item.Detected_Score, Ahorro:item.Ahorro_Potencial })))
+        dataSort.map(item => ({ ...item,Score:item.Detected_Score, Ahorro:item.Ahorro_Potencial })))
 
     const headers = headersData.map(header => {
         return <div
