@@ -3,7 +3,6 @@ export const sortHeaders = (e, data) => {
 	const key = e.target.innerText;
 	const noAccentKey = key.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 	const _key = noAccentKey.replace(' ', '_');
-	console.log(_key);
 	return _key === 'Comunicacion' ||
 	_key === 'Pasarela_Clima' ||
 	_key === 'Alumbrado' ||
