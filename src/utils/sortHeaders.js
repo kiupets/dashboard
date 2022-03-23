@@ -13,11 +13,11 @@ export const sortHeaders = (e, data) => {
 	_key === 'Confort'
 		? data
 				.filter((e) => {
-					return e[_key] === 0;
+					return e[_key] !== 0;
 				})
-				.concat(data.filter((e) => e[_key] !== 0))
 				.sort((a, b) => {
 					return a[_key] - b[_key];
 				})
+				.concat(data.filter((e) => e[_key] === 0))
 		: R.sort(R.ascend(R.prop(_key.replace(' ', '_'))), data);
 };
