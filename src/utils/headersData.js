@@ -11,7 +11,7 @@ export const headersData = [
 	'Consumo Clima',
 	'Confort',
 	'Anomalías',
-	'Impacto Anomalías',
-	'Detected Score',
-	'Ahorro Potencial'
+	'Impacto Anomalías'
+	// 'Detected Score',
+	// 'Ahorro Potencial'
 ];
