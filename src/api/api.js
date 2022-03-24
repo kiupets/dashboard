@@ -8,7 +8,6 @@ const headers = {
 	'X-Session-Id': session_id
 };
 
-
 const get = async (path) => {
 	const response = await axios.get(`${baseUrl}${path}/`, { headers });
 	const { data } = await response;

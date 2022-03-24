@@ -24,9 +24,9 @@ export const Dashboard = () => {
     useEffect(() => {
         table?.length !== 0 && setDataSort(table);
     }, [table]);
-
+//AGREGAR (item => ({ ...item,Score:item.Detected_Score, Ahorro:item.Ahorro_Potencial })) EN tableDataApi
     const tableDataApi = R.map(table => R.values(table),
-        dataSort.map(item => ({ ...item,Score:item.Detected_Score, Ahorro:item.Ahorro_Potencial })))
+        dataSort.map(item => ({ ...item, })))
 
     const headers = headersData.map(header => {
         return <div

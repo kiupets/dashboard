@@ -4,21 +4,22 @@
         url("../../fonts/SFProText-Regular.ttf") format("truetype");
 }
 
+/* CAMBIAR 13 X 15 PARA AGREGAR 2 COLUMNAS EN EL DASHBOARD EN LOS 3 GRID-CONTAINERS */
 .grid-container-headers {
     display: grid;
-    grid-template-columns: repeat(15, minmax(30px, 1fr));
+    grid-template-columns: repeat(13, minmax(30px, 1fr));
     column-gap: 1px;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(15, minmax(30px, 1fr));
+    grid-template-columns: repeat(13, minmax(30px, 1fr));
     column-gap: 1px;
 }
 
 .bottom-grid-container {
     display: grid;
-    grid-template-columns: repeat(15, minmax(30px, 1fr));
+    grid-template-columns: repeat(13, minmax(30px, 1fr));
     column-gap: 1px;
     margin: 2rem 0rem;
 }

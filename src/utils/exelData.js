@@ -57,17 +57,21 @@ export const ExcelTable = (data, top) => {
         return p === 'NaN%' ? '0%' : p
     })
     const inciArray = ['Total Incidencias', 'Total Stores', '% Incidencias',]
-    const excelArray = R.zip(inciArray, [R.flatten(['', '', totalInci, '', '', '', '']), R.flatten(['', '', totalScore, '', '', '', '']), R.flatten(['', '', finalPercentage, '', '', '', ''])])
+    const excelArray = R.zip(inciArray, [R.flatten(['', '', totalInci, '', '',]), R.flatten(['', '', totalScore, '', '', ]), R.flatten(['', '', finalPercentage, '', '', ])])
     const superExcelArray = excelArray.map(arr => R.flatten(arr))
 
 
     const headersArray = Object.keys(data[0])
-    const superDummy = data?.map(data => R.values(data))
+    
+        //sacar slice para que tome todo el array cuando se agreguen AHORRO Y DETECT
+    const superDummy = data?.map(data => R.values(data).slice(0,11))
+    
 
     const tabla = [widgetsArray]
         .concat(topTag())
         .concat(['', ''])
-        .concat([headersArray])
+        //sacar slice para que tome todo el array cuando se agreguen AHORRO Y DETECT
+        .concat([headersArray.slice(0, 11)])
         .concat(superDummy)
         .concat(['', ''])
         .concat(superExcelArray)
