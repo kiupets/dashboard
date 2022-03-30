@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { DotTable } from "../../components/shared/dotTable/DotTable";
 import { Dots, } from "@dexma/ui-components";
 import { colorScale, headersData, sortHeaders } from "../../utils";
@@ -14,6 +14,13 @@ import downExe from './downExe.png'
 
 const even = (n) => n % 2 === 0;
 export const Dashboard = () => {
+    const [scroll, setScroll] = useState(false)
+    const scrollRef = useRef(null);
+    useEffect(() => {
+        scrollRef.current.scrollHeight > scrollRef.current.clientHeight ? setScroll(true) : setScroll(false)
+    }, []);
+
+
     const { table, incidents,
         uncommunicated_stores,
         perc_stores_without_incidents } = useSelector((state) => state.table.data);
@@ -24,7 +31,7 @@ export const Dashboard = () => {
     useEffect(() => {
         table?.length !== 0 && setDataSort(table);
     }, [table]);
-//AGREGAR (item => ({ ...item,Score:item.Detected_Score, Ahorro:item.Ahorro_Potencial })) EN tableDataApi
+    //AGREGAR (item => ({ ...item,Score:item.Detected_Score, Ahorro:item.Ahorro_Potencial })) EN tableDataApi
     const tableDataApi = R.map(table => R.values(table),
         dataSort.map(item => ({ ...item, })))
 
@@ -51,20 +58,20 @@ export const Dashboard = () => {
                             textDecoration: `${col === 0 ? 'underline' : 'none'}`
                         }}>
                         {row === true
-                        ? <DotTable className='green' />
-                        : row === 0
-                        ? '-'
-                        : row === false
-                            ? <DotTable className='red' />
-                            : col === 11 || col === 12
-                            ? '-'
-                            : col === 13    
-                            ? row     
-                            : col === 14
-                            ? `${row}€`       
-                            : row.length !== 0 
-                                ? row
-                                :'-'
+                            ? <DotTable className='green' />
+                            : row === 0
+                                ? '-'
+                                : row === false
+                                    ? <DotTable className='red' />
+                                    : col === 11 || col === 12
+                                        ? '-'
+                                        : col === 13
+                                            ? row
+                                            : col === 14
+                                                ? `${row}€`
+                                                : row.length !== 0
+                                                    ? row
+                                                    : '-'
                         }
                     </div>
                 </div>
@@ -81,7 +88,8 @@ export const Dashboard = () => {
                 <div className="top-bottom">
                     <div className="headers-top">
                         <span className="span-estado-store">Estados por store</span>
-                        <div className="span-download"
+                        <div
+                            className="span-download"
                             onClick={ExcelTable(
                                 table,
                                 [location_tags, total_locations, uncommunicated_stores,
@@ -89,24 +97,76 @@ export const Dashboard = () => {
                                     `${perc_stores_without_incidents}%`]
                             )
                             }
-                        >  
-                             <img   className="img-download" src={downExe}  alt="excel" />    
+                        >
+                            <img className="img-download" src={downExe} alt="excel" />
                         </div>
                     </div>
                     {/* ///////////HEADERS-GRID/////////////////////////////// */}
                     <div className="headers-magic">
-                        <div className="headers-super-scroll">
+                        <div
+                            style={scroll ? { paddingRight: '16px' } : { paddingRight: '0px' }} gfyrytyjyhm
+                            className="headers-super-scroll">
                             <div className='grid-container-headers'>
                                 {headers}
                             </div>
                         </div>
                         {/* ///////////CENTRAL-TABLE-GRID/////////////////////////////// */}
-                        <div className="table-container">
-                        {/* [0].ID !== '-' */}
+                        <div
+                            ref={scrollRef}
+                            className="table-container">
+                            {/* [0].ID !== '-' */}
                             {/* para que se vean los puntos sino carga la tabla inicial en redux */}
-                            {table
+                            {table[0].ID !== '-'
                                 ? <div className='grid-container'>
                                     {info}
+                                </div>
+                                : <div className="loading-container">
+                                    <Dots steps="3" size="5" />
+                                </div>}
+
+                        </div>
+                        <div
+
+
+                            className="bottom-bottom-grid">
+                            {table?.length !== 0
+                                ? <div
+                                    className="bottom-grid-container"
+                                    style={scroll ? { overflowY: 'scroll' } : { overflowY: 'hidden' }}
+                                >
+                                    {
+                                        bottomTable(table).map((column, i) => column.map((row, j) => {
+                                            const colorValue = i === 2 && row !== '% Incidencias' && row.length !== 0
+                                            return (
+                                                <div
+                                                    className={row === 'Total Incidencias' ||
+                                                        row === 'Total Stores' ||
+                                                        row === '% Incidencias' ? 'bottom-bottom-grid-headers' : ''}
+                                                    style={{
+                                                        backgroundColor: `${colorValue
+                                                            ? `rgba(255, 99, 71,${(row / 100).toFixed(2)} )`
+                                                            : i === 1 ? '#f5f5f5'
+                                                                : 'white'}`
+                                                    }}>
+                                                    <div className={
+                                                        row === 'Total Incidencias' ||
+                                                            row === 'Total Stores' ||
+                                                            row === '% Incidencias' ? 'table-data-bottom-headers' : 'table-data-bottom-headers2'
+                                                    }>
+                                                        {i === 2
+                                                            ? `${row === '% Incidencias'
+                                                                ? '% Incidencias'
+                                                                : row.length !== 0
+                                                                    ? `${row}%`
+                                                                    : '-'}`
+                                                            : (i === 1 || i === 0) && row.length !== 0
+                                                                ? row
+                                                                : '-'}
+                                                    </div>
+                                                </div>
+                                            )
+                                        }))
+                                    }
                                 </div>
                                 : <div className="loading-container">
                                     <Dots steps="3" size="5" />
@@ -114,50 +174,7 @@ export const Dashboard = () => {
                         </div>
                     </div>
                     {/* ///////////BOTTOM GRID/////////////////////////////// */}
-                    <div className="bottom-bottom-grid">
-                        {table?.length !== 0
-                            ? <div 
-                                className="bottom-grid-container"
-                                style={table?.length > 12 ? {paddingRight: "1rem"} : {padding: ""}}
-                            >
-                                {
-                                    bottomTable(table).map((column, i) => column.map((row, j) => {
-                                        const colorValue = i === 2 && row !== '% Incidencias' && row.length !== 0
-                                        return (
-                                            <div
-                                                className={row === 'Total Incidencias' ||
-                                                    row === 'Total Stores' ||
-                                                    row === '% Incidencias' ? 'bottom-bottom-grid-headers' : ''}
-                                                style={{
-                                                    backgroundColor: `${colorValue
-                                                        ? `rgba(255, 99, 71,${(row / 100).toFixed(2)} )`
-                                                        : i === 1 ? '#f5f5f5'
-                                                            : 'white'}`
-                                                }}>
-                                                <div className={
-                                                    row === 'Total Incidencias' ||
-                                                        row === 'Total Stores' ||
-                                                        row === '% Incidencias' ? 'table-data-bottom-headers' : 'table-data-bottom-headers2'
-                                                }>
-                                                    {i === 2
-                                                        ? `${row === '% Incidencias'
-                                                            ? '% Incidencias'
-                                                            : row.length !== 0
-                                                                ? `${row}%`
-                                                                : '-'}`
-                                                        : (i === 1 || i === 0) && row.length !== 0
-                                                            ? row
-                                                            : '-'}
-                                                </div>
-                                            </div>
-                                        )
-                                    }))
-                                }
-                            </div>
-                            : <div className="loading-container">
-                                <Dots steps="3" size="5" />
-                            </div>}
-                    </div>
+
                 </div>
             </div>
         </div >
