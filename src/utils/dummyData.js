@@ -12,9 +12,7 @@ export const dummyData = [
 		Consumo_Clima: 0,
 		Confort: 0,
 		Anomalías: 3,
-		Impacto_Anomalías: 2,
-		Detected_Score: 100,
-		Ahorro_Potencial: 231
+		Impacto_Anomalías: 2
 	},
 	{
 		ID: '2',
@@ -29,9 +27,7 @@ export const dummyData = [
 		Consumo_Clima: 0,
 		Confort: 0,
 		Anomalías: 3,
-		Impacto_Anomalías: 2,
-		Detected_Score: 100,
-		Ahorro_Potencial: 231
+		Impacto_Anomalías: 2
 	},
 	{
 		ID: '3',
@@ -46,9 +42,7 @@ export const dummyData = [
 		Consumo_Clima: 0,
 		Confort: 0,
 		Anomalías: 3,
-		Impacto_Anomalías: 2,
-		Detected_Score: 100,
-		Ahorro_Potencial: 231
+		Impacto_Anomalías: 2
 	},
 	{
 		ID: '4',
@@ -63,9 +57,7 @@ export const dummyData = [
 		Consumo_Clima: 0,
 		Confort: 0,
 		Anomalías: 3,
-		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 231
+		Impacto_Anomalías: 2
 	},
 	{
 		ID: '5',
@@ -80,9 +72,7 @@ export const dummyData = [
 		Consumo_Clima: true,
 		Confort: 0,
 		Anomalías: 3,
-		Impacto_Anomalías: 2,
-		Detected_Score: 11,
-		Ahorro_Potencial: 231
+		Impacto_Anomalías: 2
 	},
 	{
 		ID: '6',
@@ -97,9 +87,7 @@ export const dummyData = [
 		Consumo_Clima: true,
 		Confort: 0,
 		Anomalías: 3,
-		Impacto_Anomalías: 2,
-		Detected_Score: 23,
-		Ahorro_Potencial: 231
+		Impacto_Anomalías: 2
 	},
 	{
 		ID: '7',
@@ -114,9 +102,7 @@ export const dummyData = [
 		Consumo_Clima: false,
 		Confort: 0,
 		Anomalías: 3,
-		Impacto_Anomalías: 2,
-		Detected_Score: 43,
-		Ahorro_Potencial: 231
+		Impacto_Anomalías: 2
 	},
 	{
 		ID: '8',
@@ -131,9 +117,7 @@ export const dummyData = [
 		Consumo_Clima: false,
 		Confort: 0,
 		Anomalías: 3,
-		Impacto_Anomalías: 2,
-		Detected_Score: 65,
-		Ahorro_Potencial: 231
+		Impacto_Anomalías: 2
 	},
 	{
 		ID: '9',
@@ -148,8 +132,81 @@ export const dummyData = [
 		Consumo_Clima: false,
 		Confort: 0,
 		Anomalías: 3,
-		Impacto_Anomalías: 2,
-		Detected_Score: 99,
-		Ahorro_Potencial: 231
+		Impacto_Anomalías: 2
+	},
+	{
+		ID: '9',
+		Ciudad: 'Barcelona',
+		Tipologia: 'simple',
+		Comunicacion: 0,
+		Pasarela_Clima: true,
+		Alumbrado: 0,
+		Clima: 0,
+		Banderola: true,
+		Rótulo: true,
+		Consumo_Clima: false,
+		Confort: 0,
+		Anomalías: 3,
+		Impacto_Anomalías: 2
+	},
+	{
+		ID: '9',
+		Ciudad: 'Barcelona',
+		Tipologia: 'simple',
+		Comunicacion: 0,
+		Pasarela_Clima: true,
+		Alumbrado: 0,
+		Clima: 0,
+		Banderola: true,
+		Rótulo: true,
+		Consumo_Clima: false,
+		Confort: 0,
+		Anomalías: 3,
+		Impacto_Anomalías: 2
+	},
+	{
+		ID: '9',
+		Ciudad: 'Barcelona',
+		Tipologia: 'simple',
+		Comunicacion: 0,
+		Pasarela_Clima: true,
+		Alumbrado: 0,
+		Clima: 0,
+		Banderola: true,
+		Rótulo: true,
+		Consumo_Clima: false,
+		Confort: 0,
+		Anomalías: 3,
+		Impacto_Anomalías: 2
+	},
+	{
+		ID: '9',
+		Ciudad: 'Barcelona',
+		Tipologia: 'simple',
+		Comunicacion: 0,
+		Pasarela_Clima: true,
+		Alumbrado: 0,
+		Clima: 0,
+		Banderola: true,
+		Rótulo: true,
+		Consumo_Clima: false,
+		Confort: 0,
+		Anomalías: 3,
+		Impacto_Anomalías: 2
+	},
+	{
+		ID: '9',
+		Ciudad: 'Barcelona',
+		Tipologia: 'simple',
+		Comunicacion: 0,
+		Pasarela_Clima: true,
+		Alumbrado: 0,
+		Clima: 0,
+		Banderola: true,
+		Rótulo: true,
+		Consumo_Clima: false,
+		Confort: 0,
+		Anomalías: 3,
+		Impacto_Anomalías: 2
 	}
 ];
