@@ -10,16 +10,8 @@ import { bottomTable } from "../../utils/bottomData";
 import { Top } from '../Top/Top'
 import downExe from './downExe.png'
 
-
-
 const even = (n) => n % 2 === 0;
 export const Dashboard = () => {
-    const [scroll, setScroll] = useState(false)
-    const scrollRef = useRef(null);
-    useEffect(() => {
-        scrollRef.current.scrollHeight > scrollRef.current.clientHeight ? setScroll(true) : setScroll(false)
-    }, []);
-
 
     const { table, incidents,
         uncommunicated_stores,
@@ -103,80 +95,86 @@ export const Dashboard = () => {
                     </div>
                     {/* ///////////HEADERS-GRID/////////////////////////////// */}
                     <div className="headers-magic">
-                        <div
-                            style={scroll ? { paddingRight: '16px' } : { paddingRight: '0px' }} gfyrytyjyhm
-                            className="headers-super-scroll">
+                        <div className="headers-super-scroll">
                             <div className='grid-container-headers'>
                                 {headers}
                             </div>
                         </div>
                         {/* ///////////CENTRAL-TABLE-GRID/////////////////////////////// */}
-                        <div
-                            ref={scrollRef}
-                            className="table-container">
-                            {/* [0].ID !== '-' */}
-                            {/* para que se vean los puntos sino carga la tabla inicial en redux */}
-                            {table[0].ID !== '-'
-                                ? <div className='grid-container'>
+
+                        {/* para que se vean los puntos sino carga la tabla inicial en redux */}
+                        {table[0].ID !== '-'
+                            ? <div style={{ position: 'relative', overflowY: 'auto', height: '650px' }}>
+                                <div className='grid-container'>
                                     {info}
                                 </div>
-                                : <div className="loading-container">
-                                    <Dots steps="3" size="5" />
-                                </div>}
+                                <div className="bottom-bottom-grid">
+                                    {table?.length !== 0
+                                        ? <div className="bottom-grid-container" >
+                                            {
+                                                bottomTable(table).map((column, i) => column.map((row, j) => {
+                                                    const colorValue = i === 2 && row !== '% Incidencias' && row.length !== 0
+                                                    return (
 
-                        </div>
-                        <div
-
-
-                            className="bottom-bottom-grid">
-                            {table?.length !== 0
-                                ? <div
-                                    className="bottom-grid-container"
-                                    style={scroll ? { overflowY: 'scroll' } : { overflowY: 'hidden' }}
-                                >
-                                    {
-                                        bottomTable(table).map((column, i) => column.map((row, j) => {
-                                            const colorValue = i === 2 && row !== '% Incidencias' && row.length !== 0
-                                            return (
-                                                <div
-                                                    className={row === 'Total Incidencias' ||
-                                                        row === 'Total Stores' ||
-                                                        row === '% Incidencias' ? 'bottom-bottom-grid-headers' : ''}
-                                                    style={{
-                                                        backgroundColor: `${colorValue
-                                                            ? `rgba(255, 99, 71,${(row / 100).toFixed(2)} )`
-                                                            : i === 1 ? '#f5f5f5'
-                                                                : 'white'}`
-                                                    }}>
-                                                    <div className={
-                                                        row === 'Total Incidencias' ||
-                                                            row === 'Total Stores' ||
-                                                            row === '% Incidencias' ? 'table-data-bottom-headers' : 'table-data-bottom-headers2'
-                                                    }>
-                                                        {i === 2
-                                                            ? `${row === '% Incidencias'
-                                                                ? '% Incidencias'
-                                                                : row.length !== 0
-                                                                    ? `${row}%`
-                                                                    : '-'}`
-                                                            : (i === 1 || i === 0) && row.length !== 0
-                                                                ? row
-                                                                : '-'}
-                                                    </div>
-                                                </div>
-                                            )
-                                        }))
-                                    }
+                                                        <div
+                                                            className={row === 'Total Incidencias' ||
+                                                                row === 'Total Stores' ||
+                                                                row === '% Incidencias' ? 'bottom-bottom-grid-headers' : ''}
+                                                            style={{
+                                                                zIndex: 99,
+                                                                backgroundColor: `${colorValue
+                                                                    ? `white`
+                                                                    : i === 1 ? '#f5f5f5'
+                                                                        : 'white'}`
+                                                            }}>
+                                                            <div
+                                                                style={{
+                                                                    zIndex: 99,
+                                                                    backgroundColor: `${colorValue
+                                                                        ? `rgba(255, 99, 71,${(row / 100).toFixed(2)} )`
+                                                                        : i === 1 ? '#f5f5f5'
+                                                                            : 'white'}`
+                                                                }} className={
+                                                                    row === 'Total Incidencias' ||
+                                                                        row === 'Total Stores' ||
+                                                                        row === '% Incidencias' ? 'table-data-bottom-headers' : 'table-data-bottom-headers2'
+                                                                }>
+                                                                {i === 2
+                                                                    ? `${row === '% Incidencias'
+                                                                        ? '% Incidencias'
+                                                                        : row.length !== 0
+                                                                            ? `${row}%`
+                                                                            : '-'}`
+                                                                    : (i === 1 || i === 0) && row.length !== 0
+                                                                        ? row
+                                                                        : '-'}
+                                                            </div>
+                                                        </div>
+                                                    )
+                                                }))
+                                            }
+                                        </div>
+                                        : <div className="loading-container">
+                                            <Dots steps="3" size="5" />
+                                        </div>}
                                 </div>
-                                : <div className="loading-container">
-                                    <Dots steps="3" size="5" />
-                                </div>}
-                        </div>
+
+
+                            </div>
+
+
+                            : <div className="loading-container">
+                                <Dots steps="3" size="5" />
+                            </div>}
+
                     </div>
-                    {/* ///////////BOTTOM GRID/////////////////////////////// */}
+
 
                 </div>
+                {/* ///////////BOTTOM GRID/////////////////////////////// */}
+
             </div>
-        </div >
+        </div>
+
     )
 };
