@@ -1,0 +1,94 @@
+steps:
+  - name: 'gcr.io/$PROJECT_ID/dexma-cloud-builders/vaulter'
+    id: GET_SECRETS_AND_CACHE
+    waitFor: ['-']
+    entrypoint: 'bash'
+    args:
+      - -c
+      - |
+        /vaulter.sh ENV=${_ENV} VALUE_KEY=npm_artifactory_registry_url VALUE_PATH=cloud_build VALUE_KEY=npm_artifactory_auth VALUE_PATH=cloud_build && source /workspace/build_vars
+        echo '_auth='${npm_artifactory_auth}'\nalways-auth=true\nemail=systems@dexma.com\nregistry='${npm_artifactory_registry_url} > ./.npmrc   
+        if gsutil -m cp -r gs://dexma-cloudbuild/sonar_cache_${_REPO_NAME}.tar.gz .; then tar xpzf sonar_cache_${_REPO_NAME}.tar.gz -C /;fi               
+    volumes:
+      - path: '/root/.sonar'
+        name: 'sonar_cache'
+  
+  - name: 'gcr.io/$PROJECT_ID/dexma-cloud-builders/versioner'
+    id: GET_VERSION
+    waitFor: ['-']
+    args: ['-a=get', '-l=${_LANGUAGE}', '-b=${_BRANCH_NAME}']
+
+  - name: 'gcr.io/cloud-builders/npm'
+    id: WRITE_VERSION
+    waitFor: ['GET_VERSION']
+    entrypoint: /bin/sh
+    args:
+      - -c
+      - |
+        npm version --no-git-tag-version --allow-same-version $(cat VERSION_NUMBER)
+
+  #- name: 'gcr.io/cloud-builders/docker'
+  #  id: TEST_APP
+  #  waitFor: ['WRITE_VERSION']
+  #  entrypoint: /bin/sh
+  #  args:
+  #    - -c
+  #    - |
+  #      docker run -v $(pwd):/app -w /app -e GENERATE_SOURCEMAP=false --rm node:14.15.5-alpine npm ci --silent
+  #      docker run -v $(pwd):/app -w /app -e GENERATE_SOURCEMAP=false --rm node:14.15.5-alpine npm install react-scripts@3.4.1 -g --silent
+  #      docker run -v $(pwd):/app -w /app --rm node:14.15.5-alpine npm i jest-sonar-reporter
+  #      docker run -v $(pwd):/app -w /app -e CI=true --rm node:14.15.5-alpine npm run test -- --testResultsProcessor="jest-sonar-reporter"
+
+  - name: 'gcr.io/cloud-builders/docker'
+    id: GENERATE_IMAGE_AND_PUSH
+    waitFor: ['WRITE_VERSION']
+    entrypoint: 'bash'
+    args:
+       - -c
+       - |
+        docker run \
+          --network=cloudbuild \
+          -v /workspace:/workspace \
+          gcr.io/kaniko-project/executor:latest \
+          --dockerfile /workspace/Dockerfile \
+          --build-arg=APP_BACKEND_URL=https://caixa-dashboards-api.pre.enerapp.com/dashboard/ \
+          --destination=gcr.io/$PROJECT_ID/dexmatech/${_BB_PROJECT}/${_REPO_NAME}:$(cat VERSION_NUMBER) \
+          --cache=true \
+  
+  #- name: 'gcr.io/divine-aegis-105709/dexma-cloud-builders/sonar-scanner:latest'
+  #  id: SONAR
+  #  waitFor: ['TEST_APP']
+  #  args: ['-Dsonar.projectName=${_REPO_NAME}',
+  #         '-Dsonar.projectKey=dexma:${_REPO_NAME}',
+  #         '-Dsonar.source=.',
+  #         '-Dsonar.exclusions=**/*.test.*',
+  #         '-Dsonar.testExecutionReportPaths=test-report.xml',
+  #         '-Dsonar.branch.name=${_BRANCH_NAME}']
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:alpine'
+    id: PUSH_RESULTS_AND_CACHE
+    waitFor: ['GENERATE_IMAGE_AND_PUSH']
+    entrypoint: 'bash'
+    args:
+      - -c
+      - | 
+        apk add pigz &&
+        apk add tar &&
+        tar --use-compress-program="pigz --best --recursive" -cf sonar_cache_${_REPO_NAME}.tar.gz /root/.sonar
+        #tar --use-compress-program="pigz --best --recursive" -cf test_ci_${_REPO_NAME}_${_BUILD_ID}.tar.gz test-report.xml &&
+        #gsutil -m -o GSUtil:parallel_composite_upload_threshold=150M cp sonar_cache_${_REPO_NAME}.tar.gz gs://dexma-cloudbuild/
+        #gsutil -m -o GSUtil:parallel_composite_upload_threshold=150M cp target/sonar/report-task.txt gs://dexma-jenkins/sonar/sonar_ci_${_REPO_NAME}_${_BUILD_ID}.txt &&
+        #gsutil -m -o GSUtil:parallel_composite_upload_threshold=150M cp test_ci_${_REPO_NAME}_${_BUILD_ID}.tar.gz gs://dexma-jenkins/junits/test_ci_${_REPO_NAME}_${_BUILD_ID}.tar.gz
+    volumes:
+      - path: '/root/.sonar'
+        name: 'sonar_cache'
+
+substitutions:
+  _ENV: 'pre'
+  _REPO_NAME: 'caixa-dashboards-front'
+  _BB_PROJECT: 'external'
+  _BRANCH_NAME: 'develop'
+  _BUILD_ID: 'HAND_DEFAULT'
+  _LANGUAGE: 'npm'
+options:
+  logStreamingOption: STREAM_ON

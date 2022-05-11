@@ -13,14 +13,14 @@ export const Top = () => {
   const widgetsData = [
     ['Localizaciones', total_locations],
     ['Tags Seleccionadas', <WidgetLabels loc_tags={location_tags} />, 'Tags no seleccionadas'],
-    ['Store sin comunicacion', uncommunicated_stores],
+    ['Store sin comunicación', uncommunicated_stores],
     ['Incidencias', incidents],
     ['Store sin incidencias', perc_stores_without_incidents]
   ]
   const widgets = widgetsData.map((widget, index) => {
     return (
       <>
-        {widget[0] === 'Store sin comunicacion' || widget[0] === 'Incidencias'
+        {widget[0] === 'Store sin comunicación' || widget[0] === 'Incidencias'
 
           ? < Widget key={index}>
             <div className="store-with-dot">

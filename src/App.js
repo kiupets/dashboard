@@ -21,7 +21,6 @@ function App() {
 
   useEffect(() => {
     api.getDataTable().then((res) => {
-      console.log(res);
       if (res?.table.length !== 0) {
         dispatch(SET_TABLE(res));
       } else {

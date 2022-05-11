@@ -31,7 +31,8 @@ export const bottomTable = (data) => {
     const totalInci = sumByIndex(totalIncidencias)
     const totalScore = sumByIndex(totalStores)
     const f = (a, b) => {
-        return ((a / b) * 100).toFixed(2)
+        return ((a / b) * 100).toFixed(2
+            )
     }
     const percentage = R.zipWith(f, totalInci, totalScore)
 
@@ -41,7 +42,8 @@ export const bottomTable = (data) => {
     })
 
     const inciArray = ['Total Incidencias', 'Total Stores', '% Incidencias',]
-    const excelArray = R.zip(inciArray, [R.flatten([totalInci, '', '', '', '']), R.flatten([totalScore, '', '', '', '']), R.flatten([finalPercentage, '', '', '', ''])])
+    //AGREGAR DOS 2 COLUMNAS EN CADA R.FLATTEN ('', '') PARA AHORRO Y DETECTED SCORE
+    const excelArray = R.zip(inciArray, [R.flatten([totalInci, '', '', ]), R.flatten([totalScore, '', '', ]), R.flatten([finalPercentage, '', '', ])])
 
     const superExcelArray = excelArray.map(arr => R.flatten(arr))
     return superExcelArray

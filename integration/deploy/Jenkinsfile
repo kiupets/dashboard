@@ -1,0 +1,5 @@
+#!groovy
+@Library('dexma') _
+
+jenkinsfileDeployPipeline(gitRepoName: 'caixa-dashboards-front',
+                          appName: 'caixa-dashboards-front')
