@@ -79,6 +79,7 @@ steps:
         #gsutil -m -o GSUtil:parallel_composite_upload_threshold=150M cp sonar_cache_${_REPO_NAME}.tar.gz gs://dexma-cloudbuild/
         #gsutil -m -o GSUtil:parallel_composite_upload_threshold=150M cp target/sonar/report-task.txt gs://dexma-jenkins/sonar/sonar_ci_${_REPO_NAME}_${_BUILD_ID}.txt &&
         #gsutil -m -o GSUtil:parallel_composite_upload_threshold=150M cp test_ci_${_REPO_NAME}_${_BUILD_ID}.tar.gz gs://dexma-jenkins/junits/test_ci_${_REPO_NAME}_${_BUILD_ID}.tar.gz
+        gsutil -m -o GSUtil:parallel_composite_upload_threshold=150M cp VERSION_NUMBER gs://dexma-jenkins/version_number/version_number_ci_${_REPO_NAME}_${_BUILD_ID}
     volumes:
       - path: '/root/.sonar'
         name: 'sonar_cache'

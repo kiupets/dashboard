@@ -26,6 +26,7 @@ steps:
 
   - name: 'gcr.io/$PROJECT_ID/dexma-cloud-builders/deployer'
     id: DEPLOY
+    waitFor: ['GET_SECRETS_AND_CACHE']
     env:
       - 'ANSIBLE_VAULT_PASSWORD_FILE=.ansible_pass.txt'
       - 'ANSIBLE_HOST_KEY_CHECKING=False'
@@ -34,6 +35,15 @@ steps:
       - -c
       - |
         /usr/bin/ansible-playbook -i /deploy-ansible/inventory/${_ENV} --private-key id_rsa -u jenkins -e "app=${_APP} env=${_ENV} version=$(cat VERSION_NUMBER) branch_tag_name=${_BRANCH_TAG_NAME} worker_name=${_WORKER_NAME} host=external bb_project=external service=docker not_render=true" /deploy-ansible/deploy.yaml
+  
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:alpine'
+    id: PUSH_RESULTS
+    waitFor: ['GET_SECRETS_AND_CACHE']
+    entrypoint: 'bash'
+    args:
+      - -c
+      - | 
+        gsutil -m -o GSUtil:parallel_composite_upload_threshold=150M cp VERSION_NUMBER gs://dexma-jenkins/version_number/version_number_deploy_${_WORKER_NAME}_${_BUILD_ID}
 
 substitutions:
   _ENV: 'pre'
@@ -42,3 +52,4 @@ substitutions:
   _BRANCH_TAG_NAME: 'master'
   _BRANCH_OR_TAG: 'release'
   _LANGUAGE: 'npm'
+  _BUILD_ID: 'HAND_DEFAULT'

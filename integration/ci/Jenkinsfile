@@ -5,4 +5,5 @@ jenkinsfileCiPipeline(gitRepoName: 'caixa-dashboards-front',
                       gitProjectName: 'external',
                       languageName: 'npm',
                       qualityGate: 'false',
-                      showTestResults: 'false')
+                      showTestResults: 'false',
+                      slackChannel: '#jenkins,#p_caixabank_dashboard')
