@@ -14,7 +14,7 @@ export const Top = () => {
     ['Localizaciones', total_locations],
     ['Tags Seleccionadas', <WidgetLabels loc_tags={location_tags} />, 'Tags no seleccionadas'],
     ['Store sin comunicación', uncommunicated_stores],
-    ['Incidencias', incidents],
+    ['Incidencias totales', incidents],
     ['Store sin incidencias', perc_stores_without_incidents]
   ]
   const widgets = widgetsData.map((widget, index) => {
