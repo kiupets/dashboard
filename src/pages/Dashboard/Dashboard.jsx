@@ -10,6 +10,7 @@ import { bottomTable } from "../../utils/bottomData";
 import { Top } from '../Top/Top'
 import downExe from './downExe.png'
 
+
 const even = (n) => n % 2 === 0;
 export const Dashboard = () => {
 
@@ -25,7 +26,7 @@ export const Dashboard = () => {
     }, [table]);
     //AGREGAR (item => ({ ...item,Score:item.Detected_Score, Ahorro:item.Ahorro_Potencial })) EN tableDataApi
     const tableDataApi = R.map(table => R.values(table),
-        dataSort.map(item => ({ ...item, })))
+        dataSort.map(item => ({ ...item, ...item, })))
 
     const headers = headersData.map(header => {
         return <div
