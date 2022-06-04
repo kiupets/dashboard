@@ -1,0 +1,6 @@
+#!groovy
+@Library('dexma') _
+
+jenkinsfileDeployPipeline(gitRepoName: 'caixa-dashboards-front',
+                          appName: 'caixa-dashboards-front',
+                          slackChannel: '#jenkins,#p_caixabank_dashboard')

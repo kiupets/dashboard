@@ -79,7 +79,7 @@ export const Dashboard = () => {
             <div className="bottom">
                 <div className="top-bottom">
                     <div className="headers-top">
-                        <span className="span-estado-store">Estados por store</span>
+                        <span className="span-estado-store"></span>
                         <div
                             className="span-download"
                             onClick={ExcelTable(
