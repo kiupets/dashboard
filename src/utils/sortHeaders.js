@@ -2,7 +2,6 @@ import * as R from 'ramda';
 export const sortHeaders = (e, data) => {
 	const key = e.target.innerText;
 	const noAccentKey = key.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-	console.log(noAccentKey);
 	const _key = noAccentKey.replace(' ', '_');
 	return _key === 'Comunicacion' ||
 		_key === 'Pasarela_Clima' ||
