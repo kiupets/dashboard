@@ -9,7 +9,7 @@ import './Dashboard.css'
 import { bottomTable } from "../../utils/bottomData";
 import { Top } from '../Top/Top'
 import downExe from './downExe.png'
-import { dummyData } from "../../utils";
+
 
 
 const even = (n) => n % 2 === 0;
@@ -20,10 +20,10 @@ export const Dashboard = () => {
         perc_stores_without_incidents } = useSelector((state) => state.table.data);
     const { total_locations, location_tags } = useSelector((state) => state.table)
 
-    const [dataSort, setDataSort] = useState(dummyData);
+    const [dataSort, setDataSort] = useState(table);
 
     useEffect(() => {
-        table?.length !== 0 && setDataSort(dummyData);
+        table?.length !== 0 && setDataSort(table);
     }, [table]);
     //AGREGAR (item => ({ ...item,Score:item.Detected_Score, Ahorro:item.Ahorro_Potencial })) EN tableDataApi
     const tableDataApi = R.map(table => R.values(table),
@@ -103,9 +103,9 @@ export const Dashboard = () => {
                             </div>
                         </div>
                         {/* ///////////CENTRAL-TABLE-GRID/////////////////////////////// */}
-                        {/* .ID !== '-' */}
+
                         {/* para que se vean los puntos sino carga la tabla inicial en redux */}
-                        {table[0]
+                        {table[0].ID !== '-'
                             ? <div style={{ position: 'relative', overflowY: 'auto', height: '650px' }}>
                                 <div className='grid-container'>
                                     {info}

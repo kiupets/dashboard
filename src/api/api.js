@@ -4,8 +4,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const dep_id = urlParams.get('dep_id');
 const session_id = urlParams.get('session_id');
 const headers = {
-	'X-Dep-Id': 3953,
-	'X-Session-Id': '3327843eb4af53fba0d811d7f91ef829472b1dd309a40d943224c0933eb7966a'
+	'X-Dep-Id': dep_id,
+	'X-Session-Id': session_id
 };
 
 const get = async (path) => {
