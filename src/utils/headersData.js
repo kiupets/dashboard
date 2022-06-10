@@ -12,6 +12,6 @@ export const headersData = [
 	'Confort',
 	'Anomalías',
 	'Impacto Anomalías',
-	'Detected Score',
-	'Ahorro Potencial'
+	// 'Detected Score',
+	// 'Ahorro Potencial'
 ];

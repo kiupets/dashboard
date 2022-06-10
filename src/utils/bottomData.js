@@ -43,7 +43,7 @@ export const bottomTable = (data) => {
 
     const inciArray = ['Total Incidencias', 'Total Stores', '% Incidencias',]
     //AGREGAR DOS 2 COLUMNAS EN CADA R.FLATTEN ('', '') PARA AHORRO Y DETECTED SCORE
-    const excelArray = R.zip(inciArray, [R.flatten([totalInci, '', '', '', '']), R.flatten([totalScore, '', '', '', '']), R.flatten([finalPercentage, '', '', '', ''])])
+    const excelArray = R.zip(inciArray, [R.flatten([totalInci, '', '',]), R.flatten([totalScore, '', '',]), R.flatten([finalPercentage, '', '',])])
 
     const superExcelArray = excelArray.map(arr => R.flatten(arr))
     return superExcelArray

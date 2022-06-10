@@ -13,8 +13,7 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 	},
 	{
 		ID: '2',
@@ -30,8 +29,7 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 	},
 	{
 		ID: '3',
@@ -47,8 +45,7 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 	},
 	{
 		ID: '4',
@@ -64,8 +61,7 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 	},
 	{
 		ID: '5',
@@ -81,8 +77,7 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 	},
 	{
 		ID: '6',
@@ -98,8 +93,7 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 
 	},
 	{
@@ -116,8 +110,7 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 	},
 	{
 		ID: '8',
@@ -133,8 +126,7 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 	},
 	{
 		ID: '9',
@@ -150,8 +142,7 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 	},
 	{
 		ID: '9',
@@ -167,8 +158,7 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 	},
 	{
 		ID: '9',
@@ -184,8 +174,7 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 	},
 	{
 		ID: '9',
@@ -201,8 +190,7 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 	},
 	{
 		ID: '9',
@@ -218,8 +206,7 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 	},
 	{
 		ID: '9',
@@ -235,7 +222,6 @@ export const dummyData = [
 		Confort: 0,
 		Anomalías: 3,
 		Impacto_Anomalías: 2,
-		Detected_Score: 2,
-		Ahorro_Potencial: 3
+
 	}
 ];
