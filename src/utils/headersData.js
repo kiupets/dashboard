@@ -10,7 +10,7 @@ export const headersData = [
 	'Horario rótulo',
 	'Consumo Clima',
 	'Confort',
-	'Anomalías',
+	'Total Anomalías',
 	'Impacto Anomalías',
 	// 'Detected Score',
 	// 'Ahorro Potencial'

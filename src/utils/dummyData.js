@@ -11,7 +11,7 @@ export const dummyData = [
 		Rotulo: 0,
 		Consumo_Clima: 0,
 		Confort: 0,
-		Anomalías: 3,
+		Total_Anomalías: 3,
 		Impacto_Anomalías: 2,
 
 	},
@@ -27,9 +27,8 @@ export const dummyData = [
 		Rotulo: 0,
 		Consumo_Clima: 0,
 		Confort: 0,
-		Anomalías: 3,
+		Total_Anomalías: 3,
 		Impacto_Anomalías: 2,
-
 	},
 	{
 		ID: '3',
@@ -43,7 +42,7 @@ export const dummyData = [
 		Rótulo: 0,
 		Consumo_Clima: 0,
 		Confort: 0,
-		Anomalías: 3,
+		Total_Anomalías: 3,
 		Impacto_Anomalías: 2,
 
 	},
@@ -59,7 +58,7 @@ export const dummyData = [
 		Rótulo: 0,
 		Consumo_Clima: 0,
 		Confort: 0,
-		Anomalías: 3,
+		Total_Anomalías: 3,
 		Impacto_Anomalías: 2,
 
 	},
@@ -75,9 +74,8 @@ export const dummyData = [
 		Rótulo: 0,
 		Consumo_Clima: true,
 		Confort: 0,
-		Anomalías: 3,
+		Total_Anomalías: 3,
 		Impacto_Anomalías: 2,
-
 	},
 	{
 		ID: '6',
@@ -91,7 +89,7 @@ export const dummyData = [
 		Rótulo: 0,
 		Consumo_Clima: true,
 		Confort: 0,
-		Anomalías: 3,
+		Total_Anomalías: 3,
 		Impacto_Anomalías: 2,
 
 
@@ -108,7 +106,7 @@ export const dummyData = [
 		Rótulo: false,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
+		Total_Anomalías: 3,
 		Impacto_Anomalías: 2,
 
 	},
@@ -124,7 +122,22 @@ export const dummyData = [
 		Rótulo: true,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
+	},
+	{
+		ID: '9',
+		Ciudad: 'Barcelona',
+		Tipologia: 'simple',
+		Comunicacion: 0,
+		Pasarela_Clima: true,
+		Alumbrado: 0,
+		Clima: 0,
+		Banderola: true,
+		Rótulo: true,
+		Consumo_Clima: false,
+		Confort: 0,
+		Total_Anomalías: 3,
 		Impacto_Anomalías: 2,
 
 	},
@@ -140,7 +153,7 @@ export const dummyData = [
 		Rótulo: true,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
+		Total_Anomalías: 3,
 		Impacto_Anomalías: 2,
 
 	},
@@ -156,7 +169,7 @@ export const dummyData = [
 		Rótulo: true,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
+		Total_Anomalías: 3,
 		Impacto_Anomalías: 2,
 
 	},
@@ -172,7 +185,7 @@ export const dummyData = [
 		Rótulo: true,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
+		Total_Anomalías: 3,
 		Impacto_Anomalías: 2,
 
 	},
@@ -188,9 +201,8 @@ export const dummyData = [
 		Rótulo: true,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
+		Total_Anomalías: 3,
 		Impacto_Anomalías: 2,
-
 	},
 	{
 		ID: '9',
@@ -204,23 +216,7 @@ export const dummyData = [
 		Rótulo: true,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2,
-
-	},
-	{
-		ID: '9',
-		Ciudad: 'Barcelona',
-		Tipologia: 'simple',
-		Comunicacion: 0,
-		Pasarela_Clima: true,
-		Alumbrado: 0,
-		Clima: 0,
-		Banderola: true,
-		Rótulo: true,
-		Consumo_Clima: false,
-		Confort: 0,
-		Anomalías: 3,
+		Total_Anomalías: 3,
 		Impacto_Anomalías: 2,
 
 	}
