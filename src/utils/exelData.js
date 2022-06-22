@@ -81,7 +81,7 @@ export const ExcelTable = (data, top) => {
     const tabla = [widgetsArray]
         .concat(topTag())
         .concat(['', ''])
-        .concat([R.remove(10,2,headersArray)])
+        .concat([R.remove(11,2,headersArray)])
         .concat(superDummy)
         .concat(['', ''])
         .concat(superExcelArray)
