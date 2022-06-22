@@ -4,14 +4,12 @@ export const headersData = [
 	'Tipología',
 	'Comunicación',
 	'Pasarela Clima',
-	'Horario alumbrado',
-	'Horario clima',
-	'Horario banderola',
-	'Horario rótulo',
+	'alumbrado',
+	'clima',
+	'banderola',
+	'rótulo',
 	'Consumo Clima',
 	'Confort',
 	'Total Anomalías',
-	'Impacto Anomalías',
-	// 'Detected Score',
-	// 'Ahorro Potencial'
+	'Impacto Anomalías'
 ];

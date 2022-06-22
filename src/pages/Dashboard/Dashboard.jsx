@@ -41,14 +41,15 @@ export const Dashboard = () => {
             "Impacto_Anomalias"
         ], table)),
         dataSort.map(item => {
+            console.log(item)
             return ({ ...item, })
         }))
-    console.log(tableDataApi)
+
 
     const headers = headersData.map(header => {
         return <div
             onClick={(e) => setDataSort(sortHeaders(e, dataSort))}
-            className={header === 'Impacto Anomalías' ? 'header-impacto' : 'headers'}>
+            className={header === 'Impacto Anomalías' ? 'headers' : 'headers'}>
             <div className="header-in">
                 {header}
             </div>

@@ -20,8 +20,7 @@ const tableEmpty = {
 				Confort: '-',
 				Total_Anomalías: '-',
 				Impacto_Anomalía: '-',
-				// Ahorro_Potencial: '-',
-				// Detected_Score: '-'
+
 			}
 		]
 	}
@@ -46,8 +45,7 @@ const initialState = {
 				Confort: '-',
 				Total_Anomalías: '-',
 				Impacto_Anomalía: '-',
-				// Ahorro_Potencial: '-',
-				// Detected_Score: '-'
+
 
 			}
 		]
