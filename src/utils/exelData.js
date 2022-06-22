@@ -62,16 +62,26 @@ export const ExcelTable = (data, top) => {
 
 
     const headersArray = Object.keys(data[0])
-
-    // slice para que tome PARTE todo el array cuando se agreguen AHORRO Y DETECT
-    const superDummy = data?.map(data => R.values(data))
-
-
+    const superDummy = data?.map(data => R.values(R.pick(
+        [
+            "ID",
+            "Ciudad",
+            "Tipologia",
+            "Comunicacion",
+            "Pasarela_Clima",
+            "Alumbrado",
+            "Clima",
+            "Banderola",
+            "Rotulo",
+            "Consumo_Clima",
+            "Confort",
+            "Total_Anomalias",
+            "Impacto_Anomalias"
+        ], data)))
     const tabla = [widgetsArray]
         .concat(topTag())
         .concat(['', ''])
-        // slice para que tome PARTER O  todo el array cuando se agreguen AHORRO Y DETECT
-        .concat([headersArray])
+        .concat([R.remove(10,2,headersArray)])
         .concat(superDummy)
         .concat(['', ''])
         .concat(superExcelArray)

@@ -24,6 +24,7 @@ export const Dashboard = () => {
     useEffect(() => {
         table?.length !== 0 && setDataSort(table);
     }, [table]);
+    console.log(table)
     const tableDataApi = R.map(table => R.values(R.pick(
         [
             "ID",
