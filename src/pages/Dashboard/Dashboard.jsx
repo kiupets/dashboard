@@ -11,8 +11,6 @@ import { Top } from '../Top/Top'
 import downExe from './downExe.png'
 
 
-
-
 const even = (n) => n % 2 === 0;
 export const Dashboard = () => {
 
@@ -26,9 +24,26 @@ export const Dashboard = () => {
     useEffect(() => {
         table?.length !== 0 && setDataSort(table);
     }, [table]);
-    //AGREGAR (item => ({ ...item,Score:item.Detected_Score, Ahorro:item.Ahorro_Potencial })) EN tableDataApi
-    const tableDataApi = R.map(table => R.values(table),
-        dataSort.map(item => ({ ...item, })))
+    const tableDataApi = R.map(table => R.values(R.pick(
+        [
+            "ID",
+            "Ciudad",
+            "Tipologia",
+            "Comunicacion",
+            "Pasarela_Clima",
+            "Alumbrado",
+            "Clima",
+            "Banderola",
+            "Rotulo",
+            "Consumo_Clima",
+            "Confort",
+            "Total_Anomalias",
+            "Impacto_Anomalias"
+        ], table)),
+        dataSort.map(item => {
+            return ({ ...item, })
+        }))
+    console.log(tableDataApi)
 
     const headers = headersData.map(header => {
         return <div
