@@ -34,7 +34,7 @@ steps:
     args:
       - -c
       - |
-        /usr/bin/ansible-playbook -i /deploy-ansible/inventory/${_ENV} --private-key id_rsa -u jenkins -e "app=${_APP} env=${_ENV} version=$(cat VERSION_NUMBER) branch_tag_name=${_BRANCH_TAG_NAME} worker_name=${_WORKER_NAME} host=external bb_project=external service=docker not_render=true" /deploy-ansible/deploy.yaml
+        /usr/bin/ansible-playbook -i /deploy-ansible/inventory/${_ENV} --private-key id_rsa -u jenkins -e "repo_name_app=${_APP} env=${_ENV} version=$(cat VERSION_NUMBER) branch_tag_name=${_BRANCH_TAG_NAME} app_name=${_WORKER_NAME} host=external bb_project=external service=docker not_render=true" /deploy-ansible/deploy.yaml
   
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:alpine'
     id: PUSH_RESULTS
