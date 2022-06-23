@@ -11,8 +11,9 @@ export const dummyData = [
 		Rotulo: 0,
 		Consumo_Clima: 0,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
+
 	},
 	{
 		ID: '2',
@@ -26,8 +27,8 @@ export const dummyData = [
 		Rotulo: 0,
 		Consumo_Clima: 0,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
 	},
 	{
 		ID: '3',
@@ -41,8 +42,9 @@ export const dummyData = [
 		Rótulo: 0,
 		Consumo_Clima: 0,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
+
 	},
 	{
 		ID: '4',
@@ -56,8 +58,9 @@ export const dummyData = [
 		Rótulo: 0,
 		Consumo_Clima: 0,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
+
 	},
 	{
 		ID: '5',
@@ -71,8 +74,8 @@ export const dummyData = [
 		Rótulo: 0,
 		Consumo_Clima: true,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
 	},
 	{
 		ID: '6',
@@ -86,8 +89,10 @@ export const dummyData = [
 		Rótulo: 0,
 		Consumo_Clima: true,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
+
+
 	},
 	{
 		ID: '7',
@@ -101,8 +106,9 @@ export const dummyData = [
 		Rótulo: false,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
+
 	},
 	{
 		ID: '8',
@@ -116,8 +122,8 @@ export const dummyData = [
 		Rótulo: true,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
 	},
 	{
 		ID: '9',
@@ -131,8 +137,9 @@ export const dummyData = [
 		Rótulo: true,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
+
 	},
 	{
 		ID: '9',
@@ -146,8 +153,9 @@ export const dummyData = [
 		Rótulo: true,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
+
 	},
 	{
 		ID: '9',
@@ -161,8 +169,9 @@ export const dummyData = [
 		Rótulo: true,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
+
 	},
 	{
 		ID: '9',
@@ -176,8 +185,9 @@ export const dummyData = [
 		Rótulo: true,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
+
 	},
 	{
 		ID: '9',
@@ -191,8 +201,8 @@ export const dummyData = [
 		Rótulo: true,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
 	},
 	{
 		ID: '9',
@@ -206,7 +216,8 @@ export const dummyData = [
 		Rótulo: true,
 		Consumo_Clima: false,
 		Confort: 0,
-		Anomalías: 3,
-		Impacto_Anomalías: 2
+		Total_Anomalías: 3,
+		Impacto_Anomalías: 2,
+
 	}
 ];

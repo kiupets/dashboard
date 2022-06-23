@@ -2,7 +2,6 @@ import * as R from 'ramda';
 export const sortHeaders = (e, data) => {
 	const key = e.target.innerText;
 	const noAccentKey = key.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-	console.log(noAccentKey);
 	const _key = noAccentKey.replace(' ', '_');
 	return _key === 'Comunicacion' ||
 	_key === 'Pasarela_Clima' ||
@@ -11,6 +10,8 @@ export const sortHeaders = (e, data) => {
 	_key === 'Banderola' ||
 	_key === 'Rotulo' ||
 	_key === 'Consumo_Clima' ||
+	_key === 'Total_Anomalias' ||
+	_key === 'Impacto_Anomalias' ||
 	_key === 'Confort'
 		? data
 				.filter((e) => {

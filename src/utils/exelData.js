@@ -48,30 +48,40 @@ export const ExcelTable = (data, top) => {
     const totalScore = sumByIndex(totalStores)
     const f = (a, b) => {
         return `${((a / b) * 100).toFixed(2
-            )}%`
+        )}%`
     }
     const percentage = R.zipWith(f, totalInci, totalScore)
 
-    //para modificar cuando este toda la data
+    //para modificar cuando este toda la data NO TOCAR NADA ACA
     const finalPercentage = percentage.map(p => {
         return p === 'NaN%' ? '0%' : p
     })
     const inciArray = ['Total Incidencias', 'Total Stores', '% Incidencias',]
-    const excelArray = R.zip(inciArray, [R.flatten(['', '', totalInci, '', '',]), R.flatten(['', '', totalScore, '', '', ]), R.flatten(['', '', finalPercentage, '', '', ])])
+    const excelArray = R.zip(inciArray, [R.flatten(['', '', totalInci, '', '',]), R.flatten(['', '', totalScore, '', '',]), R.flatten(['', '', finalPercentage, '', '',])])
     const superExcelArray = excelArray.map(arr => R.flatten(arr))
 
 
     const headersArray = Object.keys(data[0])
-    
-        //sacar slice para que tome todo el array cuando se agreguen AHORRO Y DETECT
-    const superDummy = data?.map(data => R.values(data).slice(0,11))
-    
-
+    const superDummy = data?.map(data => R.values(R.pick(
+        [
+            "ID",
+            "Ciudad",
+            "Tipologia",
+            "Comunicacion",
+            "Pasarela_Clima",
+            "Alumbrado",
+            "Clima",
+            "Banderola",
+            "Rotulo",
+            "Consumo_Clima",
+            "Confort",
+            "Total_Anomalias",
+            "Impacto_Anomalias"
+        ], data)))
     const tabla = [widgetsArray]
         .concat(topTag())
         .concat(['', ''])
-        //sacar slice para que tome todo el array cuando se agreguen AHORRO Y DETECT
-        .concat([headersArray.slice(0, 11)])
+        .concat([R.remove(11,2,headersArray)])
         .concat(superDummy)
         .concat(['', ''])
         .concat(superExcelArray)

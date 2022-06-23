@@ -10,6 +10,7 @@ import { bottomTable } from "../../utils/bottomData";
 import { Top } from '../Top/Top'
 import downExe from './downExe.png'
 
+
 const even = (n) => n % 2 === 0;
 export const Dashboard = () => {
 
@@ -23,14 +24,31 @@ export const Dashboard = () => {
     useEffect(() => {
         table?.length !== 0 && setDataSort(table);
     }, [table]);
-    //AGREGAR (item => ({ ...item,Score:item.Detected_Score, Ahorro:item.Ahorro_Potencial })) EN tableDataApi
-    const tableDataApi = R.map(table => R.values(table),
-        dataSort.map(item => ({ ...item, })))
+    const tableDataApi = R.map(table => R.values(R.pick(
+        [
+            "ID",
+            "Ciudad",
+            "Tipologia",
+            "Comunicacion",
+            "Pasarela_Clima",
+            "Alumbrado",
+            "Clima",
+            "Banderola",
+            "Rotulo",
+            "Consumo_Clima",
+            "Confort",
+            "Total_Anomalias",
+            "Impacto_Anomalias"
+        ], table)),
+        dataSort.map(item => {
+            return ({ ...item, })
+        }))
+
 
     const headers = headersData.map(header => {
         return <div
             onClick={(e) => setDataSort(sortHeaders(e, dataSort))}
-            className={header === 'Impacto Anomalías' ? 'header-impacto' : 'headers'}>
+            className={header === 'Impacto Anomalías' ? 'headers' : 'headers'}>
             <div className="header-in">
                 {header}
             </div>
@@ -55,8 +73,8 @@ export const Dashboard = () => {
                                 ? '-'
                                 : row === false
                                     ? <DotTable className='red' />
-                                    : col === 11 || col === 12
-                                        ? '-'
+                                    : col === 12 || col === 12
+                                        ? `${row}€`
                                         : col === 13
                                             ? row
                                             : col === 14
@@ -108,9 +126,10 @@ export const Dashboard = () => {
                                 <div className='grid-container'>
                                     {info}
                                 </div>
+
                                 <div className="bottom-bottom-grid">
-                                    {table?.length !== 0
-                                        ? <div className="bottom-grid-container" >
+                                    {table.length !== 0 ?
+                                        <div className="bottom-grid-container" >
                                             {
                                                 bottomTable(table).map((column, i) => column.map((row, j) => {
                                                     const colorValue = i === 2 && row !== '% Incidencias' && row.length !== 0

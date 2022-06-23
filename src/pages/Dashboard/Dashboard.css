@@ -18,8 +18,6 @@
 
 }
 
-
-
 .bottom-bottom-grid {
     box-sizing: border-box;
     width: 100%;
@@ -156,6 +154,8 @@
     border-top: 1px solid #dee0e2;
     height: 40px;
     width: 100%;
+    padding-left: 8px;
+
 }
 
 .header-in {
@@ -163,6 +163,7 @@
 }
 
 .header-impacto {
+
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -176,6 +177,7 @@
     border-top: 1px solid #dee0e2;
     height: 40px;
     width: 100%;
+    /* padding-left: 5px; */
 }
 
 .headers-super-scroll {

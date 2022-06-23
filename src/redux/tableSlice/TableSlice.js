@@ -18,8 +18,8 @@ const tableEmpty = {
 				Rotulo: '-',
 				Consumo_Clima: '-',
 				Confort: '-',
-				Detected_Score: '-',
-				Ahorro_Potencial: '-'
+				Total_Anomalias: '-',
+				Impacto_Anomalias: '-'
 			}
 		]
 	}
@@ -42,8 +42,8 @@ const initialState = {
 				Rotulo: '-',
 				Consumo_Clima: '-',
 				Confort: '-',
-				Detected_Score: '-',
-				Ahorro_Potencial: '-'
+				Total_Anomalias: '-',
+				Impacto_Anomalias: '-'
 			}
 		]
 	},
