@@ -5,7 +5,7 @@ const dep_id = urlParams.get('dep_id');
 const session_id = urlParams.get('session_id');
 const headers = {
 	'X-Dep-Id': '3953',
-	'X-Session-Id': 'f679ce9da6a34653da1dc12776675299a983e500c3f658e9477cd16c58906b47'
+	'X-Session-Id': '1f0bd5d9809ea5db9e8ea6667f3b292260f4fb07ee8cfec503b9b79a51ee6949'
 };
 
 const get = async (path) => {

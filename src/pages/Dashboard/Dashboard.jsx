@@ -75,15 +75,15 @@ export const Dashboard = () => {
                                 ? '-'
                                 : row === false
                                     ? <DotTable className='red' />
-                                    // : col === 11 || col === 12
-                                    //     ? '-'
-                                    : col === 13
-                                        ? row
-                                        : col === 14
-                                            ? `${row}€`
-                                            : row.length !== 0
-                                                ? row
-                                                : '-'
+                                    : col === 12 || col === 12
+                                        ? `${row}€`
+                                        : col === 13
+                                            ? row
+                                            : col === 14
+                                                ? `${row}€`
+                                                : row.length !== 0
+                                                    ? row
+                                                    : '-'
                         }
                     </div>
                 </div>
