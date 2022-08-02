@@ -24,7 +24,10 @@ export const Dashboard = () => {
     useEffect(() => {
         table?.length !== 0 && setDataSort(table);
     }, [table]);
+<<<<<<< HEAD
     console.log(table)
+=======
+>>>>>>> fd6622b2607add5d7b9ab4ce38a6c46e32e9256c
     const tableDataApi = R.map(table => R.values(R.pick(
         [
             "ID",
@@ -42,7 +45,10 @@ export const Dashboard = () => {
             "Impacto_Anomalias"
         ], table)),
         dataSort.map(item => {
+<<<<<<< HEAD
             console.log(item)
+=======
+>>>>>>> fd6622b2607add5d7b9ab4ce38a6c46e32e9256c
             return ({ ...item, })
         }))
 

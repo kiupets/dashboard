@@ -78,11 +78,14 @@ export const ExcelTable = (data, top) => {
             "Total_Anomalias",
             "Impacto_Anomalias"
         ], data)))
+<<<<<<< HEAD
         // const superDummyDash = superDummy.map(x => {
         //    return  x.map(v => v === true ? 'verde' : v === false ? 'rojo' : v)
         // })
         
         
+=======
+>>>>>>> fd6622b2607add5d7b9ab4ce38a6c46e32e9256c
     const tabla = [widgetsArray]
         .concat(topTag())
         .concat(['', ''])
