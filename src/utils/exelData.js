@@ -2,6 +2,7 @@ import * as R from 'ramda'
 import XLSX from 'xlsx';
 
 export const ExcelTable = (data, top) => {
+    console.log(data)
 
     const topTag = () => top[0].length !== 0
         ? top[0].map((tag, i) => top.map((row, j) =>
@@ -26,9 +27,17 @@ export const ExcelTable = (data, top) => {
                 "Banderola",
                 "Rotulo",
                 "Consumo_Clima",
-                "Confort"], item))
-    )
+                "Confort",
+                 "Total_Anomalias",
+            "Impacto_Anomalias",
+            "Detected_Score",
+            "Ahorro_Potencial"
 
+            
+            
+            ], item))
+    )
+console.log(incidentsDataReduce)
     const totalIncidencias = incidentsDataReduce?.map(item =>
         item?.map(ite => ite === false ? 1 : ite === true ? 0 : '')
     )
@@ -57,12 +66,16 @@ export const ExcelTable = (data, top) => {
         return p === 'NaN%' ? '0%' : p
     })
     const inciArray = ['Total Incidencias', 'Total Stores', '% Incidencias',]
-    const excelArray = R.zip(inciArray, [R.flatten(['', '', totalInci, '', '',]), R.flatten(['', '', totalScore, '', '',]), R.flatten(['', '', finalPercentage, '', '',])])
+    const excelArray = R.zip(inciArray, [R.flatten(['', '', totalInci, '', '','', '','', '']), R.flatten(['', '', totalScore, '', '','', '','', '']), R.flatten(['', '', finalPercentage, '', '','', '','', ''])])
     const superExcelArray = excelArray.map(arr => R.flatten(arr))
 
 
-    const headersArray = Object.keys(data[0])
-    const superDummy = data?.map(data => R.values(R.pick(
+    // const headersArray = Object.keys(data[0])
+    const headersArray = ['ID', 'Ciudad', 'Tipologia', 'Comunicacion', 'Pasarela_Clima', 'Alumbrado',
+     'Clima', 'Banderola', 'Rotulo', 'Consumo_Clima', 'Confort',  'Total_Anomalias', 'Impacto_Anomalias','Detected_Score',
+     'Ahorro_Potencial',]
+    console.log(headersArray)
+    const superDummy = data.map(data => R.values(R.pick(
         [
             "ID",
             "Ciudad",
@@ -76,20 +89,20 @@ export const ExcelTable = (data, top) => {
             "Consumo_Clima",
             "Confort",
             "Total_Anomalias",
-            "Impacto_Anomalias"
+            "Impacto_Anomalias" ,
+            "Detected_Score",
+            "Ahorro_Potencial",
+
         ], data)))
-<<<<<<< HEAD
         // const superDummyDash = superDummy.map(x => {
         //    return  x.map(v => v === true ? 'verde' : v === false ? 'rojo' : v)
         // })
         
         
-=======
->>>>>>> fd6622b2607add5d7b9ab4ce38a6c46e32e9256c
     const tabla = [widgetsArray]
         .concat(topTag())
         .concat(['', ''])
-        .concat([R.remove(11,2,headersArray)])
+        .concat([headersArray])
         .concat(superDummy)
         .concat(['', ''])
         .concat(superExcelArray)

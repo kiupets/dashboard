@@ -19,7 +19,9 @@ const tableEmpty = {
 				Consumo_Clima: '-',
 				Confort: '-',
 				Total_Anomalias: '-',
-				Impacto_Anomalias: '-'
+				Impacto_Anomalias: '-',
+				Detected_Score: '-',
+				Ahorro_Potencial: '-'
 			}
 		]
 	}
@@ -43,7 +45,9 @@ const initialState = {
 				Consumo_Clima: '-',
 				Confort: '-',
 				Total_Anomalias: '-',
-				Impacto_Anomalias: '-'
+				Impacto_Anomalias: '-',
+				Detected_Score: '-',
+				Ahorro_Potencial: '-'
 			}
 		]
 	},

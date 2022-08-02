@@ -11,6 +11,7 @@ import { Top } from '../Top/Top'
 import downExe from './downExe.png'
 
 
+
 const even = (n) => n % 2 === 0;
 export const Dashboard = () => {
 
@@ -24,10 +25,7 @@ export const Dashboard = () => {
     useEffect(() => {
         table?.length !== 0 && setDataSort(table);
     }, [table]);
-<<<<<<< HEAD
-    console.log(table)
-=======
->>>>>>> fd6622b2607add5d7b9ab4ce38a6c46e32e9256c
+
     const tableDataApi = R.map(table => R.values(R.pick(
         [
             "ID",
@@ -42,17 +40,17 @@ export const Dashboard = () => {
             "Consumo_Clima",
             "Confort",
             "Total_Anomalias",
-            "Impacto_Anomalias"
+            "Impacto_Anomalias",
+            "Detected_Score",
+            "Ahorro_Potencial",
+
         ], table)),
         dataSort.map(item => {
-<<<<<<< HEAD
-            console.log(item)
-=======
->>>>>>> fd6622b2607add5d7b9ab4ce38a6c46e32e9256c
+
             return ({ ...item, })
         }))
-
-
+    // Total_Anomalias: item.Total_Anomalias, Impacto_Anomalias: item.Impacto_Anomalias
+    // Detected_Score: item.Detected_Score, Ahorro_Potencial: item.Ahorro_Potencial, Total_Anomalias: item.Total_Anomalias, Impacto_Anomalias: item.Impacto_Anomalias,
     const headers = headersData.map(header => {
         return <div
             onClick={(e) => setDataSort(sortHeaders(e, dataSort))}
@@ -81,7 +79,7 @@ export const Dashboard = () => {
                                 ? '-'
                                 : row === false
                                     ? <DotTable className='red' />
-                                    : col === 12 || col === 12
+                                    : col === 12 || col === 14
                                         ? `${row}€`
                                         : col === 13
                                             ? row
