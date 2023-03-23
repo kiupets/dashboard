@@ -9,8 +9,9 @@ import './Dashboard.css'
 import { bottomTable } from "../../utils/bottomData";
 import { Top } from '../Top/Top'
 import downExe from './downExe.png'
+import { dummyData } from "../../utils";
 
-
+console.log(dummyData)
 
 const even = (n) => n % 2 === 0;
 export const Dashboard = () => {
@@ -20,10 +21,10 @@ export const Dashboard = () => {
         perc_stores_without_incidents } = useSelector((state) => state.table.data);
     const { total_locations, location_tags } = useSelector((state) => state.table)
 
-    const [dataSort, setDataSort] = useState(table);
+    const [dataSort, setDataSort] = useState(dummyData);
 
     useEffect(() => {
-        table?.length !== 0 && setDataSort(table);
+        table?.length !== 0 && setDataSort(dummyData);
     }, [table]);
 
     const tableDataApi = R.map(table => R.values(R.pick(
@@ -47,7 +48,7 @@ export const Dashboard = () => {
         ], table)),
         dataSort.map(item => {
 
-            return ({ ...item, })
+            return ({ ...item, Total_Anomalias: item.Total_Anomalías, Impacto_Anomalias: item.Impacto_Anomalias, Ahorro_Potencial: item.Ahorro_Potencial, })
         }))
     // Total_Anomalias: item.Total_Anomalias, Impacto_Anomalias: item.Impacto_Anomalias
     // Detected_Score: item.Detected_Score, Ahorro_Potencial: item.Ahorro_Potencial, Total_Anomalias: item.Total_Anomalias, Impacto_Anomalias: item.Impacto_Anomalias,
@@ -127,7 +128,7 @@ export const Dashboard = () => {
                         {/* ///////////CENTRAL-TABLE-GRID/////////////////////////////// */}
 
                         {/* para que se vean los puntos sino carga la tabla inicial en redux */}
-                        {table[0].ID !== '-'
+                        {dummyData
                             ? <div style={{ position: 'relative', overflowY: 'auto', height: '650px' }}>
                                 <div className='grid-container'>
                                     {info}
